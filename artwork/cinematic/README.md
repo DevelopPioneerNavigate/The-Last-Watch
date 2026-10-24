@@ -1,51 +1,60 @@
 # THE LAST WATCH — CINEMATIC ART COLLECTION
 
-**Writer:** Diesel • **Imprint:** DPN Novels • **Edition:** CINEMATIC-DIRECT-02
+**Written by Diesel • DPN Novels** · **CINEMATIC-DIRECT-03**
 
-The repository now contains **eleven verified cinematic placements** — a cinematic image-based cover and **ten full-page scene illustrations**. They are embedded by the publisher into the actual PDF; this is no longer a pending manual ZIP upload.
+**Current verified edition:** 15 cinematic image placements — **one full-color cover and fourteen scene illustrations** — in the 481-page, 6 × 9-inch PDF. The narrative text remains at 76,146 words.
 
-## Preview gallery
+The illustrations are committed as real JPEG files and reproduced by GitHub Actions without downloading from an external image host. [Read or download the illustrated book](../../books/The_Last_Watch_Extended_Edition.pdf).
 
-![USS Northstar DDG-148 — cinematic cover](../../assets/cinematic/00_northstar_cover.jpg)
+## Featured gallery
 
-| North Atlantic convoy | Combat information center |
+![Northstar DDG-148 book cover](../../assets/cinematic/00_northstar_cover.jpg)
+
+| HMS Cutlass: Still Fighting | The Children of Aurora |
 |---|---|
-| ![Convoy LANTERN](01-north-atlantic-convoy.jpg) | ![Twelve inbound tracks](03-twelve-tracks-in-combat.jpg) |
+| ![Cutlass after the strike](16_cutlass_crippled_bridge.jpg) | ![A child being comforted aboard Aurora](17_aurora_child_and_nurse.jpg) |
 
-| Raven One helicopter | Engineering fire |
+| Remembrance | The Watchkeepers' Book |
 |---|---|
-| ![Raven One returns](../../assets/cinematic/12_raven_one.jpg) | ![Chief Ramirez and her team](04-ramirez-engineering-fire.jpg) |
+| ![A sailor salutes at a memorial](18_memorial_watch.jpg) | ![Ramirez's recovered watchkeeping notebook](19_ramirez_watchbook.jpg) |
 
-| Reykjavík arrival | Liv's new home |
+| Raven One | Liv and Vale's homecoming |
 |---|---|
-| ![Reykjavík harbor](05-reykjavik-arrival.jpg) | ![Liv returns with her drawing](06-the-green-roof.jpg) |
+| ![Raven One's helicopter](../../assets/cinematic/12_raven_one.jpg) | ![Liv shows Commander Vale a drawing at a naval memorial](20_liv_and_vale_remembrance.jpg) |
 
-## Verified placements
+## Exact manuscript placement
 
-| Illustration | Narrative scene |
+| Artwork | Book placement |
 |---|---|
-| **USS Northstar DDG-148** | Full-color book cover |
+| **Northstar DDG-148** | Front cover |
 | North Atlantic convoy | The First Crossing |
-| Caledonia's survivors | The Distance Between Ships |
-| Norwegian rescue crew | The Fisherman's Choice |
-| Missile defenses | Before the Second Salvo |
-| CIC missile engagement | The Twelve Tracks |
-| Chief Ramirez's rescue | The Door With No Handle |
-| Iceland harbor | The Pier at Reykjavík |
-| Liv's new home | The Green Roof |
-| Raven One helicopter | Raven One's Empty Seat |
+| Caledonia rescue | The Distance Between Ships |
+| Fishermen aboard Sigrid | The Fisherman's Choice |
+| Second salvo | Before the Second Salvo |
+| Missile alert | The Twelve Tracks |
+| Engineering fire | The Door With No Handle |
+| Cutlass damaged bridge | **The Lieutenant's Bridge** |
+| Child and caregiver | **Beneath Aurora** |
+| Memorial watch | **Letters Never Sent** |
+| Ramirez's watchkeeper notebook | **The Watchkeepers' Book** |
+| Reykjavík harbor | The Pier at Reykjavík |
+| Liv and Vale at remembrance | The Green Roof |
+| Raven One's helicopter | Raven One's Empty Seat |
 | Caledonia in the storm | The Last Manifest |
 
-## Reproducible publishing
+Four scenes received new illustration pages, and the existing Liv illustration was upgraded to a higher-resolution image.
 
-- `committed_manifest.json` defines the images, exact manuscript anchors, titles and captions, relative source paths, and SHA-256 checksums.
-- `scripts/cinematic_art.py` refuses missing files, altered checksums, unsafe paths, and ambiguous image placements.
-- `scripts/build_book.py` includes the full-page artwork immediately before its corresponding scene and replaces the silhouette cover with the photographic DDG-148 cover.
-- `.github/workflows/publish-book.yml` builds and validates the 6 × 9 inch PDF, tests the manuscript and illustration mapping, verifies image-bearing pages, and commits the new book to `books/The_Last_Watch_Extended_Edition.pdf`.
-- Existing `manifest.json` describes the optional ZIP collection route for an alternative artwork release. **A ZIP upload is not required** for the checked-in edition.
+## Publishing controls
 
-## Quality and creative direction
+- `committed_manifest.json` is the authoritative artwork manifest with manuscript anchors, filenames, captions and SHA-256 hashes.
+- `scripts/cinematic_art.py` verifies each committed artwork file and rejects missing or modified images.
+- `scripts/build_book.py` places a complete image page immediately before each matching scene and renders the photographic cover.
+- `tests/test_cinematic_art.py` asserts all **15 placements**, image integrity, manuscript anchors, and 1024 × 1536 dimensions for the five new/updated assets.
+- `.github/workflows/publish-book.yml` validates **at least 15 image-bearing PDF pages** and preserves searchable text, the author credit and the trim dimensions before publication.
+- The older ZIP manifest remains an optional alternate publishing path; **no manual ZIP upload is needed**.
 
-The artwork is cinematic interpretation of a fictional naval conflict, **not historical photography**. Future plates should retain the correct Northstar designation **DDG-148**, visual consistency of the officers, North Atlantic weather and equipment, and a high-detail film-still finish rather than minimalist shapes. Print proofing and editorial review are still advisable before commercial distribution.
+## Visual integrity notes
 
-**[Download the cinematic PDF](../../books/The_Last_Watch_Extended_Edition.pdf)**.
+These are artistic renderings of a fictional naval conflict, not documentary photographs. The four newly added scene plates were adapted from cinematic storyboard illustrations. They are suitable for the digital reading edition; a high-resolution print proof is still necessary before professional color-print production. Character consistency, accurate Northstar DDG-148 markings, and safe illustration margins remain required quality checks.
+
+[**Open the latest illustrated novel PDF**](../../books/The_Last_Watch_Extended_Edition.pdf)
