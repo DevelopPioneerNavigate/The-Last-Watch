@@ -49,13 +49,13 @@ jobs:
           from pypdf import PdfReader
           path = Path("books/The_Last_Watch_Extended_Edition.pdf")
           reader = PdfReader(str(path))
-          assert len(reader.pages) >= 215, f"Unexpectedly short expanded PDF: {len(reader.pages)} pages"
+          assert len(reader.pages) >= 275, f"Unexpectedly short expanded PDF: {len(reader.pages)} pages"
           assert not reader.is_encrypted
           assert "Diesel" in (reader.metadata.author or ""), "Missing Diesel author credit"
           alltext = "\n".join(p.extract_text() or "" for p in reader.pages)
-          for phrase in ("THE LAST WATCH", "CHAPTER ONE", "CHAPTER THIRTEEN", "EPILOGUE", "THE END", "THE SHIP THAT BREATHES", "THE WEATHER HAS NO ALLIES", "THE HEARING ROOM", "THE VOICES AT HOME", "THE LAST MANIFEST", "THE PEOPLE WE HAD PROMISED", "THE FIRST CROSSING", "THE SILENT QUARTER", "THE FISHERMAN", "THE PIER AT REYKJAV", "WHAT THE ORDERS DID NOT SAY", "BENEATH AURORA", "BEFORE THE SECOND SALVO", "THE COLD HOURS"):
+          for phrase in ("THE LAST WATCH", "CHAPTER ONE", "CHAPTER THIRTEEN", "EPILOGUE", "THE END", "THE SHIP THAT BREATHES", "THE WEATHER HAS NO ALLIES", "THE HEARING ROOM", "THE VOICES AT HOME", "THE LAST MANIFEST", "THE PEOPLE WE HAD PROMISED", "THE FIRST CROSSING", "THE SILENT QUARTER", "THE FISHERMAN", "THE PIER AT REYKJAV", "WHAT THE ORDERS DID NOT SAY", "BENEATH AURORA", "BEFORE THE SECOND SALVO", "THE COLD HOURS", "THE VOICE FROM HAWTHORNE", "THE UNWRITTEN MAP", "THE CORRIDOR OF LIGHTS", "THE FIRST LEDGER"):
               assert phrase in alltext, f"Missing expected section: {phrase}"
-          assert len(alltext) > 225000, f"Expanded PDF text extraction too short: {len(alltext)} chars"
+          assert len(alltext) > 285000, f"Expanded PDF text extraction too short: {len(alltext)} chars"
           assert int(reader.pages[0].mediabox.width) == 432 and int(reader.pages[0].mediabox.height) == 648, "Unexpected trim size"
           print(f"Validated {len(reader.pages)} pages and {len(alltext):,} extracted characters.")
           PY
@@ -87,10 +87,10 @@ jobs:
           pdf = Path("books/The_Last_Watch_Extended_Edition.pdf")
           reader = PdfReader(str(pdf))
           assert not reader.is_encrypted
-          assert len(reader.pages) >= 215
+          assert len(reader.pages) >= 275
           assert "Diesel" in (reader.metadata.author or "")
           body = "\n".join(p.extract_text() or "" for p in reader.pages)
-          assert len(body) > 225000
+          assert len(body) > 285000
           assert "THE END" in body
           print(f"Validated latest-source PDF: {len(reader.pages)} pages")
           PY
