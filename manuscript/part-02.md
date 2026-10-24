@@ -435,6 +435,8 @@ That silence felt like a gift I did not quite trust.
 
 # CHAPTER TWELVE — THE LIGHTS OF ICELAND
 
+{{scene:41-the-freighter-at-the-edge.md}}
+
 {{scene:38-the-morning-without-signals.md}}
 
 **19 November 2037 — 1832 hours**
@@ -578,6 +580,10 @@ A bell sounded.
 The chaplain prayed.
 
 We stood in silence.
+
+{{scene:42-where-the-cargo-went.md}}
+
+{{scene:43-the-convoy-after-ours.md}}
 
 Later, I wrote a message to my wife.
 
