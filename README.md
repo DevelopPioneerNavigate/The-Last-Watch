@@ -13,20 +13,20 @@ When a future North Atlantic war breaks out, Vale's destroyer and the British fr
 
 **Current published build:**
 - **76,146 words**
-- **474 printed pages**
+- **481 printed pages**
 - **13 chapters + prologue + epilogue**
 - **58 integrated scenes** featuring richer tactical, engineering, rescue, crew-life and aftermath sequences
 - Approximately **8.0–9.8 hours** of narration, depending on speaking pace
 
-The PDF is typeset at **6 × 9 inches**, with a **full-color cinematic cover and ten full-page narrative illustrations**, running headers, page numbers and a table of contents.
+The PDF is typeset at **6 × 9 inches**, with a **full-color cinematic cover and fourteen full-page narrative illustrations**, running headers, page numbers and a table of contents.
 
 If the PDF link is missing after a new commit, check the [Publish book PDF workflow](.github/workflows/publish-book.yml) and its downloadable artifact. GitHub Actions rebuilds and commits the verified PDF when the source changes.
 
 ## Cinematic illustrated edition — now published
 
-The current **474-page PDF** includes an original, full-color **USS Northstar DDG-148 cover** and **ten full-page scene photographs**, embedded within the story at their narrative anchors. All 11 image placements are backed by real files committed to this GitHub repository and verified by SHA-256 before publishing.
+The current **481-page PDF** includes an original, full-color **USS Northstar DDG-148 cover** and **fourteen full-page cinematic scene illustrations**, embedded within the story at their narrative anchors. All 15 image placements are backed by real files committed to this GitHub repository and verified by SHA-256 before publishing.
 
-The artwork depicts the North Atlantic convoy, Caledonia rescue, Norwegian fishing-boat rescue, air-defense engagements, the Combat Information Center, Chief Ramirez's engine-room fire, Raven One's helicopter, Reykjavík harbor and Liv's later return. The final photo edition replaces the older minimalist vector cover and chapter silhouettes.
+The artwork depicts the North Atlantic convoy, Caledonia rescue, Norwegian fishing-boat rescue, air-defense engagements, the Combat Information Center, Chief Ramirez's engine-room fire, Raven One's helicopter, the battered HMS Cutlass, families aboard Aurora, Ramirez's watchkeeping notebook, a remembrance scene, Reykjavík harbor, and Liv's later return. The final photo edition replaces the older minimalist vector cover and chapter silhouettes.
 
 See the [cinematic artwork gallery, placement map and publishing specification](artwork/cinematic/README.md). No separate ZIP upload is required; the scene images are already committed and the publisher uses them automatically.
 
@@ -34,7 +34,7 @@ See the [cinematic artwork gallery, placement map and publishing specification](
 
 **The Last Watch** is **written by Diesel**, published under the **DPN Novels** name. The PDF title page, metadata, cover treatment and running headers reflect this credit.
 
-The current GitHub PDF includes 11 checksum-verified, committed cinematic photographic pages (one cover and ten story illustrations). The original vector illustration system remains available only as a compatibility fallback when the photographic artwork is absent.
+The current GitHub PDF includes 15 checksum-verified, committed cinematic photographic pages (one cover and fourteen story illustrations). The original vector illustration system remains available only as a compatibility fallback when the photographic artwork is absent.
 
 ## What's new in the expanded edition
 
