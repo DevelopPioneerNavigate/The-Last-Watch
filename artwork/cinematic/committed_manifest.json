@@ -63,9 +63,10 @@
     {
       "file": "20_liv_and_vale_remembrance.jpg",
       "anchor": "THE GREEN ROOF",
-      "title": "The Green Roof — Remembrance",
-      "caption": "Years after the evacuation, Liv shows Vale her drawing beside the memorial",
-      "sha256": "62fc4e3fddecf5d2443a248cb9b969659c429500d90d78da45a72c0273246dd1"
+      "title": "Liv's New Home",
+      "caption": "Five years later, Liv shows Commander Vale a drawing of the home her family built",
+      "sha256": "62fc4e3fddecf5d2443a248cb9b969659c429500d90d78da45a72c0273246dd1",
+      "source_path": "assets/cinematic/20_liv_and_vale_remembrance.jpg"
     },
     {
       "file": "12_raven_one.jpg",
@@ -86,30 +87,34 @@
     {
       "file": "16_cutlass_crippled_bridge.jpg",
       "anchor": "THE LIEUTENANT'S BRIDGE",
-      "title": "Cutlass Still Fights",
-      "caption": "HMS Cutlass survives the missile strike, wounded but moving",
-      "sha256": "d8b19966cb360c4353af020c97adb45f4ffc3de8827d3efe32d8d4b47b4e46e8"
+      "title": "HMS Cutlass — The Wounded Escort",
+      "caption": "The British frigate burns as her watchkeepers keep the ship moving",
+      "sha256": "d8b19966cb360c4353af020c97adb45f4ffc3de8827d3efe32d8d4b47b4e46e8",
+      "source_path": "assets/cinematic/16_cutlass_crippled_bridge.jpg"
     },
     {
       "file": "17_aurora_child_and_nurse.jpg",
       "anchor": "BENEATH AURORA",
-      "title": "The Children of Aurora",
-      "caption": "Families cling to hope in the midst of the wartime crossing",
-      "sha256": "a0ed02d66cc26921a93eb8fee7b350df6bdc7472cb716c8b31341ef357878048"
+      "title": "Beneath Aurora's Windows",
+      "caption": "A frightened child finds comfort aboard Aurora",
+      "sha256": "a0ed02d66cc26921a93eb8fee7b350df6bdc7472cb716c8b31341ef357878048",
+      "source_path": "assets/cinematic/17_aurora_child_and_nurse.jpg"
     },
     {
       "file": "18_memorial_watch.jpg",
       "anchor": "LETTERS NEVER SENT",
-      "title": "Remembering the Fallen",
-      "caption": "The sailors lost on the crossing are honored by those who survived",
-      "sha256": "fc6c9acfc3124a1b4142030f8304ddbc12d832b0fe26750d0ed9354a0f2f782e"
+      "title": "The Memorial Watch",
+      "caption": "A sailor pays respects to those lost at sea",
+      "sha256": "fc6c9acfc3124a1b4142030f8304ddbc12d832b0fe26750d0ed9354a0f2f782e",
+      "source_path": "assets/cinematic/18_memorial_watch.jpg"
     },
     {
       "file": "19_ramirez_watchbook.jpg",
       "anchor": "THE WATCHKEEPERS",
       "title": "The Watchkeepers' Book",
-      "caption": "Chief Ramirez's handwritten notes become a legacy for the next watch",
-      "sha256": "30519ff2e655038e65e0d66f0c7d761bdb0ad34fa446479ee679caef43a4cb69"
+      "caption": "A weathered compass and watchkeeper's words honor the departed",
+      "sha256": "b035ff5adeee3203a66dded5455bb3ba5f2d22eaa652362bedf88f8462e0af55",
+      "source_path": "assets/cinematic/19_ramirez_watchbook.jpg"
     }
   ]
 }
