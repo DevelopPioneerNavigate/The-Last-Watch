@@ -16,8 +16,8 @@ class NovelTests(unittest.TestCase):
 
     def test_full_manuscript_present(self):
         self.assertEqual(self.chapters, 13)
-        self.assertEqual(self.scenes, 31)
-        self.assertGreater(self.words, 41000)
+        self.assertEqual(self.scenes, 35)
+        self.assertGreater(self.words, 46000)
         self.assertNotIn("{{scene:", self.raw)
         self.assertIn("THE END", self.raw)
 
@@ -41,7 +41,9 @@ class NovelTests(unittest.TestCase):
             ("BENEATH AURORA", "# CHAPTER FIVE"),
             ("THE COST OF KEEPING COURSE", "THE FISHERMAN\u0027S CHOICE"),
             ("THE FISHERMAN\u0027S CHOICE", "# CHAPTER SIX"),
+            ("THE VOICE FROM HAWTHORNE", "THE FISHERMAN\u0027S CHOICE"),
             ("THE NAME ON THE METAL", "THE INVISIBLE FRONT"),
+            ("THE UNWRITTEN MAP", "BEFORE THE SECOND SALVO"),
             ("THE INVISIBLE FRONT", "BEFORE THE SECOND SALVO"),
             ("BEFORE THE SECOND SALVO", "# CHAPTER SEVEN"),
             ("WHEN CUTLASS WENT DARK", "THE SHIPS THAT ANSWERED"),
@@ -53,9 +55,12 @@ class NovelTests(unittest.TestCase):
             ("THE WEATHER HAS NO ALLIES", "THE COLD HOURS"),
             ("THE COLD HOURS", "THE DARK BETWEEN THE ALARMS"),
             ("THE DARK BETWEEN THE ALARMS", "# CHAPTER TWELVE"),
-            ("VOICES FROM THE WEST", "# CHAPTER THIRTEEN"),
+            ("VOICES FROM THE WEST", "THE CORRIDOR OF LIGHTS"),
+            ("THE CORRIDOR OF LIGHTS", "# CHAPTER THIRTEEN"),
             ("THE PIER AT REYKJAVÍK", "THE CAPTAINS WITHOUT SHIPS"),
             ("THE CAPTAINS WITHOUT SHIPS", "LETTERS NEVER SENT"),
+            ("LETTERS NEVER SENT", "THE FIRST LEDGER"),
+            ("THE FIRST LEDGER", "# EPILOGUE"),
             ("LETTERS NEVER SENT", "# EPILOGUE"),
             ("THE HEARING ROOM", "THE VOICES AT HOME"),
         ]
