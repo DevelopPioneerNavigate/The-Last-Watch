@@ -13,6 +13,8 @@ I was angry. Angry at the lost Caledonia sailors. Angry at the damage to Cutlass
 
 Anger was not a justification to fire.
 
+{{scene:08-the-space-before-fire.md}}
+
 I had Idris lead the evaluation. He reviewed identification evidence, the hostile conduct already observed, and the requirements of our standing orders. A second officer independently challenged the assessment. We checked the picture for neutral shipping, friendly aircraft, and other possible mistakes.
 
 When Idris finally looked at me, he was tired enough that the words sounded old.
@@ -124,6 +126,8 @@ Mara leaned over the damage-control display. "If this gets into the adjoining eq
 She was right. My instinct was to run to the smoke, to look for them myself. But a commanding officer who abandons the wider situation during a submarine threat may multiply the danger to everyone aboard.
 
 We divided responsibilities. Navarro directed engineering and damage control, Mara coordinated the broader shipboard response, and Idris maintained the battle watch. I kept the overall tactical picture and listened to the reports arrive.
+
+{{scene:09-the-boundaries-hold.md}}
 
 At 1116 we established communication with Ramirez.
 
@@ -289,6 +293,8 @@ Neither of us spoke.
 
 Sometimes a commanding officer must give orders. Sometimes all he can do is refuse to let somebody grieve alone.
 
+{{scene:10-the-people-who-were-not-on-the-screen.md}}
+
 Back in CIC, I reviewed the day's events. The enemy had struck in layers: distraction, underwater attack, airborne missiles, information interference, surface pressure, and another suspected torpedo. Our ship had answered each threat, but the true achievement belonged to sailors in spaces the tactical plots never showed.
 
 The damage-control crews did not see missiles on a display. They saw smoke. The engineers did not see the grand strategy. They saw alarms, pressure gauges and damaged equipment. The medics did not know whether we were winning. They saw a wounded man and tried to save him.
@@ -320,6 +326,8 @@ Lieutenant Aaron Bishop had the watch.
 "Aye, Captain. We'll advise the merchants on speed adjustments."
 
 I stayed longer than I needed to. The bridge was familiar. It smelled of hot electronics and wet wool. There was comfort in looking out at the sea, even one that had done so much to hurt us.
+
+{{scene:11-the-weather-has-no-allies.md}}
 
 Mara found me there.
 
@@ -439,6 +447,8 @@ I looked at Mara.
 
 She was smiling, and the sight seemed to surprise both of us.
 
+{{scene:12-voices-from-the-west.md}}
+
 Later, a Norwegian frigate and the American destroyer USS Jefferson approached from the secured corridor. Jefferson's captain offered to assume the principal air-defense responsibility for the remaining transit.
 
 I thought of our reduced magazine and tired crew.
@@ -543,6 +553,8 @@ I watched until I could no longer see him.
 
 Then I went below to prepare for the memorial service.
 
+{{scene:13-letters-never-sent.md}}
+
 We gathered in the largest space available. Some sailors attended in person; others remained at necessary watches. A folded American flag rested beside a photograph of Chief Petty Officer Elena Ramirez. In the picture she was smiling, unaware that a photograph taken on a sunny afternoon would one day become the center of a ship's grief.
 
 Our chaplain stood beside me.
@@ -608,6 +620,10 @@ War rarely offers that kind of ending.
 Caledonia never returned. Her survivors carried memories that no port inspection could erase. Some of Cutlass's sailors lived with injuries long after her hull was repaired. Families on both sides buried the dead. The world eventually signed agreements, reopened trade routes and decided which names to put on monuments.
 
 The ocean kept the rest.
+
+{{scene:14-the-hearing.md}}
+
+{{scene:15-the-voices-at-home.md}}
 
 After the war I lectured at the Naval War College. I showed maps, explained what we could confirm about the coordinated attacks, and described the difficulties of making decisions with incomplete information.
 
@@ -691,7 +707,7 @@ I hear machinery humming through the bulkheads. I smell coffee and hot metal. I 
 
 "Everything all right, Captain?" she asks.
 
-I want to tell her that Ochoa recovered. That Rios went on to make chief. That the ferry reached land and the children grew up. That her daughter became an engineer and brought a small brass model of Northstar to her college dorm room. That thousands of ordinary days followed the night we thought might never end.
+I want to tell her that Ochoa recovered. That Rios became a sailor whose courage I would never forget. That the ferry reached land and the children grew up. That her daughter grew older, loved building things, and kept a small brass model of Northstar in her room. That thousands of ordinary days followed the night we thought might never end.
 
 In the dream I can never quite say it.
 
