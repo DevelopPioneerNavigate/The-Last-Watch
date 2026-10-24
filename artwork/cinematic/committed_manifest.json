@@ -1,7 +1,7 @@
 {
-  "edition": "CINEMATIC-DIRECT-02",
+  "edition": "CINEMATIC-DIRECT-03",
   "author": "Diesel | DPN Novels",
-  "description": "Checksum-verified original photographic art: USS Northstar DDG-148 cover and ten cinematic scene plates, placed before their corresponding scenes.",
+  "description": "Fifteen checksum-verified image placements: one cover and fourteen full-page character, battle, rescue and remembrance plates.",
   "assets": [
     {
       "file": "00_northstar_cover.jpg",
@@ -61,11 +61,11 @@
       "sha256": "04538e1e0b8e21585b3321960d49c8311c5da8299323afd3efd75eadf4343251"
     },
     {
-      "file": "06-the-green-roof.jpg",
+      "file": "20_liv_and_vale_remembrance.jpg",
       "anchor": "THE GREEN ROOF",
-      "title": "A New Home",
-      "caption": "Years later, Liv shows Vale the home her family built",
-      "sha256": "22b5ac381f74d94f26afb8517f4b02014270df685ca964b07101b558d196ecff"
+      "title": "The Green Roof — Remembrance",
+      "caption": "Years after the evacuation, Liv shows Vale her drawing beside the memorial",
+      "sha256": "62fc4e3fddecf5d2443a248cb9b969659c429500d90d78da45a72c0273246dd1"
     },
     {
       "file": "12_raven_one.jpg",
@@ -82,6 +82,34 @@
       "title": "The Lost Freighter",
       "caption": "Rescue crews and merchant sailors face the freezing North Atlantic",
       "sha256": "615f3e192573cd0612d595ab73ca04416d40634747b3ffdc784276fe6ad50035"
+    },
+    {
+      "file": "16_cutlass_crippled_bridge.jpg",
+      "anchor": "THE LIEUTENANT'S BRIDGE",
+      "title": "Cutlass Still Fights",
+      "caption": "HMS Cutlass survives the missile strike, wounded but moving",
+      "sha256": "d8b19966cb360c4353af020c97adb45f4ffc3de8827d3efe32d8d4b47b4e46e8"
+    },
+    {
+      "file": "17_aurora_child_and_nurse.jpg",
+      "anchor": "BENEATH AURORA",
+      "title": "The Children of Aurora",
+      "caption": "Families cling to hope in the midst of the wartime crossing",
+      "sha256": "a0ed02d66cc26921a93eb8fee7b350df6bdc7472cb716c8b31341ef357878048"
+    },
+    {
+      "file": "18_memorial_watch.jpg",
+      "anchor": "LETTERS NEVER SENT",
+      "title": "Remembering the Fallen",
+      "caption": "The sailors lost on the crossing are honored by those who survived",
+      "sha256": "fc6c9acfc3124a1b4142030f8304ddbc12d832b0fe26750d0ed9354a0f2f782e"
+    },
+    {
+      "file": "19_ramirez_watchbook.jpg",
+      "anchor": "THE WATCHKEEPERS",
+      "title": "The Watchkeepers' Book",
+      "caption": "Chief Ramirez's handwritten notes become a legacy for the next watch",
+      "sha256": "b035ff5adeee3203a66dded5455bb3ba5f2d22eaa652362bedf88f8462e0af55"
     }
   ]
 }
