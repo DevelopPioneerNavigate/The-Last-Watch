@@ -384,7 +384,7 @@ def read_manuscript():
 
     chapter_count = len(re.findall(r"(?m)^# CHAPTER \w+", raw))
     words = len(re.findall(r"\b[\w’'-]+\b", raw))
-    if chapter_count != 13 or "# EPILOGUE" not in raw or words < 31000 or len(included) < 23:
+    if chapter_count != 13 or "# EPILOGUE" not in raw or words < 36000 or len(included) < 27:
         raise SystemExit(f"Manuscript incomplete: {chapter_count} chapters, {len(included)} scenes, {words} words")
     return raw, words, chapter_count, len(included)
 
