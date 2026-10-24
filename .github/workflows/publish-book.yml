@@ -49,13 +49,13 @@ jobs:
           from pypdf import PdfReader
           path = Path("books/The_Last_Watch_Extended_Edition.pdf")
           reader = PdfReader(str(path))
-          assert len(reader.pages) >= 175, f"Unexpectedly short expanded PDF: {len(reader.pages)} pages"
+          assert len(reader.pages) >= 215, f"Unexpectedly short expanded PDF: {len(reader.pages)} pages"
           assert not reader.is_encrypted
           assert "Diesel" in (reader.metadata.author or ""), "Missing Diesel author credit"
           alltext = "\n".join(p.extract_text() or "" for p in reader.pages)
-          for phrase in ("THE LAST WATCH", "CHAPTER ONE", "CHAPTER THIRTEEN", "EPILOGUE", "THE END", "THE SHIP THAT BREATHES", "THE WEATHER HAS NO ALLIES", "THE HEARING ROOM", "THE VOICES AT HOME", "THE LAST MANIFEST", "THE PEOPLE WE HAD PROMISED", "THE FIRST CROSSING", "THE SILENT QUARTER", "THE FISHERMAN", "THE PIER AT REYKJAV"):
+          for phrase in ("THE LAST WATCH", "CHAPTER ONE", "CHAPTER THIRTEEN", "EPILOGUE", "THE END", "THE SHIP THAT BREATHES", "THE WEATHER HAS NO ALLIES", "THE HEARING ROOM", "THE VOICES AT HOME", "THE LAST MANIFEST", "THE PEOPLE WE HAD PROMISED", "THE FIRST CROSSING", "THE SILENT QUARTER", "THE FISHERMAN", "THE PIER AT REYKJAV", "WHAT THE ORDERS DID NOT SAY", "BENEATH AURORA", "BEFORE THE SECOND SALVO", "THE COLD HOURS"):
               assert phrase in alltext, f"Missing expected section: {phrase}"
-          assert len(alltext) > 190000, f"Expanded PDF text extraction too short: {len(alltext)} chars"
+          assert len(alltext) > 225000, f"Expanded PDF text extraction too short: {len(alltext)} chars"
           assert int(reader.pages[0].mediabox.width) == 432 and int(reader.pages[0].mediabox.height) == 648, "Unexpected trim size"
           print(f"Validated {len(reader.pages)} pages and {len(alltext):,} extracted characters.")
           PY
@@ -75,9 +75,22 @@ jobs:
           git add books/The_Last_Watch_Extended_Edition.pdf
           if ! git diff --cached --quiet; then
             git commit -m "book: publish refreshed The Last Watch PDF"
-            git fetch origin main
-            git rebase origin/main
-            git push origin HEAD:main
+            # The source may advance during PDF rendering. Rebase and retry
+            # publication without forcing another contributor's branch history.
+            pushed=0
+            for attempt in 1 2 3 4; do
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then
+                pushed=1
+                break
+              fi
+              echo "Publication push raced with a new commit (attempt $attempt); retrying"
+            done
+            if [ "$pushed" -ne 1 ]; then
+              echo "Unable to publish the verified PDF without overwriting remote history"
+              exit 1
+            fi
           else
             echo "The published PDF is already current."
           fi
