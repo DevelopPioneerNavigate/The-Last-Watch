@@ -12,15 +12,15 @@ The illustrations are committed as real JPEG files and reproduced by GitHub Acti
 
 | HMS Cutlass: Still Fighting | The Children of Aurora |
 |---|---|
-| ![Cutlass after the strike](16_cutlass_crippled_bridge.jpg) | ![A child being comforted aboard Aurora](17_aurora_child_and_nurse.jpg) |
+| ![Cutlass after the strike](../../assets/cinematic/16_cutlass_crippled_bridge.jpg) | ![A child being comforted aboard Aurora](../../assets/cinematic/17_aurora_child_and_nurse.jpg) |
 
 | Remembrance | The Watchkeepers' Book |
 |---|---|
-| ![A sailor salutes at a memorial](18_memorial_watch.jpg) | ![Ramirez's recovered watchkeeping notebook](19_ramirez_watchbook.jpg) |
+| ![A sailor salutes at a memorial](../../assets/cinematic/18_memorial_watch.jpg) | ![Ramirez's recovered watchkeeping notebook](../../assets/cinematic/19_ramirez_watchbook.jpg) |
 
 | Raven One | Liv and Vale's homecoming |
 |---|---|
-| ![Raven One's helicopter](../../assets/cinematic/12_raven_one.jpg) | ![Liv shows Commander Vale a drawing at a naval memorial](20_liv_and_vale_remembrance.jpg) |
+| ![Raven One's helicopter](../../assets/cinematic/12_raven_one.jpg) | ![Liv shows Commander Vale a drawing at a naval memorial](../../assets/cinematic/20_liv_and_vale_remembrance.jpg) |
 
 ## Exact manuscript placement
 
