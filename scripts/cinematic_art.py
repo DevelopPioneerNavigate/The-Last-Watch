@@ -133,6 +133,11 @@ def draw_cinematic_cover(canvas, entry, serif_bold, sans_bold):
         return False
     canvas.saveState()
     _cover_photo(canvas, entry["path"])
+    if entry.get("prelettered"):
+        # Artwork already bears the title, author and imprint: do not conceal it
+        # beneath an additional typography overlay.
+        canvas.restoreState()
+        return True
     canvas.setFillColor(colors.Color(0.005, .018, .04, alpha=.75))
     canvas.rect(0, PAGE_H - 270, PAGE_W, 270, fill=1, stroke=0)
     canvas.setFillColor(colors.HexColor("#d6bb80"))
