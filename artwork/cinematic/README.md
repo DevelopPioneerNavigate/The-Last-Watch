@@ -6,15 +6,15 @@ This directory is the publishing contract for **The Last Watch** full-color, pho
 
 ### Current repository state
 
-- [x] Ten images mapped to exact scenes and cover in 'manifest.json'.
-- [x] 'scripts/cinematic_art.py' verifies every SHA-256 digest and extracts the archive safely.
-- [x] 'scripts/build_book.py' replaces the basic vector-only cover and inserts full-page cinematic images at matching narrative boundaries when the archive is present.
-- [x] GitHub Actions rebuilds on artwork changes and verifies at least ten image-bearing PDF pages before publication.
-- [ ] The **ZIP binary itself needs to be committed to this folder**. Until then GitHub retains the earlier vector-only edition, rather than claiming uncommitted artwork is included.
+- [x] Eight cinematic JPEG files are **already committed directly**, using 'committed_manifest.json'. One is reused for the cover and first crossing, giving **nine full-color PDF image pages**.
+- [x] The [published 471-page PDF](../../books/The_Last_Watch_Extended_Edition.pdf) contains these real embedded image assets.
+- [x] The publisher validates their SHA-256 checksums and scene locations.
+- [x] The optional expanded ZIP source contains **ten distinct high-quality images**, with an additional Raven One helicopter plate and Aurora refugee-lounge plate, ready to become the next version.
+- [ ] The optional ZIP is not committed yet. Its absence **does not mean the current book is unillustrated**.
 
 ### Publish the prepared cinematic images in one upload
 
-Open this folder on GitHub, select **Add file → Upload files**, select the supplied 'The_Last_Watch_Cinematic_Plates.zip', and commit it to 'main'.
+To switch to the expanded ten-image pack, open this folder on GitHub, select **Add file → Upload files**, select the supplied 'The_Last_Watch_Cinematic_Plates.zip', and commit it to 'main'.
 
 **Do not extract or rename the ZIP.** The publisher looks for the exact path:
 
