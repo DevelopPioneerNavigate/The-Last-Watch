@@ -12,13 +12,13 @@ When a future North Atlantic war breaks out, Vale's destroyer and the British fr
 ### [Download the PDF book](books/The_Last_Watch_Extended_Edition.pdf)
 
 **Current published build:**
-- **42,004 words**
-- **251 printed pages**
+- **46,958 words**
+- **282 printed pages**
 - **13 chapters + prologue + epilogue**
-- **31 integrated scenes** featuring richer tactical, engineering, rescue, crew-life and aftermath sequences
-- Approximately **4.4–5.4 hours** of narration, depending on speaking pace
+- **35 integrated scenes** featuring richer tactical, engineering, rescue, crew-life and aftermath sequences
+- Approximately **5.0–6.0 hours** of narration, depending on speaking pace
 
-The PDF is typeset at **6 × 9 inches**, with a naval-themed vector cover, **nine original illustrated chapter plates**, running headers, page numbers and a table of contents.
+The PDF is typeset at **6 × 9 inches**, with a naval-themed vector cover, **eleven original illustrated chapter plates**, running headers, page numbers and a table of contents.
 
 If the PDF link is missing after a new commit, check the [Publish book PDF workflow](.github/workflows/publish-book.yml) and its downloadable artifact. GitHub Actions rebuilds and commits the verified PDF when the source changes.
 
@@ -26,11 +26,11 @@ If the PDF link is missing after a new commit, check the [Publish book PDF workf
 
 **The Last Watch** is **written by Diesel**, published under the **DPN Novels** name. The PDF title page, metadata, cover treatment and running headers reflect this credit.
 
-The current GitHub PDF also includes **nine original print-friendly vector chapter illustrations** (stormship, convoy formation, rescue craft, radar, aircraft wreckage, uncertain fleet horizon, machinery fire, Iceland harbor, and memorial). Separate cinematic concept illustrations generated during development are not yet embedded as raster assets in the GitHub edition; the vector plates are included in the reproducible book build.
+The current GitHub PDF also includes **eleven original print-friendly vector chapter illustrations** (stormship, convoy formation, rescue craft, radar, aircraft wreckage, uncertain fleet horizon, machinery fire, midnight escort, Iceland harbor, memorial, and Vale's letter). Separate cinematic concept illustrations generated during development are not yet embedded as raster assets in the GitHub edition; the vector plates are included in the reproducible book build.
 
 ## What's new in the expanded edition
 
-The original story was approximately 9,800 words. This revision has grown to more than 42,000 words, with twelve additional scenes across the latest three writing passes and substantial new material throughout:
+The original story was approximately 9,800 words. This revision has grown to more than 46,000 words, with sixteen additional scenes across the latest four writing passes and substantial new material throughout:
 
 | Area | Expanded narrative |
 |---|---|
@@ -70,13 +70,22 @@ The original story was approximately 9,800 words. This revision has grown to mor
   
 This release includes **two additional illustrated plates** and a publishing-workflow repair that rebuilds the PDF against the latest source rather than attempting to merge competing generated PDFs.
 
+### Latest installment — Voices across the fleet
+
+- **The Voice from Hawthorne** — Vale confronts the uncertain fate of his friend Matthew Hayes and the consequences of a wider naval campaign.
+- **The Unwritten Map** — Nadia Farouk exposes how repeated reports can create misleading confidence in an incomplete fleet picture.
+- **The Corridor of Lights** — USS *Jefferson* and Norway's *Fenrir* reach the battered convoy and help carry the defensive burden.
+- **The First Ledger** — Vale begins documenting the true cost of the battle and writes the opening words of his private memoir.
+
+This release adds two print-ready chapter illustrations (midnight escort and letter), bringing the reproducible edition to **eleven vector plates**. The full-color cinematic development illustrations remain separate artwork; they have not yet been inserted as raster files into the published PDF.
+
 ## Read and develop the manuscript
 
 | Location | Contents |
 |---|---|
 | [Part I](manuscript/part-01.md) | Prologue, chapters 1–7 with scene references |
 | [Part II](manuscript/part-02.md) | Chapters 8–13 and epilogue |
-| [Expanded scenes](manuscript/scenes/) | Thirty-one standalone insert scenes, integrated by the PDF builder |
+| [Expanded scenes](manuscript/scenes/) | Thirty-five standalone insert scenes, integrated by the PDF builder |
 | [Story Bible](STORY_BIBLE.md) | Crew biographies, vessels, continuity rules and chronological battle events |
 | [PDF builder](scripts/build_book.py) | Book-layout generator and scene compiler |
 | [Manuscript tests](tests/test_manuscript.py) | Checks scene inclusion, chronology and narrative integrity |
@@ -97,7 +106,7 @@ python scripts/build_book.py
 
 The finished book is written to: **books/The_Last_Watch_Extended_Edition.pdf**
 
-Every manuscript or publisher change triggers GitHub Actions. The build must pass source-continuity tests and PDF checks, including a 215-page minimum, extractable text, key chapters/scenes, and 6 × 9 trim size, before the new PDF is published.
+Every manuscript or publisher change triggers GitHub Actions. The build must pass source-continuity tests and PDF checks, including a 275-page minimum, extractable text, key chapters/scenes, and 6 × 9 trim size, before the new PDF is published.
 
 ## Next editorial milestone: a complete full-length novel
 
