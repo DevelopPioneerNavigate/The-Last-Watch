@@ -419,6 +419,8 @@ She studied me for a moment.
 
 She nodded as though that was the answer she wanted.
 
+{{scene:19-a-longer-kind-of-dark.md}}
+
 At 2311 the acoustic contact faded. We did not announce that the submarine had gone. We had no way to know. We maintained the required watches and moved west through black water while the sea pounded the hull.
 
 For the first time in many hours, no one attacked us.
