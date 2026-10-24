@@ -49,13 +49,14 @@ Commander Daniel Vale commands the fictional guided-missile destroyer USS Norths
 - **Sofia Reed:** Meridian's captain.
 - **Anders Nygaard:** Fisherman who rescues distressed enemy sailors.
 - **Matthew Hayes:** Commander of Hawthorne, Academy friend of Vale, survives.
+- **Rachel Park:** Commander of relief destroyer USS Jefferson; takes over an assigned portion of escort responsibility near Iceland. Distinct from Eileen Ward.
 - **Sofia Ramirez:** Elena's daughter, nine in 2037, ten a year later.
 - **Ingrid Voss:** Volunteer teacher aboard Aurora, helps eighty-four frightened children and communicates with Vale.
 - **Liv:** Young evacuee aboard Aurora who draws her destroyed home with a red crayon; appears in the embarkation flashback.
 
 ## Added narrative scenes
 
-The expanded edition now incorporates **31 in-line scenes**. The newest scenes cover the possible American aircraft losses, the damaged HMS Cutlass and Commander Eleanor Shaw's leadership, an unidentified surface contact after Northstar's offensive engagement, and Captain Eileen Ward's visit to Vale after arrival. The original 13 numbered chapters and established outcomes remain in canon.
+The expanded edition now incorporates **35 in-line scenes**. The four latest scenes deepen Vale's relationship with Hawthorne captain Matthew Hayes, Farouk's verification of the regional naval picture, the arrival of American and Norwegian escorts west of Iceland, and Vale's first written command account after the memorial. The original 13 numbered chapters and established outcomes remain in canon.
 
 ## Chronology
 
@@ -76,9 +77,11 @@ The expanded edition now incorporates **31 in-line scenes**. The newest scenes c
 | 0642 | Vale speaks with Aurora's schoolteacher, Ingrid Voss, about frightened children |
 | 0712 | Kestrel sends distress traffic |
 | 0740 | Report of Hawthorne damage |
+| 0756 | Vale reflects on his friend Matthew Hayes and the wider fleet's losses |
 | 0801 | Nygaard commits Sigrid to the dangerous rescue of Kestrel's sailors |
 | 0845 | Aircraft wreckage remains unidentified; Vale records uncertain losses without naming an aircraft or crew |
 | 0858 | Communications interference and false command message |
+| 0909 | Farouk distinguishes independent observations from repeated, unverified reports |
 | 0919 | Idris, Farouk, and Bell review uncertain signs of a second attack |
 | 0934 | Second missile attack |
 | ~0941–0954 | Cutlass damaged; convoy defended |
@@ -94,11 +97,13 @@ The expanded edition now incorporates **31 in-line scenes**. The newest scenes c
 | 1908 | Crew psychological recovery and Aurora's medical consultation during the storm |
 | 2218–2311 | Possible submarine contact, eventually fades; 2251 crew midwatch |
 | Nov 19, 1832 | Friendly aircraft locates convoy |
+| 1941 | USS Jefferson (Rachel Park) and Norway's Fenrir support convoy relief |
 | 2241 | Lights of Iceland seen |
 | Nov 20, 0915 | Northstar alongside |
 | 1002 | Icelandic harbor liaison and Liv's thank-you drawing |
 | 1138 | Eileen Ward visits Vale aboard Northstar carrying crew names and a recovered wheelhouse key ring |
 | Nov 20 | Memorial for Ramirez |
+| 1916 | Vale writes a first factual command report and begins his private memoir |
 | Three months later | Battle inquiry |
 | One year later | Letters, visit with survivors and family |
 | Five years later | Retirement reflections |
