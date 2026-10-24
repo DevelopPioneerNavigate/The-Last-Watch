@@ -43,8 +43,36 @@ def activate_cinematic_art():
     if len(entries) < 10 or len({x["anchor"] for x in entries}) != len(entries):
         raise ValueError("Cinematic manifest must have at least ten unique placements")
     if not ARCHIVE.is_file():
+        # Production fallback: source-controlled individual cinematic JPEGs.
+        # These files are already committed, so no external image host or ZIP
+        # is needed to reproduce the PDF in GitHub Actions.
+        direct_path = ART / "committed_manifest.json"
+        if direct_path.is_file():
+            direct = json.loads(direct_path.read_text(encoding="utf-8"))
+            direct_entries = direct.get("assets", [])
+            if len(direct_entries) < 9:
+                raise ValueError("Committed cinematic manifest must list cover and eight scenes")
+            if len({e["anchor"] for e in direct_entries}) != len(direct_entries):
+                raise ValueError("Duplicate committed cinematic scene anchors")
+            if sum(e["anchor"] == "cover" for e in direct_entries) != 1:
+                raise ValueError("Exactly one committed cinematic cover required")
+            for e in direct_entries:
+                filename = e["file"]
+                if Path(filename).name != filename or not filename.lower().endswith((".jpg", ".jpeg", ".png")):
+                    raise ValueError(f"Unsafe committed cinematic filename: {filename}")
+                target = ART / filename
+                if not target.is_file():
+                    raise FileNotFoundError(f"Missing committed cinematic image: {target}")
+                raw = target.read_bytes()
+                if not 25_000 <= len(raw) <= 14_000_000:
+                    raise ValueError(f"Invalid size for cinematic image: {target}")
+                if hashlib.sha256(raw).hexdigest() != e["sha256"]:
+                    raise ValueError(f"Committed cinematic image hash mismatch: {target}")
+                e["path"] = target
+            print(f"CINEMATIC ART ACTIVE: verified {len(direct_entries)} committed cover/scene placements")
+            return direct_entries
         if os.environ.get("DPN_REQUIRE_CINEMATIC") == "1":
-            raise FileNotFoundError(f"Missing cinematic source archive: {ARCHIVE}")
+            raise FileNotFoundError("No verified cinematic image pack or committed images")
         return []
 
     PLATES.mkdir(parents=True, exist_ok=True)
