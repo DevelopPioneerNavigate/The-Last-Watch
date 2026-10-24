@@ -104,10 +104,14 @@ def main() -> None:
     prose_indices = [i for i in range(1, pdf.page_count)
                      if i not in art_page_ids]
     assert len(prose_indices) > 200, "Cannot identify themed prose pages"
-    indices = [prose_indices[0], prose_indices[len(prose_indices)//2],
-               prose_indices[-1]]
-    for index in indices:
-        pix = pdf[index].get_pixmap(matrix=fitz.Matrix(1, 1), alpha=False)
+    # Verify ALL prose pages, not only three examples. Each rendered clip is
+    # tiny, keeping the full illustrated novel practical to proof in CI.
+    assert len(prose_indices) >= 400, "Expected hundreds of themed prose pages"
+    for index in prose_indices:
+        pix = pdf[index].get_pixmap(
+            matrix=fitz.Matrix(1, 1),
+            clip=fitz.Rect(0, 0, 45, 302),
+            alpha=False)
         outer, reading, header = (pix.pixel(6, 300), pix.pixel(43, 300),
                                   pix.pixel(16, 12))
         assert all(abs(v-w) <= 3 for v,w in zip(outer[:3], (20, 24, 32))), (
@@ -122,7 +126,7 @@ def main() -> None:
     pdf.close()
     assert SOURCE.stat().st_size > 1_000_000
     print(f"Verified {len(entries)} actual embedded cinematic artworks in the ONE official PDF, {SOURCE.name}.")
-    print(f"Verified DPN graphite/red/steel theme on 3 representative reading pages, including page {proof_page+1}.")
+    print(f"Verified DPN graphite/red/steel theme on ALL {len(prose_indices)} reading pages (sample proof page {proof_page+1}).")
     print("Front cover proof: books/proofs/New_Cinematic_Cover_Proof.jpg")
     print("Interior page proof: books/proofs/DPN_Interior_Page_Proof.jpg")
     print("Illustration contact sheet: books/proofs/Cinematic_Art_Contact_Sheet.jpg")
