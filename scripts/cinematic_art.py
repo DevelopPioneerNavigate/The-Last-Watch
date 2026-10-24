@@ -61,7 +61,16 @@ def activate_cinematic_art():
                 filename = e["file"]
                 if Path(filename).name != filename or not filename.lower().endswith((".jpg", ".jpeg", ".png")):
                     raise ValueError(f"Unsafe committed cinematic filename: {filename}")
-                target = ART / filename
+                # Image assets may reside in the original artwork folder or in
+                # the separately committed cinematic asset collection.
+                asset_path = e.get("source_path")
+                if asset_path:
+                    parts = Path(asset_path).parts
+                    if len(parts) != 3 or parts[:2] != ("assets", "cinematic") or parts[2] != filename:
+                        raise ValueError(f"Unsafe cinematic asset path: {asset_path}")
+                    target = ROOT / asset_path
+                else:
+                    target = ART / filename
                 if not target.is_file():
                     raise FileNotFoundError(f"Missing committed cinematic image: {target}")
                 raw = target.read_bytes()
