@@ -297,6 +297,8 @@ Sometimes a commanding officer must give orders. Sometimes all he can do is refu
 
 {{scene:10-the-people-who-were-not-on-the-screen.md}}
 
+{{scene:37-the-weight-of-water.md}}
+
 Back in CIC, I reviewed the day's events. The enemy had struck in layers: distraction, underwater attack, airborne missiles, information interference, surface pressure, and another suspected torpedo. Our ship had answered each threat, but the true achievement belonged to sailors in spaces the tactical plots never showed.
 
 The damage-control crews did not see missiles on a display. They saw smoke. The engineers did not see the grand strategy. They saw alarms, pressure gauges and damaged equipment. The medics did not know whether we were winning. They saw a wounded man and tried to save him.
@@ -432,6 +434,8 @@ For the first time in many hours, no one attacked us.
 That silence felt like a gift I did not quite trust.
 
 # CHAPTER TWELVE — THE LIGHTS OF ICELAND
+
+{{scene:38-the-morning-without-signals.md}}
 
 **19 November 2037 — 1832 hours**
 
@@ -616,6 +620,8 @@ Caledonia never returned. Her survivors carried memories that no port inspection
 The ocean kept the rest.
 
 {{scene:14-the-hearing.md}}
+
+{{scene:39-the-book-of-names.md}}
 
 {{scene:15-the-voices-at-home.md}}
 
