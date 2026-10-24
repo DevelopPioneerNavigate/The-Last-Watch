@@ -107,6 +107,8 @@ def draw_cinematic_cover(canvas, entry, serif_bold, sans_bold):
     canvas.setFont(serif_bold, 36)
     canvas.drawCentredString(PAGE_W/2, PAGE_H - 165, "THE LAST")
     canvas.drawCentredString(PAGE_W/2, PAGE_H - 213, "WATCH")
+    canvas.setFillColor(colors.Color(0.005, .018, .04, alpha=.78))
+    canvas.rect(0, 22, PAGE_W, 64, fill=1, stroke=0)
     canvas.setFont(sans_bold, 12)
     canvas.setFillColor(colors.HexColor("#f1d4a0"))
     canvas.drawCentredString(PAGE_W/2, 56, "WRITTEN BY DIESEL  /  DPN NOVELS")
@@ -138,7 +140,19 @@ class CinematicPage(Flowable):
         c = self.canv
         c.saveState()
         # A photo-page flowable is located at the exact 0,0 plate frame.
-        _cover_photo(c, self.entry["path"])
+        im = ImageReader(str(self.entry["path"]))
+        iw, ih = im.getSize()
+        if iw / ih > .90:
+            # Wide paintings: preserve the complete helicopter / damaged ship
+            # instead of cropping away the subject's bow or tail.
+            c.setFillColor(colors.HexColor("#06101d"))
+            c.rect(0, 0, PAGE_W, PAGE_H, fill=1, stroke=0)
+            scale = min(PAGE_W / iw, (PAGE_H - 112) / ih)
+            dw, dh = iw * scale, ih * scale
+            c.drawImage(im, (PAGE_W - dw)/2, 105 + (PAGE_H - 112 - dh)/2,
+                        width=dw, height=dh, mask="auto")
+        else:
+            _cover_photo(c, self.entry["path"])
         c.setFillColor(colors.Color(.009, .02, .04, alpha=.78))
         c.rect(0, 0, PAGE_W, 105, fill=1, stroke=0)
         c.setStrokeColor(colors.HexColor("#b69970"))
