@@ -61,7 +61,7 @@ Commander Daniel Vale commands the fictional guided-missile destroyer USS Norths
 
 ## Added narrative scenes
 
-The expanded edition now incorporates **47 in-line scenes**. The latest four explore the second missile attack's overloaded combat-information center, Samira Brooks's aviation detachment as allied relief approaches, Vale's first personal call with Rebecca and Ethan after Iceland, and Ethan's decision two years later to pursue civilian emergency-systems engineering. The 13 numbered chapters, prologue, epilogue and established outcomes remain canon.
+The expanded edition incorporates **52 in-line scenes**. The newest additions give tanker captain Sofia Reed a pre-battle voice; show Lieutenant Armitage and Commander Eleanor Shaw sustaining HMS Cutlass after the strike; follow corpsman Leah Okafor and the crew's recovery needs; and develop postwar correspondence with a rescued Kestrel sailor and Vale's friendship with wounded captain Edward Mallory. Ethan remains committed to civilian emergency engineering in the epilogue. The 13 chapters, prologue, epilogue and established outcomes remain canon.
 
 ## Chronology
 
@@ -69,6 +69,7 @@ The expanded edition now incorporates **47 in-line scenes**. The latest four exp
 |---|---|
 | Nov 13 | Convoy embarkation in Norway; Vale meets Lindholm, Ward, Sofia Reed and Liv |
 | Nov 15 | Convoy departure, first coordination meeting, and a controlled damage-control drill |
+| Nov 16, 2017 hours | Sofia Reed discusses Meridian's fuel cargo and her crew's obligations with Vale |
 | Nov 17, evening | Vale and Mara review incomplete threat orders and the crew's readiness |
 | Nov 18, 0217 | First uneasy watch on Northstar |
 | 0252 | Quiet bridge watch with Bishop, Mercer, and a delayed family message |
@@ -93,6 +94,7 @@ The expanded edition now incorporates **47 in-line scenes**. The latest four exp
 | 0934 | Second missile attack |
 | 0936–0940 | Northstar's combat-information center handles twelve inbound tracks; Vale and Idris coordinate with Cutlass before the strike |
 | ~0941–0954 | Cutlass damaged; convoy defended |
+| 0958–1006 | Armitage and Shaw keep Cutlass's damaged bridge operating and resolve a possible flooding indication |
 | 1008 | Shaw updates Vale on Cutlass's fires, casualties, and Caledonia survivors |
 | 1023 | Northstar evaluates and authorizes offensive strike |
 | 1036–1044 | New unidentified surface contact; no unjustified hostile identification or casualty claim |
@@ -101,6 +103,7 @@ The expanded edition now incorporates **47 in-line scenes**. The latest four exp
 | 1116 | Ramirez reached on communications |
 | 1142 | Ramirez recovered unresponsive |
 | 1212 | Ramirez declared deceased |
+| 1312 | Okafor establishes private space and recovery arrangements for injured and distressed crew |
 | 1326 | Navarro and Vale review damaged engineering spaces and the human toll of the rescue |
 | 1546 | Weather diversion underway |
 | 1908 | Crew psychological recovery and Aurora's medical consultation during the storm |
@@ -120,10 +123,12 @@ The expanded edition now incorporates **47 in-line scenes**. The latest four exp
 | Nov 20 | Memorial for Ramirez |
 | 1916 | Vale writes a first factual command report and begins his private memoir |
 | Three months later | Battle inquiry |
+| Four months later | Vale receives and answers a screened letter from Kestrel survivor Petar Vuković |
+| Seven months later | Edward Mallory visits Vale in Norfolk, reflecting on Cutlass's officers and losses |
 | Ten months later | Rios visits Vale with Ramirez's qualification notes and talks about his recovery |
 | One year later | Letters, visit with survivors and family |
 | Two years later | Ethan, now eighteen, chooses civilian emergency-power engineering instead of a naval career |
-| Five years later | Retirement reflections |
+| Five years later | Retirement reflections; Ethan is an engineering student pursuing emergency-power systems, not a naval commission |
 
 ## Editorial continuity rules
 
@@ -142,7 +147,7 @@ The expanded edition now incorporates **47 in-line scenes**. The latest four exp
 
 Canonical narrative files: manuscript/part-01.md and manuscript/part-02.md.
 Additional scenes: manuscript/scenes/*.md, inserted via scene directives in the canonical parts.
-Compiled PDF: books/The_Last_Watch_Extended_Edition.pdf (seven original vector chapter illustrations).
+Compiled PDF: books/The_Last_Watch_Extended_Edition.pdf (fifteen original vector chapter illustrations).
 Build: python scripts/build_book.py.
 Checks: python -m unittest discover -s tests -v.
 The published PDF filename stays unchanged so existing reader links remain valid.
