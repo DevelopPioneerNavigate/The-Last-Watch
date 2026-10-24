@@ -268,10 +268,15 @@ def make_book(raw, word_count):
     story.append(PageBreak())
 
     started = False
+    section_seen = False
     for block in paragraphs_of(raw):
+        if block.startswith("# THE LAST WATCH") or block.startswith("## Extended Manuscript"):
+            continue
         if block.startswith("# PROLOGUE") or block.startswith("# CHAPTER ") or block.startswith("# EPILOGUE"):
             started = True
-            story.append(PageBreak())
+            if section_seen:
+                story.append(PageBreak())
+            section_seen = True
             story.append(Paragraph(inline_md(block[2:]), ST["heading"]))
             continue
         if not started:
