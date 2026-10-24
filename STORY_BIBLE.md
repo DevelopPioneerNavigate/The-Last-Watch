@@ -53,14 +53,16 @@ Commander Daniel Vale commands the fictional guided-missile destroyer USS Norths
 
 ## Added narrative scenes
 
-The expanded edition now incorporates **19 in-line scenes**. Newly added are the Norwegian convoy embarkation, Raven One's early search, the lost cargo manifest after Caledonia's sinking, and the 2251 midwatch with Ramirez's qualification notes. The original 15 scenes and the 13 numbered chapters remain in canon.
+The expanded edition now incorporates **23 in-line scenes**. The latest installments add Northstar's first full convoy departure, an uneasy bridge watch at 0252, Nygaard's civilian rescue decisions, and the Icelandic harbor arrival from Vale's perspective. The previous 19 scenes and the 13 numbered chapters remain in canon.
 
 ## Chronology
 
 | Date/time | Event |
 |---|---|
 | Nov 13 | Convoy embarkation in Norway; Vale meets Lindholm, Ward, Sofia Reed and Liv |
+| Nov 15 | Convoy departure, first coordination meeting, and a controlled damage-control drill |
 | Nov 18, 0217 | First uneasy watch on Northstar |
+| 0252 | Quiet bridge watch with Bishop, Mercer, and a delayed family message |
 | 0306 | Sonar detects a possible submarine |
 | 0352 | Raven One conducts an uncertain helicopter search |
 | 0402 | Submarine threat warning; Raven One operating |
@@ -70,6 +72,7 @@ The expanded edition now incorporates **19 in-line scenes**. Newly added are the
 | 0603 | First missile engagement |
 | 0712 | Kestrel sends distress traffic |
 | 0740 | Report of Hawthorne damage |
+| 0801 | Nygaard commits Sigrid to the dangerous rescue of Kestrel's sailors |
 | 0858 | Communications interference and false command message |
 | 0934 | Second missile attack |
 | ~0941–0954 | Cutlass damaged; convoy defended |
@@ -84,6 +87,7 @@ The expanded edition now incorporates **19 in-line scenes**. Newly added are the
 | Nov 19, 1832 | Friendly aircraft locates convoy |
 | 2241 | Lights of Iceland seen |
 | Nov 20, 0915 | Northstar alongside |
+| 1002 | Icelandic harbor liaison and Liv's thank-you drawing |
 | Nov 20 | Memorial for Ramirez |
 | Three months later | Battle inquiry |
 | One year later | Letters, visit with survivors and family |
@@ -106,7 +110,7 @@ The expanded edition now incorporates **19 in-line scenes**. Newly added are the
 
 Canonical narrative files: manuscript/part-01.md and manuscript/part-02.md.
 Additional scenes: manuscript/scenes/*.md, inserted via scene directives in the canonical parts.
-Compiled PDF: books/The_Last_Watch_Extended_Edition.pdf.
+Compiled PDF: books/The_Last_Watch_Extended_Edition.pdf (seven original vector chapter illustrations).
 Build: python scripts/build_book.py.
 Checks: python -m unittest discover -s tests -v.
 The published PDF filename stays unchanged so existing reader links remain valid.
