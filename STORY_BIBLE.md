@@ -50,13 +50,16 @@ Commander Daniel Vale commands the fictional guided-missile destroyer USS Norths
 - **Anders Nygaard:** Fisherman who rescues distressed enemy sailors.
 - **Matthew Hayes:** Commander of Hawthorne, Academy friend of Vale, survives.
 - **Rachel Park:** Commander of relief destroyer USS Jefferson; takes over an assigned portion of escort responsibility near Iceland. Distinct from Eileen Ward.
+- **Freyja Einarsson:** Icelandic hospital relief coordinator, verifies substitute medical equipment after Caledonia's loss.
+- **Ingrid Halvorsen:** Maritime operations liaison preparing later civilian movement; consults Vale, Farouk, Mara and Alvarez after LANTERN.
+- **Henrik Solberg:** Atlas Mariner's civilian captain; protects his crew during storm-induced cargo securing trouble.
 - **Sofia Ramirez:** Elena's daughter, nine in 2037, ten a year later.
 - **Ingrid Voss:** Volunteer teacher aboard Aurora, helps eighty-four frightened children and communicates with Vale.
 - **Liv:** Young evacuee aboard Aurora who draws her destroyed home with a red crayon; appears in the embarkation flashback.
 
 ## Added narrative scenes
 
-The expanded edition now incorporates **39 in-line scenes**. The newest scenes explore young helmsman Noah Ellis after Caledonia's sinking, the hazardous cleanup and accountability after Ramirez's death, the merchant captains' judgment during the morning after the storm, and Jacob Rios's healing ten months later. The original 13 numbered chapters and established outcomes remain in canon.
+The expanded edition now incorporates **43 in-line scenes**. The latest four explore Chief Bell and Priya Shah's possible second submarine track at 0321 on November 18; Atlas Mariner's storm-related cargo securing emergency during the night of November 19; verification of medical aid and missing Caledonia equipment at Reykjavík on November 20; and a new convoy's planning lessons after the LANTERN crossing. The 13 numbered chapters, prologue, epilogue and established outcomes remain canon.
 
 ## Chronology
 
@@ -68,6 +71,7 @@ The expanded edition now incorporates **39 in-line scenes**. The newest scenes e
 | Nov 18, 0217 | First uneasy watch on Northstar |
 | 0252 | Quiet bridge watch with Bishop, Mercer, and a delayed family message |
 | 0306 | Sonar detects a possible submarine |
+| 0321 | Shah notes potentially separate acoustic information; Bell preserves uncertainty before Raven One's flight |
 | 0352 | Raven One conducts an uncertain helicopter search |
 | 0402 | Submarine threat warning; Raven One operating |
 | 0411 | Caledonia torpedoed |
@@ -98,6 +102,7 @@ The expanded edition now incorporates **39 in-line scenes**. The newest scenes e
 | 1546 | Weather diversion underway |
 | 1908 | Crew psychological recovery and Aurora's medical consultation during the storm |
 | 2218–2311 | Possible submarine contact, eventually fades; 2251 crew midwatch |
+| Nov 19, 0224 | Atlas Mariner's loose deck cargo forces controlled convoy speed reductions during the storm |
 | Nov 19, 0610 | Merchant captains coordinate a weather-limited route amid delayed communications |
 | Nov 19, 1832 | Friendly aircraft locates convoy |
 | 1941 | USS Jefferson (Rachel Park) and Norway's Fenrir support convoy relief |
@@ -105,6 +110,8 @@ The expanded edition now incorporates **39 in-line scenes**. The newest scenes e
 | Nov 20, 0915 | Northstar alongside |
 | 1002 | Icelandic harbor liaison and Liv's thank-you drawing |
 | 1138 | Eileen Ward visits Vale aboard Northstar carrying crew names and a recovered wheelhouse key ring |
+| 1430 | Medical relief coordinator Freyja Einarsson and Ward reconcile lost Caledonia supplies and verified alternative generators |
+| 1655 | Captain Ingrid Halvorsen gathers LANTERN lessons for the next civilian convoy |
 | Nov 20 | Memorial for Ramirez |
 | 1916 | Vale writes a first factual command report and begins his private memoir |
 | Three months later | Battle inquiry |
