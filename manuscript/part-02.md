@@ -553,6 +553,8 @@ He disappeared into the waiting crowd.
 
 I watched until I could no longer see him.
 
+{{scene:23-the-pier-at-reykjavik.md}}
+
 Then I went below to prepare for the memorial service.
 
 {{scene:13-letters-never-sent.md}}
