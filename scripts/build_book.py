@@ -35,8 +35,10 @@ from reportlab.platypus import (
     TableStyle,
 )
 from reportlab.platypus.tableofcontents import TableOfContents
+from cinematic_art import activate_cinematic_art, cover_plate, draw_cinematic_cover, scene_plate, CinematicPage
 
 ROOT = Path(__file__).resolve().parents[1]
+CINEMATIC_ENTRIES = []
 OUT = ROOT / "books" / "The_Last_Watch_Extended_Edition.pdf"
 PAGE_W, PAGE_H = 6.0 * inch, 9.0 * inch
 NAVY = colors.HexColor("#10263e")
@@ -128,6 +130,7 @@ class NovelDoc(BaseDocTemplate):
         self.addPageTemplates([
             PageTemplate(id="Cover", frames=[cover_frame], onPage=draw_cover),
             PageTemplate(id="Body", frames=[body_frame], onPage=draw_body),
+            PageTemplate(id="Photo", frames=[cover_frame]),
         ])
         self.chapter_num = 0
 
@@ -149,6 +152,9 @@ class CoverSpacer(Flowable):
 
 def draw_cover(canvas, doc):
     canvas.saveState()
+    if draw_cinematic_cover(canvas, cover_plate(CINEMATIC_ENTRIES), SERIF_BOLD, SANS_BOLD):
+        canvas.restoreState()
+        return
     canvas.setFillColor(MIDNIGHT)
     canvas.rect(0, 0, PAGE_W, PAGE_H, fill=1, stroke=0)
     # A subtle horizon and sea, composed of vector shapes rather than a raster image.
@@ -541,6 +547,8 @@ def paragraphs_of(raw):
     return blocks
 
 def make_book(raw, word_count):
+    global CINEMATIC_ENTRIES
+    CINEMATIC_ENTRIES = activate_cinematic_art()
     story = []
     story.append(CoverSpacer())
     story.append(NextPageTemplate("Body"))
@@ -576,7 +584,7 @@ def make_book(raw, word_count):
             story.append(Paragraph(inline_md(block[2:]), ST["heading"]))
             chapter_idx += 1
             art_mode = {1: "watch", 2: "storm", 3: "convoy", 4: "rescue", 5: "radar", 6: "fisher", 7: "wreckage", 8: "salvo", 9: "horizon", 10: "fire", 11: "engine", 12: "night", 13: "harbor", 14: "memorial", 15: "letter"}.get(chapter_idx)
-            if art_mode:
+            if art_mode and not CINEMATIC_ENTRIES:
                 story.append(InkPlate(art_mode))
                 story.append(Spacer(1, 12))
             continue
@@ -586,6 +594,13 @@ def make_book(raw, word_count):
             story.append(Spacer(1, 13))
             continue
         if block.startswith("**") and block.endswith("**") and "\n" not in block:
+            plate = scene_plate(CINEMATIC_ENTRIES, block)
+            if plate:
+                story.append(NextPageTemplate("Photo"))
+                story.append(PageBreak())
+                story.append(CinematicPage(plate, SANS_BOLD, SANS))
+                story.append(NextPageTemplate("Body"))
+                story.append(PageBreak())
             story.append(Paragraph(inline_md(block), ST["intro"]))
             continue
         if block.startswith("> "):
