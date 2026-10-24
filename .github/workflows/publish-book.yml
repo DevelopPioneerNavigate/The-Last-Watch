@@ -45,12 +45,12 @@ jobs:
           from pypdf import PdfReader
           path = Path("books/The_Last_Watch_Extended_Edition.pdf")
           reader = PdfReader(str(path))
-          assert len(reader.pages) >= 100, f"Unexpectedly short expanded PDF: {len(reader.pages)} pages"
+          assert len(reader.pages) >= 130, f"Unexpectedly short expanded PDF: {len(reader.pages)} pages"
           assert not reader.is_encrypted
           alltext = "\n".join(p.extract_text() or "" for p in reader.pages)
-          for phrase in ("THE LAST WATCH", "CHAPTER ONE", "CHAPTER THIRTEEN", "EPILOGUE", "THE END", "THE SHIP THAT BREATHES", "THE WEATHER HAS NO ALLIES", "THE HEARING ROOM", "THE VOICES AT HOME"):
+          for phrase in ("THE LAST WATCH", "CHAPTER ONE", "CHAPTER THIRTEEN", "EPILOGUE", "THE END", "THE SHIP THAT BREATHES", "THE WEATHER HAS NO ALLIES", "THE HEARING ROOM", "THE VOICES AT HOME", "THE LAST MANIFEST", "THE PEOPLE WE HAD PROMISED"):
               assert phrase in alltext, f"Missing expected section: {phrase}"
-          assert len(alltext) > 110000, f"Expanded PDF text extraction too short: {len(alltext)} chars"
+          assert len(alltext) > 145000, f"Expanded PDF text extraction too short: {len(alltext)} chars"
           assert int(reader.pages[0].mediabox.width) == 432 and int(reader.pages[0].mediabox.height) == 648, "Unexpected trim size"
           print(f"Validated {len(reader.pages)} pages and {len(alltext):,} extracted characters.")
           PY
