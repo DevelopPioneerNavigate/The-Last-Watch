@@ -1,0 +1,72 @@
+name: Publish book PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "manuscript/**"
+      - "scripts/build_book.py"
+      - ".github/workflows/publish-book.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    name: Validate manuscript and publish PDF
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PDF build requirements
+        run: python -m pip install --disable-pip-version-check "reportlab>=4,<5" "pypdf>=5,<7"
+
+      - name: Build novel PDF
+        run: python scripts/build_book.py
+
+      - name: Check PDF integrity, narrative completeness and metadata
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from pypdf import PdfReader
+          path = Path("books/The_Last_Watch_Extended_Edition.pdf")
+          reader = PdfReader(str(path))
+          assert len(reader.pages) >= 25, f"Unexpectedly short PDF: {len(reader.pages)} pages"
+          assert not reader.is_encrypted
+          alltext = "\n".join(p.extract_text() or "" for p in reader.pages)
+          for phrase in ("THE LAST WATCH", "CHAPTER ONE", "CHAPTER THIRTEEN", "EPILOGUE", "THE END"):
+              assert phrase in alltext, f"Missing expected section: {phrase}"
+          assert len(alltext) > 45000, f"Text extraction too short: {len(alltext)} chars"
+          print(f"Validated {len(reader.pages)} pages and {len(alltext):,} extracted characters.")
+          PY
+
+      - name: Upload PDF as Actions artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: The-Last-Watch-Book-PDF
+          path: books/The_Last_Watch_Extended_Edition.pdf
+          if-no-files-found: error
+
+      - name: Commit published edition to repository
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add books/The_Last_Watch_Extended_Edition.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m "book: publish refreshed The Last Watch PDF"
+            git push
+          else
+            echo "The published PDF is already current."
+          fi
