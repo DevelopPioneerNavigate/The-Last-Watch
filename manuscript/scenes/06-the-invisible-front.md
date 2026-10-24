@@ -56,48 +56,6 @@ I returned to Combat, where Idris was discussing one of the doubtful aircraft re
 
 That was how a ship defended itself against bad information. Not by pretending its people were infallible, but by making disagreement an ordinary part of doing the job.
 
-Then the false message arrived ordering us to abandon the convoy.
-
-I read it and felt a brief, poisonous temptation.
-
-It would be easy to obey an order that promised escape from responsibility.
-
-If headquarters had truly directed us to turn southwest, the burden would belong to someone else. I could say that I had followed orders. I could leave the ferry and hope a different force would find her. I could sleep.
-
-That was what made the message so dangerous even before we identified it as false. It offered a tired captain exactly the permission he most wanted.
-
-Alvarez reported the authentication failure. We rejected the order and sought confirmation.
-
-Afterward, Mara remained beside me.
-
-"You looked at that one for a long time," she said.
-
-"I did."
-
-"Wanted it to be real?"
-
-For a second I considered lying.
-
-"Part of me did."
-
-She nodded.
-
-"Part of me too."
-
-I looked at her, surprised.
-
-"Why?"
-
-"Because if someone told us our responsibility had ended, we could stop carrying it."
-
-We let the words sit between us.
-
-Then she said, "But it hasn't."
-
-"No."
-
-We returned to our stations.
-
 Farouk issued a short watch advisory. Nothing dramatic: state the source, state confidence, avoid presenting incomplete data as fact, and escalate inconsistent information. I approved it.
 
 Modern war contains moments of terrifying spectacle. Missiles rising through cloud. Ships burning. Helicopters hovering above black waves.
