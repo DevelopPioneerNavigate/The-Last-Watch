@@ -9,9 +9,9 @@ When a future North Atlantic war breaks out, Vale's destroyer and the British fr
 
 ## Read the expanded edition
 
-### [Download the new cinematic PDF — October 24, 2026](books/The_Last_Watch_Cinematic_Illustrated_2026-10-24.pdf)
+### [Download the one official illustrated DPN edition](books/The_Last_Watch_Extended_Edition.pdf)
 
-[Preview the **actual printed cover**](books/proofs/New_Cinematic_Cover_Proof.jpg) · [View all 15 image pages as a contact sheet](books/proofs/Cinematic_Art_Contact_Sheet.jpg) · [Check the exact image page numbers](books/proofs/Cinematic_Pages.json)
+[Preview the **actual printed cover**](books/proofs/New_Cinematic_Cover_Proof.jpg) · [Preview the **DPN-themed interior**](books/proofs/DPN_Interior_Page_Proof.jpg) · [View all 15 image pages](books/proofs/Cinematic_Art_Contact_Sheet.jpg) · [Check exact image pages](books/proofs/Cinematic_Pages.json)
 
 **Current published build:**
 - **76,146 words**
@@ -24,9 +24,17 @@ The PDF is typeset at **6 × 9 inches**, with a **full-color cinematic cover and
 
 If the PDF link is missing after a new commit, check the [Publish book PDF workflow](.github/workflows/publish-book.yml) and its downloadable artifact. GitHub Actions rebuilds and commits the verified PDF when the source changes.
 
+## DPN-themed interior — single official PDF
+
+The original story, all 58 scenes, the cinematic Northstar cover and every photographic illustration remain unchanged. The former white reading pages are now **cool steel-gray inside an obsidian and gunmetal frame**, with **crimson rules, subtly repeated binary digits, miniature lightning geometry, and DPN Novels running headers and folios**. The body text stays dark, readable and in its existing layout. The front cover and full-page art retain their original image treatment.
+
+**One official output only:** `books/The_Last_Watch_Extended_Edition.pdf`. The dated duplicate PDF is retired and the verification pipeline produces only proof JPEGs/JSON, not a second book. Publication fails if committed cinematic assets are missing. The build renders representative prose pages to confirm the steel-gray field and dark header are actually in the published PDF.
+
+[See the actual DPN reading-page proof](books/proofs/DPN_Interior_Page_Proof.jpg) · [Download the one illustrated PDF](books/The_Last_Watch_Extended_Edition.pdf)
+
 ## Cinematic illustrated edition — now published
 
-**October 24 artwork upgrade:** The cover and five chapter illustrations have been replaced with the newly generated full-detail renderings, and the title-bearing cover is used unobstructed. A new PDF filename and proof images prevent confusion with an older cached download. The publishing pipeline verifies the exact committed JPEG bytes in the finished PDF and renders a preview of each photographic page.
+**October 24 artwork upgrade:** The cover and five chapter illustrations have been replaced with the newly generated full-detail renderings, and the title-bearing cover is used unobstructed. The one canonical PDF path is retained; proof images let you check the actual rendered cover, reading-page theme, and chapter art. The publishing pipeline verifies the exact committed JPEG bytes in the finished PDF and renders a preview of each photographic page.
 
 The current **481-page PDF** includes an original, full-color **USS Northstar DDG-148 cover** and **fourteen full-page cinematic scene illustrations**, embedded within the story at their narrative anchors. All 15 image placements are backed by real files committed to this GitHub repository and verified by SHA-256 before publishing.
 
