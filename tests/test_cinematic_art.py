@@ -37,6 +37,30 @@ class CinematicArtworkTests(unittest.TestCase):
             found = scene_plate(entries, "**" + item["anchor"] + " — TEST TIME**")
             self.assertEqual(found["file"], item["file"])
 
+    def test_full_bleed_pages_render_in_both_aspects(self):
+        """Exercise the actual page flowable before original ZIP upload."""
+        import tempfile
+        from PIL import Image as PILImage
+        from pypdf import PdfReader
+        from reportlab.platypus import BaseDocTemplate, Frame, PageTemplate
+        from cinematic_art import CinematicPage
+
+        with tempfile.TemporaryDirectory() as scratch:
+            for width, height in ((480, 720), (720, 480)):
+                image_path = Path(scratch) / f"sample-{width}.jpg"
+                PILImage.new("RGB", (width, height), (25, 65, 90)).save(image_path, "JPEG")
+                pdf_path = Path(scratch) / f"proof-{width}.pdf"
+                doc = BaseDocTemplate(str(pdf_path), pagesize=(432, 648))
+                frame = Frame(0, 0, 432, 648, leftPadding=0, rightPadding=0,
+                              topPadding=0, bottomPadding=0)
+                doc.addPageTemplates([PageTemplate(id="Photo", frames=[frame])])
+                entry = {"path": image_path, "title": "The Atlantic Watch",
+                         "caption": "Photo composition test, no layout cropping or overflow"}
+                doc.build([CinematicPage(entry, "Helvetica-Bold", "Helvetica")])
+                pdf = PdfReader(str(pdf_path))
+                self.assertEqual(len(pdf.pages), 1)
+                self.assertGreaterEqual(len(pdf.pages[0].images), 1)
+
     def test_no_partial_archive(self):
         # With no archive, the publisher legitimately uses its existing
         # vector edition. An archive, once uploaded, must pass full checks.
