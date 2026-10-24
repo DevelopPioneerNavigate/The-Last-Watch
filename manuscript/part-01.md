@@ -518,6 +518,8 @@ Raven One made a limited search during its return. Brooks reported no survivors 
 
 "Best order of the day, sir."
 
+{{scene:28-the-name-on-the-metal.md}}
+
 Our communications picture, meanwhile, had become unreliable. Data links dropped and returned. Reports showed inconsistent timestamps.
 
 {{scene:06-the-invisible-front.md}}
@@ -695,5 +697,7 @@ There was a long silence.
 Then Lindholm said, "We're not strangers anymore, Commander. Tell your sailors that."
 
 I promised I would.
+
+{{scene:29-the-ships-that-answered.md}}
 
 And looking around CIC at the exhausted faces, I made another promise I did not say aloud: I would spend everything our ship had before I willingly left those civilians undefended.
