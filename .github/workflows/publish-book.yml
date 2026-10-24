@@ -9,6 +9,7 @@ on:
       - "scripts/cinematic_art.py"
       - "tests/test_cinematic_art.py"
       - "artwork/cinematic/**"
+      - "assets/cinematic/**"
       - ".github/workflows/publish-book.yml"
   workflow_dispatch:
 
@@ -43,10 +44,12 @@ jobs:
 
       - name: Report cinematic artwork status
         run: |
-          if test -f artwork/cinematic/The_Last_Watch_Cinematic_Plates.zip; then
-            echo "CINEMATIC ZIP DETECTED: PDF must include actual photographic image pages"
+          if test -f artwork/cinematic/committed_manifest.json; then
+            echo "CINEMATIC PHOTO EDITION: verifying all checked-in scene image files and artwork hashes"
+          elif test -f artwork/cinematic/The_Last_Watch_Cinematic_Plates.zip; then
+            echo "CINEMATIC ZIP EDITION: verifying archive and scene image files"
           else
-            echo "CINEMATIC ZIP PENDING: publishing validated vector edition until the source archive is uploaded"
+            echo "NO CINEMATIC IMAGE SOURCE: publishing fallback artwork edition"
           fi
 
       - name: Build novel PDF
