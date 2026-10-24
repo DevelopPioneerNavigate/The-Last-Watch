@@ -63,7 +63,7 @@ jobs:
           assert len(reader.pages) >= 455, f"Unexpectedly short expanded PDF: {len(reader.pages)} pages"
           if Path("artwork/cinematic/The_Last_Watch_Cinematic_Plates.zip").is_file() or Path("artwork/cinematic/committed_manifest.json").is_file():
               image_pages = sum(bool(page.images) for page in reader.pages)
-              assert image_pages >= 9, f"Cinematic images are committed but PDF has only {image_pages} image pages"
+              assert image_pages >= 15, f"Cinematic images are committed but PDF has only {image_pages} image pages"
               print(f"Verified {image_pages} image-backed cinematic pages")
           assert not reader.is_encrypted
           assert "Diesel" in (reader.metadata.author or ""), "Missing Diesel author credit"
@@ -104,7 +104,7 @@ jobs:
           assert not reader.is_encrypted
           assert len(reader.pages) >= 455
           if Path("artwork/cinematic/The_Last_Watch_Cinematic_Plates.zip").is_file() or Path("artwork/cinematic/committed_manifest.json").is_file():
-              assert sum(bool(page.images) for page in reader.pages) >= 9, "Latest PDF missing committed cinematic photographs"
+              assert sum(bool(page.images) for page in reader.pages) >= 15, "Latest PDF missing committed cinematic photographs"
           assert "Diesel" in (reader.metadata.author or "")
           body = "\n".join(p.extract_text() or "" for p in reader.pages)
           assert len(body) > 465000
