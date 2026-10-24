@@ -12,11 +12,11 @@ When a future North Atlantic war breaks out, Vale's destroyer and the British fr
 ### [Download the PDF book](books/The_Last_Watch_Extended_Edition.pdf)
 
 **Current published build:**
-- **31,940 words**
-- **187 printed pages**
+- **37,226 words**
+- **222 printed pages**
 - **13 chapters + prologue + epilogue**
-- **23 integrated scenes** featuring richer tactical, engineering, rescue, crew-life and aftermath sequences
-- Approximately **3.3–4.1 hours** of narration, depending on speaking pace
+- **27 integrated scenes** featuring richer tactical, engineering, rescue, crew-life and aftermath sequences
+- Approximately **4.0–4.8 hours** of narration, depending on speaking pace
 
 The PDF is typeset at **6 × 9 inches**, with a naval-themed vector cover, **seven original illustrated chapter plates**, running headers, page numbers and a table of contents.
 
@@ -30,7 +30,7 @@ The current GitHub PDF also includes **seven original print-friendly vector chap
 
 ## What's new in the expanded edition
 
-The original story was approximately 9,800 words. This revision has grown to more than 31,000 words, with four additional scenes in the latest writing pass and substantial new material throughout:
+The original story was approximately 9,800 words. This revision has grown to more than 37,000 words, with eight additional scenes across the latest two writing passes and substantial new material throughout:
 
 | Area | Expanded narrative |
 |---|---|
@@ -54,13 +54,20 @@ The original story was approximately 9,800 words. This revision has grown to mor
 - **The Fisherman's Choice** — Civilian courage during a rescue of enemy sailors.
 - **The Pier at Reykjavík** — A human-scale arrival and the thank-you drawing from Liv.
 
+### Latest installment — Four more scenes
+
+- **What the Orders Did Not Say** — Vale and Mara's final readiness briefing and the crew's ordinary lives before combat.
+- **Beneath Aurora's Windows** — A volunteer teacher, frightened children and the true stakes of Northstar's defense.
+- **Before the Second Salvo** — Idris, Bell, Farouk and a tactical picture that cannot be trusted without judgment.
+- **The Cold Hours** — The storm, passenger medical concerns and the crew's struggle with grief and fatigue.
+
 ## Read and develop the manuscript
 
 | Location | Contents |
 |---|---|
 | [Part I](manuscript/part-01.md) | Prologue, chapters 1–7 with scene references |
 | [Part II](manuscript/part-02.md) | Chapters 8–13 and epilogue |
-| [Expanded scenes](manuscript/scenes/) | Twenty-three standalone insert scenes, integrated by the PDF builder |
+| [Expanded scenes](manuscript/scenes/) | Twenty-seven standalone insert scenes, integrated by the PDF builder |
 | [Story Bible](STORY_BIBLE.md) | Crew biographies, vessels, continuity rules and chronological battle events |
 | [PDF builder](scripts/build_book.py) | Book-layout generator and scene compiler |
 | [Manuscript tests](tests/test_manuscript.py) | Checks scene inclusion, chronology and narrative integrity |
@@ -81,7 +88,7 @@ python scripts/build_book.py
 
 The finished book is written to: **books/The_Last_Watch_Extended_Edition.pdf**
 
-Every manuscript or publisher change triggers GitHub Actions. The build must pass source-continuity tests and PDF checks, including a 130-page minimum, extractable text, key chapters/scenes, and 6 × 9 trim size, before the new PDF is published.
+Every manuscript or publisher change triggers GitHub Actions. The build must pass source-continuity tests and PDF checks, including a 175-page minimum, extractable text, key chapters/scenes, and 6 × 9 trim size, before the new PDF is published.
 
 ## Next editorial milestone: a complete full-length novel
 
