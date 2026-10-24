@@ -22,6 +22,14 @@ The PDF is typeset at **6 × 9 inches**, with a naval-themed vector cover, **fif
 
 If the PDF link is missing after a new commit, check the [Publish book PDF workflow](.github/workflows/publish-book.yml) and its downloadable artifact. GitHub Actions rebuilds and commits the verified PDF when the source changes.
 
+## Cinematic illustrated edition — image upload required
+
+The full-length novel is now configured for a **cinematic, full-color photographic edition** rather than the earlier basic vector chapter drawings. An image manifest maps **ten original images** to the cover and their appropriate scenes: the convoy, Caledonia rescue, CIC missile attack, Ramirez's fire, Reykjavík arrival, Liv's later memorial scene, Raven One, HMS Cutlass, children folding paper boats aboard Aurora, and a defensive missile launch.
+
+The source ZIP is prepared and available from the conversation. **The binary ZIP is not yet in this repository.** Until it is uploaded, the published PDF remains the previous **15-vector-plate edition**. GitHub does not magically access files generated in a ChatGPT session.
+
+To activate the cinematic edition, upload the single **The_Last_Watch_Cinematic_Plates.zip** into the [artwork/cinematic directory](artwork/cinematic/README.md), without unpacking or renaming. The GitHub Actions publisher then verifies the image checksums, renders the full-page illustrations at their matching scenes, checks the resulting PDF contains ten image-bearing pages, and publishes the new illustrated book automatically. This uses the already configured GitHub workflow and requires no paid image service or API token.
+
 ## Publishing credit and illustrations
 
 **The Last Watch** is **written by Diesel**, published under the **DPN Novels** name. The PDF title page, metadata, cover treatment and running headers reflect this credit.
