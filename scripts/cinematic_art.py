@@ -19,6 +19,7 @@ from pathlib import Path
 from reportlab.lib import colors
 from reportlab.lib.utils import ImageReader
 from reportlab.platypus import Flowable
+from PIL import Image as PILImage, ImageFilter, ImageOps
 
 PAGE_W, PAGE_H = 432, 648
 ROOT = Path(__file__).resolve().parents[1]
@@ -171,14 +172,23 @@ class CinematicPage(Flowable):
         im = ImageReader(str(self.entry["path"]))
         iw, ih = im.getSize()
         if iw / ih > .90:
-            # Wide paintings: preserve the complete helicopter / damaged ship
-            # instead of cropping away the subject's bow or tail.
-            c.setFillColor(colors.HexColor("#06101d"))
+            # Letterbox the *entire* wide scene over a soft full-bleed
+            # photographic backdrop, rather than empty black bands.
+            original = PILImage.open(self.entry["path"]).convert("RGB")
+            backdrop = ImageOps.fit(
+                original, (720, 1080), method=PILImage.Resampling.LANCZOS
+            ).filter(ImageFilter.GaussianBlur(30))
+            c.drawImage(ImageReader(backdrop), 0, 0,
+                        width=PAGE_W, height=PAGE_H, mask="auto")
+            c.setFillColor(colors.Color(.004, .013, .027, alpha=.52))
             c.rect(0, 0, PAGE_W, PAGE_H, fill=1, stroke=0)
             scale = min(PAGE_W / iw, (PAGE_H - 112) / ih)
             dw, dh = iw * scale, ih * scale
-            c.drawImage(im, (PAGE_W - dw)/2, 105 + (PAGE_H - 112 - dh)/2,
-                        width=dw, height=dh, mask="auto")
+            dx, dy = (PAGE_W - dw)/2, 105 + (PAGE_H - 112 - dh)/2
+            c.drawImage(im, dx, dy, width=dw, height=dh, mask="auto")
+            c.setStrokeColor(colors.HexColor("#af966f"))
+            c.setLineWidth(.9)
+            c.rect(dx+1, dy+1, dw-2, dh-2, fill=0, stroke=1)
         else:
             _cover_photo(c, self.entry["path"])
         c.setFillColor(colors.Color(.009, .02, .04, alpha=.78))
