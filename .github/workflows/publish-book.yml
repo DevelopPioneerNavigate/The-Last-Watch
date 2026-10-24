@@ -47,10 +47,9 @@ jobs:
         run: |
           if test -f artwork/cinematic/committed_manifest.json; then
             echo "CINEMATIC PHOTO EDITION: verifying all checked-in scene image files and artwork hashes"
-          elif test -f artwork/cinematic/The_Last_Watch_Cinematic_Plates.zip; then
-            echo "CINEMATIC ZIP EDITION: verifying archive and scene image files"
           else
-            echo "NO CINEMATIC IMAGE SOURCE: publishing fallback artwork edition"
+            echo "ERROR: The single official illustrated PDF requires the committed cinematic manifest."
+            exit 1
           fi
 
       - name: Build novel PDF
@@ -88,9 +87,9 @@ jobs:
           name: The-Last-Watch-Book-PDF
           path: |
             books/The_Last_Watch_Extended_Edition.pdf
-            books/The_Last_Watch_Cinematic_Illustrated_2026-10-24.pdf
             books/proofs/Cinematic_Art_Contact_Sheet.jpg
             books/proofs/New_Cinematic_Cover_Proof.jpg
+            books/proofs/DPN_Interior_Page_Proof.jpg
           if-no-files-found: error
 
       - name: Publish from latest source without overwriting other commits
@@ -123,7 +122,7 @@ jobs:
           assert "THE END" in body
           print(f"Validated latest-source PDF: {len(reader.pages)} pages")
           PY
-            git add books/The_Last_Watch_Extended_Edition.pdf books/The_Last_Watch_Cinematic_Illustrated_2026-10-24.pdf books/proofs/New_Cinematic_Cover_Proof.jpg books/proofs/Cinematic_Art_Contact_Sheet.jpg books/proofs/Cinematic_Pages.json
+            git add books/The_Last_Watch_Extended_Edition.pdf books/proofs/New_Cinematic_Cover_Proof.jpg books/proofs/DPN_Interior_Page_Proof.jpg books/proofs/Cinematic_Art_Contact_Sheet.jpg books/proofs/Cinematic_Pages.json
             if git diff --cached --quiet; then
               echo "Published PDF already matches current manuscript."
               published=1
