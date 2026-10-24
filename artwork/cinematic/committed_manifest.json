@@ -1,14 +1,14 @@
 {
-  "edition": "CINEMATIC-DIRECT-03",
+  "edition": "CINEMATIC-DIRECT-04",
   "author": "Diesel | DPN Novels",
-  "description": "Fifteen checksum-verified image placements: one cover and fourteen full-page character, battle, rescue and remembrance plates.",
+  "description": "Full-color cinematic cover and fourteen scene plates, including six high-detail artwork replacements verified by SHA-256.",
   "assets": [
     {
       "file": "00_northstar_cover.jpg",
       "anchor": "cover",
       "title": "The Last Watch",
-      "caption": "USS Northstar DDG-148 defends the convoy through North Atlantic darkness",
-      "sha256": "528c626b6c0a1d6e8a59d4ba72a5475ee543fe7edfddccabdacd4781d004db29",
+      "caption": "The Last Watch cinematic cover: USS Northstar DDG-148 in the storm, written by Diesel | DPN Novels",
+      "sha256": "f019abfd3e0a0c5fddb4168b44b49aa0cb82ea0de5a5ce84046cbcc9a1c8646b",
       "source_path": "assets/cinematic/00_northstar_cover.jpg"
     },
     {
@@ -64,8 +64,8 @@
       "file": "20_liv_and_vale_remembrance.jpg",
       "anchor": "THE GREEN ROOF",
       "title": "Liv's New Home",
-      "caption": "Five years later, Liv shows Commander Vale a drawing of the home her family built",
-      "sha256": "62fc4e3fddecf5d2443a248cb9b969659c429500d90d78da45a72c0273246dd1",
+      "caption": "Five years after the convoy, Liv shares her drawing of her new home with Vale",
+      "sha256": "5a1e6b5f41cc4aceb1f4a76d4ed754505865098fdc9a3040ba101b5a593121c1",
       "source_path": "assets/cinematic/20_liv_and_vale_remembrance.jpg"
     },
     {
@@ -89,7 +89,7 @@
       "anchor": "THE LIEUTENANT'S BRIDGE",
       "title": "HMS Cutlass — The Wounded Escort",
       "caption": "The British frigate burns as her watchkeepers keep the ship moving",
-      "sha256": "d8b19966cb360c4353af020c97adb45f4ffc3de8827d3efe32d8d4b47b4e46e8",
+      "sha256": "02246b661587cc86dd7df01a6ba8ad1f716112d500a786aec0c44fae63ceddc0",
       "source_path": "assets/cinematic/16_cutlass_crippled_bridge.jpg"
     },
     {
@@ -97,7 +97,7 @@
       "anchor": "BENEATH AURORA",
       "title": "Beneath Aurora's Windows",
       "caption": "A frightened child finds comfort aboard Aurora",
-      "sha256": "a0ed02d66cc26921a93eb8fee7b350df6bdc7472cb716c8b31341ef357878048",
+      "sha256": "c50e6644502b513571e9ca6ee836d94071e8de8cb53e18722bf54e2dcae25e6a",
       "source_path": "assets/cinematic/17_aurora_child_and_nurse.jpg"
     },
     {
@@ -105,15 +105,15 @@
       "anchor": "LETTERS NEVER SENT",
       "title": "The Memorial Watch",
       "caption": "A sailor pays respects to those lost at sea",
-      "sha256": "fc6c9acfc3124a1b4142030f8304ddbc12d832b0fe26750d0ed9354a0f2f782e",
+      "sha256": "00110d841954418bd92f581ec993f9620f16b11030ab916344af1e0d275b3569",
       "source_path": "assets/cinematic/18_memorial_watch.jpg"
     },
     {
       "file": "19_ramirez_watchbook.jpg",
       "anchor": "THE WATCHKEEPERS",
       "title": "The Watchkeepers' Book",
-      "caption": "A weathered compass and watchkeeper's words honor the departed",
-      "sha256": "b035ff5adeee3203a66dded5455bb3ba5f2d22eaa652362bedf88f8462e0af55",
+      "caption": "Chief Ramirez's weathered engineering watchbook lies beside the tools of her trade",
+      "sha256": "4c009cc54c9530e24fde232d0f4a024f006a247280e1791554b1dac21c14d68b",
       "source_path": "assets/cinematic/19_ramirez_watchbook.jpg"
     }
   ]
