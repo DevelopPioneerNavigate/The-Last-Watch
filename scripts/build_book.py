@@ -336,6 +336,39 @@ class InkPlate(Flowable):
             c.setStrokeColor(colors.HexColor("#ecc38c"))
             c.setLineWidth(1)
             c.line(159,18,164,77)
+        elif self.mode == "night":
+            # A solitary escort riding beneath a starless North Atlantic sky.
+            c.setFillColor(colors.HexColor("#071827"))
+            c.circle(268,79,11,fill=1,stroke=0)
+            c.setFillColor(colors.HexColor("#e6c794"))
+            for x,y in ((50,82),(92,69),(173,87),(242,88),(282,65)):
+                c.circle(x,y,1.1,fill=1,stroke=0)
+            c.setFillColor(colors.HexColor("#05121f"))
+            p=c.beginPath();p.moveTo(68,45);p.lineTo(240,45)
+            p.lineTo(220,32);p.lineTo(89,32);p.close();c.drawPath(p,fill=1,stroke=0)
+            c.rect(120,45,64,12,fill=1,stroke=0)
+            c.rect(146,57,3,24,fill=1,stroke=0)
+            c.setStrokeColor(colors.HexColor("#b6d2e3"))
+            c.setLineWidth(1.3)
+            for i in range(4):
+                c.line(41,19+i*5,280,19+i*5)
+        elif self.mode == "letter":
+            # An envelope, folded flag and fountain pen: Vale's first private account.
+            c.setFillColor(colors.HexColor("#d2e3ea"))
+            c.roundRect(79,18,159,70,4,stroke=0,fill=1)
+            c.setStrokeColor(colors.HexColor("#244962"))
+            c.setLineWidth(1.5)
+            p=c.beginPath()
+            p.moveTo(79,88);p.lineTo(159,47);p.lineTo(238,88)
+            c.drawPath(p,stroke=1,fill=0)
+            c.line(79,18,130,59)
+            c.line(238,18,190,59)
+            c.setStrokeColor(colors.HexColor("#bc965f"))
+            c.setLineWidth(2)
+            c.line(204,76,258,20)
+            c.setFillColor(colors.HexColor("#e4c08a"))
+            p=c.beginPath();p.moveTo(258,20);p.lineTo(264,16)
+            p.lineTo(260,27);p.close();c.drawPath(p,stroke=0,fill=1)
         elif self.mode == "memorial":
             # A folded flag and ship's bell, an understated memorial plate.
             c.setFillColor(colors.HexColor("#cedde6"))
@@ -469,7 +502,7 @@ def make_book(raw, word_count):
             section_seen = True
             story.append(Paragraph(inline_md(block[2:]), ST["heading"]))
             chapter_idx += 1
-            art_mode = {2: "storm", 3: "convoy", 4: "rescue", 5: "radar", 7: "wreckage", 9: "horizon", 10: "fire", 13: "harbor", 14: "memorial"}.get(chapter_idx)
+            art_mode = {2: "storm", 3: "convoy", 4: "rescue", 5: "radar", 7: "wreckage", 9: "horizon", 10: "fire", 12: "night", 13: "harbor", 14: "memorial", 15: "letter"}.get(chapter_idx)
             if art_mode:
                 story.append(InkPlate(art_mode))
                 story.append(Spacer(1, 12))
