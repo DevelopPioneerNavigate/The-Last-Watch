@@ -297,6 +297,8 @@ Sometimes a commanding officer must give orders. Sometimes all he can do is refu
 
 {{scene:10-the-people-who-were-not-on-the-screen.md}}
 
+{{scene:49-a-space-for-the-living.md}}
+
 {{scene:37-the-weight-of-water.md}}
 
 Back in CIC, I reviewed the day's events. The enemy had struck in layers: distraction, underwater attack, airborne missiles, information interference, surface pressure, and another suspected torpedo. Our ship had answered each threat, but the true achievement belonged to sailors in spaces the tactical plots never showed.
@@ -631,6 +633,10 @@ The ocean kept the rest.
 
 {{scene:14-the-hearing.md}}
 
+{{scene:50-the-eleventh-survivor.md}}
+
+{{scene:51-the-visitor-from-cutlass.md}}
+
 {{scene:39-the-book-of-names.md}}
 
 {{scene:15-the-voices-at-home.md}}
@@ -675,19 +681,23 @@ I hoped he never would.
 
 That evening I sat on our back porch with Ethan. He was twenty-one, studying engineering, and taller than me.
 
-"Dad," he said, "I've been thinking about joining the Navy."
+"Dad," he said, "I've been thinking about working on emergency power systems for ships."
 
 I stared out at the yard.
 
-"You don't have to follow me."
+"Not what I expected to hear when you decided against the Navy."
 
-"I know."
+"I'm still not joining. I want to build things that people need, without making the decisions you had to make."
 
-"War isn't what they show in films."
+"That's a worthy ambition."
 
-"I know that too."
+He looked toward me.
 
-We sat in silence for a while. He studied my hands.
+"Did you ever think you wouldn't come back?"
+
+"Every day of that crossing."
+
+He studied my hands.
 
 "Were you scared?"
 
@@ -703,11 +713,11 @@ He looked surprised. "Really?"
 
 He watched a bird settle on the fence.
 
-"I think I want to do something that matters."
+"I want to design something that gives people a better chance when everything goes wrong."
 
 I put a hand on his shoulder.
 
-"Then make sure you understand why you're doing it. The uniform doesn't answer that question for you."
+"Then make sure you understand why you're doing it. Engineering doesn't make the choices for you. People do."
 
 He nodded.
 
