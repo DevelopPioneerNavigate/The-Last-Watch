@@ -56,7 +56,7 @@ Commander Daniel Vale commands the fictional guided-missile destroyer USS Norths
 
 ## Added narrative scenes
 
-The expanded edition now incorporates **35 in-line scenes**. The four latest scenes deepen Vale's relationship with Hawthorne captain Matthew Hayes, Farouk's verification of the regional naval picture, the arrival of American and Norwegian escorts west of Iceland, and Vale's first written command account after the memorial. The original 13 numbered chapters and established outcomes remain in canon.
+The expanded edition now incorporates **39 in-line scenes**. The newest scenes explore young helmsman Noah Ellis after Caledonia's sinking, the hazardous cleanup and accountability after Ramirez's death, the merchant captains' judgment during the morning after the storm, and Jacob Rios's healing ten months later. The original 13 numbered chapters and established outcomes remain in canon.
 
 ## Chronology
 
@@ -73,6 +73,7 @@ The expanded edition now incorporates **35 in-line scenes**. The four latest sce
 | 0411 | Caledonia torpedoed |
 | 0426–0531 | Rescue efforts; Caledonia sinks |
 | 0548 | Vale records the manifest losses and reaches out to the remaining merchants |
+| 0556 | Noah Ellis asks why Northstar cannot return for Caledonia's missing sailors |
 | 0603 | First missile engagement |
 | 0642 | Vale speaks with Aurora's schoolteacher, Ingrid Voss, about frightened children |
 | 0712 | Kestrel sends distress traffic |
@@ -93,9 +94,11 @@ The expanded edition now incorporates **35 in-line scenes**. The four latest sce
 | 1116 | Ramirez reached on communications |
 | 1142 | Ramirez recovered unresponsive |
 | 1212 | Ramirez declared deceased |
+| 1326 | Navarro and Vale review damaged engineering spaces and the human toll of the rescue |
 | 1546 | Weather diversion underway |
 | 1908 | Crew psychological recovery and Aurora's medical consultation during the storm |
 | 2218–2311 | Possible submarine contact, eventually fades; 2251 crew midwatch |
+| Nov 19, 0610 | Merchant captains coordinate a weather-limited route amid delayed communications |
 | Nov 19, 1832 | Friendly aircraft locates convoy |
 | 1941 | USS Jefferson (Rachel Park) and Norway's Fenrir support convoy relief |
 | 2241 | Lights of Iceland seen |
@@ -105,6 +108,7 @@ The expanded edition now incorporates **35 in-line scenes**. The four latest sce
 | Nov 20 | Memorial for Ramirez |
 | 1916 | Vale writes a first factual command report and begins his private memoir |
 | Three months later | Battle inquiry |
+| Ten months later | Rios visits Vale with Ramirez's qualification notes and talks about his recovery |
 | One year later | Letters, visit with survivors and family |
 | Five years later | Retirement reflections |
 
