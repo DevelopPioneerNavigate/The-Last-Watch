@@ -74,6 +74,8 @@ I watched Aurora rise above a swell two miles away. A few passenger-deck windows
 
 I had told the ferry's captain, Peter Lindholm, that the Navy would protect them. In peacetime, a promise can be a comfort. In war, it becomes a debt.
 
+{{scene:01-ship-that-breathes.md}}
+
 At 0230 I went below. The passageways smelled of coffee, hydraulic fluid, wet clothing, and warm machinery. Sailors hurried past with their shoulders braced against the ship's movement. Near an engineering access, I encountered Fireman Apprentice Jacob Rios, nineteen, from Kansas. He had joined because his grandfather had been a Navy man and because he wanted to see the world beyond a grain elevator.
 
 "How's engineering, Rios?"
@@ -121,6 +123,8 @@ Chief Sonar Technician Naomi Bell had spent fourteen years learning to tell the 
 She shook her head. "Certain would be a luxury, Captain."
 
 She showed me the faint trace. It came and went beneath the roar of the sea. Somewhere beyond it were moving layers of water of different temperatures, bottom terrain, and the complicated reflections that make the underwater world so difficult to interpret. We did not know its distance. We barely knew its direction.
+
+{{scene:02-a-faint-line.md}}
 
 Idris asked permission to raise our aviation alert status. I agreed. In the hangar, the MH-60R Seahawk called Raven One was being prepared for a difficult flight.
 
@@ -302,6 +306,8 @@ I wanted a record that would outlast the tactical symbols. I wanted the families
 
 By 0632, Cutlass had recovered nineteen survivors. Three were confirmed dead. Four remained missing. Ward was alive, bruised and shivering and still asking whether rescue boats had found the others.
 
+{{scene:03-california-of-the-sea.md}}
+
 My duty was to keep the rest alive. Yet for the first time that night, I understood the shape of the enemy plan. They were not simply attacking ships. They were attacking our ability to choose. One crippled freighter could pull an escort away. One crisis could create another.
 
 Bell had identified two separate acoustic signatures. The first submarine appeared to have drawn our attention. The second had fired.
@@ -351,6 +357,8 @@ I gripped the edge of the console.
 A report came from Cutlass: another inbound missile to the northeast. The British engaged and destroyed it. On our own display, the remaining tracks had been cleared.
 
 Seven hostile weapons, seven stopped.
+
+{{scene:04-the-picture-is-not-the-sea.md}}
 
 But the ammunition accounting was ugly. We had already consumed a substantial part of a finite defensive inventory, and replacing those missiles would require a port and infrastructure we did not have. The enemy could choose when to attack again. We could not choose how long our defenses would last.
 
@@ -464,6 +472,8 @@ I thought about how strange that exchange would sound in a history book. Our ene
 
 None of it would fit neatly into a patriotic slogan. That was probably why it mattered.
 
+{{scene:05-the-cost-of-keeping-course.md}}
+
 At 0740 another fleet message arrived. USS Hawthorne had sustained severe damage farther southwest. Status unknown.
 
 Her captain was Matthew Hayes, a Naval Academy classmate and one of my oldest friends. He had sent me a photograph just before deployment, standing beside his wife and two daughters. Underneath it he had written: *See you on the other side, brother.*
@@ -492,7 +502,11 @@ Raven One made a limited search during its return. Brooks reported no survivors 
 
 "Best order of the day, sir."
 
-Our communications picture, meanwhile, had become unreliable. Data links dropped and returned. Reports showed inconsistent timestamps. Then came a priority message that seemed to originate from fleet headquarters.
+Our communications picture, meanwhile, had become unreliable. Data links dropped and returned. Reports showed inconsistent timestamps.
+
+{{scene:06-the-invisible-front.md}}
+
+Then came a priority message that seemed to originate from fleet headquarters.
 
 **Discontinue convoy escort. Proceed southwest immediately. Do not delay.**
 
@@ -635,6 +649,8 @@ When I lowered the microphone, Mara was standing near me.
 "That matters."
 
 "It does."
+
+{{scene:07-when-cutlass-went-dark.md}}
 
 I looked at the remaining convoy, our ammunition status, the uncertain enemy contacts, and the damaged British frigate. For the first time I understood we might be approaching the limit of what the escorts could accomplish.
 
