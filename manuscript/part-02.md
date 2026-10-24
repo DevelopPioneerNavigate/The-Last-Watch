@@ -131,6 +131,8 @@ We divided responsibilities. Navarro directed engineering and damage control, Ma
 
 {{scene:09-the-boundaries-hold.md}}
 
+{{scene:53-the-door-with-no-handle.md}}
+
 At 1116 we established communication with Ramirez.
 
 Her voice came through a damaged circuit with a hard edge of static.
@@ -301,6 +303,8 @@ Sometimes a commanding officer must give orders. Sometimes all he can do is refu
 
 {{scene:37-the-weight-of-water.md}}
 
+{{scene:54-the-watchkeepers-book.md}}
+
 Back in CIC, I reviewed the day's events. The enemy had struck in layers: distraction, underwater attack, airborne missiles, information interference, surface pressure, and another suspected torpedo. Our ship had answered each threat, but the true achievement belonged to sailors in spaces the tactical plots never showed.
 
 The damage-control crews did not see missiles on a display. They saw smoke. The engineers did not see the grand strategy. They saw alarms, pressure gauges and damaged equipment. The medics did not know whether we were winning. They saw a wounded man and tried to save him.
@@ -441,6 +445,8 @@ That silence felt like a gift I did not quite trust.
 
 {{scene:38-the-morning-without-signals.md}}
 
+{{scene:55-the-lantern-key.md}}
+
 {{scene:45-raven-ones-empty-seat.md}}
 
 **19 November 2037 — 1832 hours**
@@ -553,6 +559,8 @@ I watched until I could no longer see him.
 
 {{scene:31-the-captains-without-ships.md}}
 
+{{scene:56-when-hawthorne-answered.md}}
+
 Then I went below to prepare for the memorial service.
 
 {{scene:13-letters-never-sent.md}}
@@ -586,6 +594,8 @@ The chaplain prayed.
 We stood in silence.
 
 {{scene:42-where-the-cargo-went.md}}
+
+{{scene:57-the-room-for-the-missing.md}}
 
 {{scene:43-the-convoy-after-ours.md}}
 
@@ -642,6 +652,8 @@ The ocean kept the rest.
 {{scene:15-the-voices-at-home.md}}
 
 {{scene:47-what-ethan-chose.md}}
+
+{{scene:58-the-green-roof.md}}
 
 After the war I lectured at the Naval War College. I showed maps, explained what we could confirm about the coordinated attacks, and described the difficulties of making decisions with incomplete information.
 
