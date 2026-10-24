@@ -9,7 +9,8 @@
       "title": "The Last Watch",
       "caption": "The Last Watch cinematic cover: USS Northstar DDG-148 in the storm, written by Diesel | DPN Novels",
       "sha256": "f019abfd3e0a0c5fddb4168b44b49aa0cb82ea0de5a5ce84046cbcc9a1c8646b",
-      "source_path": "assets/cinematic/00_northstar_cover.jpg"
+      "source_path": "assets/cinematic/00_northstar_cover.jpg",
+      "prelettered": true
     },
     {
       "file": "01-north-atlantic-convoy.jpg",
