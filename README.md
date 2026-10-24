@@ -12,11 +12,11 @@ When a future North Atlantic war breaks out, Vale's destroyer and the British fr
 ### [Download the PDF book](books/The_Last_Watch_Extended_Edition.pdf)
 
 **Current published build:**
-- **63,106 words**
-- **384 printed pages**
+- **69,383 words**
+- **421 printed pages**
 - **13 chapters + prologue + epilogue**
-- **47 integrated scenes** featuring richer tactical, engineering, rescue, crew-life and aftermath sequences
-- Approximately **6.8–8.1 hours** of narration, depending on speaking pace
+- **52 integrated scenes** featuring richer tactical, engineering, rescue, crew-life and aftermath sequences
+- Approximately **7.3–8.9 hours** of narration, depending on speaking pace
 
 The PDF is typeset at **6 × 9 inches**, with a naval-themed vector cover, **fifteen original illustrated chapter plates**, running headers, page numbers and a table of contents.
 
@@ -30,7 +30,7 @@ The current GitHub PDF also includes **fifteen original print-friendly vector ch
 
 ## What's new in the expanded edition
 
-The original story was approximately 9,800 words. This revision has grown to more than 63,000 words, with sixteen additional scenes across the latest four writing passes and substantial new material throughout:
+The original story was approximately 9,800 words. This revision has grown to more than 69,000 words, with sixteen additional scenes across the latest four writing passes and substantial new material throughout:
 
 | Area | Expanded narrative |
 |---|---|
@@ -106,13 +106,23 @@ This edition adds **two original vector chapter plates** depicting a rescue traw
 
 This update adds **one original prologue illustration**, bringing the print-ready, reproducible PDF to **15 vector plates**. The separate full-color cinematic concept art remains outside the GitHub PDF until integrated as reproducible assets.
 
+### Latest installment — The people behind the battle
+
+- **The Tanker's Captain** — Meridian master Sofia Reed explains the duty of carrying fuel and why she refuses to gamble with her civilian crew.
+- **The Lieutenant's Bridge** — A young officer and Commander Shaw keep HMS *Cutlass* operational after a missile strike.
+- **A Space for the Living** — Corpsman Leah Okafor creates a place for frightened sailors to ask for help after the engineering fire.
+- **The Eleventh Survivor** — Months later, an enemy sailor rescued by *Sigrid* writes to Vale about the man who pulled him from the sea.
+- **The Visitor from Cutlass** — Edward Mallory visits Norfolk carrying a walking stick, survivor's memories, and an improbable gift of tea.
+
+**Editorial correction:** The epilogue now maintains Ethan Vale's established choice of civilian emergency-systems engineering rather than reversing it to a naval career. The illustrated edition retains **15 original vector plates**. Standalone cinematic paintings are not yet part of the reproducible PDF.
+
 ## Read and develop the manuscript
 
 | Location | Contents |
 |---|---|
 | [Part I](manuscript/part-01.md) | Prologue, chapters 1–7 with scene references |
 | [Part II](manuscript/part-02.md) | Chapters 8–13 and epilogue |
-| [Expanded scenes](manuscript/scenes/) | Forty-seven standalone insert scenes, integrated by the PDF builder |
+| [Expanded scenes](manuscript/scenes/) | Fifty-two standalone insert scenes, integrated by the PDF builder |
 | [Story Bible](STORY_BIBLE.md) | Crew biographies, vessels, continuity rules and chronological battle events |
 | [PDF builder](scripts/build_book.py) | Book-layout generator and scene compiler |
 | [Manuscript tests](tests/test_manuscript.py) | Checks scene inclusion, chronology and narrative integrity |
@@ -133,7 +143,7 @@ python scripts/build_book.py
 
 The finished book is written to: **books/The_Last_Watch_Extended_Edition.pdf**
 
-Every manuscript or publisher change triggers GitHub Actions. The build must pass source-continuity tests and PDF checks, including a 375-page minimum, extractable text, key chapters/scenes, and 6 × 9 trim size, before the new PDF is published.
+Every manuscript or publisher change triggers GitHub Actions. The build must pass source-continuity tests and PDF checks, including a 410-page minimum, extractable text, key chapters/scenes, and 6 × 9 trim size, before the new PDF is published.
 
 ## Next editorial milestone: a complete full-length novel
 
