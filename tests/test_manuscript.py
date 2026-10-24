@@ -16,8 +16,8 @@ class NovelTests(unittest.TestCase):
 
     def test_full_manuscript_present(self):
         self.assertEqual(self.chapters, 13)
-        self.assertEqual(self.scenes, 35)
-        self.assertGreater(self.words, 46000)
+        self.assertEqual(self.scenes, 39)
+        self.assertGreater(self.words, 51000)
         self.assertNotIn("{{scene:", self.raw)
         self.assertIn("THE END", self.raw)
 
@@ -36,7 +36,8 @@ class NovelTests(unittest.TestCase):
             ("A FAINT LINE IN THE NOISE", "THE AIRCRAFT IN THE DARK"),
             ("THE AIRCRAFT IN THE DARK", "# CHAPTER THREE"),
             ("THE DISTANCE BETWEEN SHIPS", "THE LAST MANIFEST"),
-            ("THE LAST MANIFEST", "# CHAPTER FOUR"),
+            ("THE LAST MANIFEST", "THE HOUR BEFORE SUNRISE"),
+            ("THE HOUR BEFORE SUNRISE", "# CHAPTER FOUR"),
             ("THE PICTURE IS NOT THE SEA", "BENEATH AURORA"),
             ("BENEATH AURORA", "# CHAPTER FIVE"),
             ("THE COST OF KEEPING COURSE", "THE FISHERMAN\u0027S CHOICE"),
@@ -51,10 +52,12 @@ class NovelTests(unittest.TestCase):
             ("THE SPACE BEFORE FIRE", "THE SHIP WE COULD NOT SEE"),
             ("THE SHIP WE COULD NOT SEE", "# CHAPTER NINE"),
             ("THE BOUNDARIES HOLD", "# CHAPTER TEN"),
-            ("THE PEOPLE WHO WERE NOT ON THE SCREEN", "# CHAPTER ELEVEN"),
+            ("THE PEOPLE WHO WERE NOT ON THE SCREEN", "THE WEIGHT OF WATER"),
+            ("THE WEIGHT OF WATER", "# CHAPTER ELEVEN"),
             ("THE WEATHER HAS NO ALLIES", "THE COLD HOURS"),
             ("THE COLD HOURS", "THE DARK BETWEEN THE ALARMS"),
             ("THE DARK BETWEEN THE ALARMS", "# CHAPTER TWELVE"),
+            ("THE MORNING WITHOUT SIGNALS", "VOICES FROM THE WEST"),
             ("VOICES FROM THE WEST", "THE CORRIDOR OF LIGHTS"),
             ("THE CORRIDOR OF LIGHTS", "# CHAPTER THIRTEEN"),
             ("THE PIER AT REYKJAVÍK", "THE CAPTAINS WITHOUT SHIPS"),
@@ -62,7 +65,8 @@ class NovelTests(unittest.TestCase):
             ("LETTERS NEVER SENT", "THE FIRST LEDGER"),
             ("THE FIRST LEDGER", "# EPILOGUE"),
             ("LETTERS NEVER SENT", "# EPILOGUE"),
-            ("THE HEARING ROOM", "THE VOICES AT HOME"),
+            ("THE HEARING ROOM", "THE BOOK OF NAMES"),
+            ("THE BOOK OF NAMES", "THE VOICES AT HOME"),
         ]
         for earlier, later in placements:
             with self.subTest(earlier=earlier):
