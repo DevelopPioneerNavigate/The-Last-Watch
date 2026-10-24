@@ -97,8 +97,12 @@ def main() -> None:
     # Validate interior colors by sampling pixels from rendered *PDF pages*,
     # not trusting the source code alone. Artwork cover/photo pages are exempt.
     # x=43 sits in the clear reading field outside the text frame (x>=52).
+    # Decorative header labels are now raster pictures on every reading page
+    # (to prevent ElevenLabs speaking them). Select prose by EXCLUDING verified
+    # cinematic plate pages instead of treating all images as a photo plate.
+    art_page_ids = {i for i, _entry in photographic_pages}
     prose_indices = [i for i in range(1, pdf.page_count)
-                     if not pdf[i].get_images(full=True)]
+                     if i not in art_page_ids]
     assert len(prose_indices) > 200, "Cannot identify themed prose pages"
     indices = [prose_indices[0], prose_indices[len(prose_indices)//2],
                prose_indices[-1]]
