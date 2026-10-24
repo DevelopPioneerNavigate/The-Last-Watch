@@ -16,8 +16,8 @@ class NovelTests(unittest.TestCase):
 
     def test_full_manuscript_present(self):
         self.assertEqual(self.chapters, 13)
-        self.assertEqual(self.scenes, 39)
-        self.assertGreater(self.words, 51000)
+        self.assertEqual(self.scenes, 43)
+        self.assertGreater(self.words, 57000)
         self.assertNotIn("{{scene:", self.raw)
         self.assertIn("THE END", self.raw)
 
@@ -33,7 +33,8 @@ class NovelTests(unittest.TestCase):
             ("WHAT THE ORDERS DID NOT SAY", "THE SHIP THAT BREATHES"),
             ("THE SHIP THAT BREATHES", "THE SILENT QUARTER"),
             ("THE SILENT QUARTER", "# CHAPTER TWO"),
-            ("A FAINT LINE IN THE NOISE", "THE AIRCRAFT IN THE DARK"),
+            ("A FAINT LINE IN THE NOISE", "THE DARK WATER BETWEEN"),
+            ("THE DARK WATER BETWEEN", "THE AIRCRAFT IN THE DARK"),
             ("THE AIRCRAFT IN THE DARK", "# CHAPTER THREE"),
             ("THE DISTANCE BETWEEN SHIPS", "THE LAST MANIFEST"),
             ("THE LAST MANIFEST", "THE HOUR BEFORE SUNRISE"),
@@ -57,11 +58,15 @@ class NovelTests(unittest.TestCase):
             ("THE WEATHER HAS NO ALLIES", "THE COLD HOURS"),
             ("THE COLD HOURS", "THE DARK BETWEEN THE ALARMS"),
             ("THE DARK BETWEEN THE ALARMS", "# CHAPTER TWELVE"),
+            ("THE FREIGHTER AT THE EDGE", "THE MORNING WITHOUT SIGNALS"),
             ("THE MORNING WITHOUT SIGNALS", "VOICES FROM THE WEST"),
             ("VOICES FROM THE WEST", "THE CORRIDOR OF LIGHTS"),
             ("THE CORRIDOR OF LIGHTS", "# CHAPTER THIRTEEN"),
             ("THE PIER AT REYKJAVÍK", "THE CAPTAINS WITHOUT SHIPS"),
             ("THE CAPTAINS WITHOUT SHIPS", "LETTERS NEVER SENT"),
+            ("LETTERS NEVER SENT", "WHERE THE CARGO WENT"),
+            ("WHERE THE CARGO WENT", "THE CONVOY AFTER OURS"),
+            ("THE CONVOY AFTER OURS", "THE FIRST LEDGER"),
             ("LETTERS NEVER SENT", "THE FIRST LEDGER"),
             ("THE FIRST LEDGER", "# EPILOGUE"),
             ("LETTERS NEVER SENT", "# EPILOGUE"),
