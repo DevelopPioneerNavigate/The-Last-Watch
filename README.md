@@ -12,13 +12,13 @@ When a future North Atlantic war breaks out, Vale's destroyer and the British fr
 ### [Download the PDF book](books/The_Last_Watch_Extended_Edition.pdf)
 
 **Current published build:**
-- **37,226 words**
-- **222 printed pages**
+- **42,004 words**
+- **251 printed pages**
 - **13 chapters + prologue + epilogue**
-- **27 integrated scenes** featuring richer tactical, engineering, rescue, crew-life and aftermath sequences
-- Approximately **4.0–4.8 hours** of narration, depending on speaking pace
+- **31 integrated scenes** featuring richer tactical, engineering, rescue, crew-life and aftermath sequences
+- Approximately **4.4–5.4 hours** of narration, depending on speaking pace
 
-The PDF is typeset at **6 × 9 inches**, with a naval-themed vector cover, **seven original illustrated chapter plates**, running headers, page numbers and a table of contents.
+The PDF is typeset at **6 × 9 inches**, with a naval-themed vector cover, **nine original illustrated chapter plates**, running headers, page numbers and a table of contents.
 
 If the PDF link is missing after a new commit, check the [Publish book PDF workflow](.github/workflows/publish-book.yml) and its downloadable artifact. GitHub Actions rebuilds and commits the verified PDF when the source changes.
 
@@ -26,11 +26,11 @@ If the PDF link is missing after a new commit, check the [Publish book PDF workf
 
 **The Last Watch** is **written by Diesel**, published under the **DPN Novels** name. The PDF title page, metadata, cover treatment and running headers reflect this credit.
 
-The current GitHub PDF also includes **seven original print-friendly vector chapter illustrations** (stormship, convoy formation, rescue craft, radar, machinery fire, Iceland harbor, and memorial). Separate cinematic concept illustrations generated during development are not yet embedded as raster assets in the GitHub edition; the vector plates are included in the reproducible book build.
+The current GitHub PDF also includes **nine original print-friendly vector chapter illustrations** (stormship, convoy formation, rescue craft, radar, aircraft wreckage, uncertain fleet horizon, machinery fire, Iceland harbor, and memorial). Separate cinematic concept illustrations generated during development are not yet embedded as raster assets in the GitHub edition; the vector plates are included in the reproducible book build.
 
 ## What's new in the expanded edition
 
-The original story was approximately 9,800 words. This revision has grown to more than 37,000 words, with eight additional scenes across the latest two writing passes and substantial new material throughout:
+The original story was approximately 9,800 words. This revision has grown to more than 42,000 words, with twelve additional scenes across the latest three writing passes and substantial new material throughout:
 
 | Area | Expanded narrative |
 |---|---|
@@ -61,13 +61,22 @@ The original story was approximately 9,800 words. This revision has grown to mor
 - **Before the Second Salvo** — Idris, Bell, Farouk and a tactical picture that cannot be trusted without judgment.
 - **The Cold Hours** — The storm, passenger medical concerns and the crew's struggle with grief and fatigue.
 
+### Latest installment — Beyond the convoy
+
+- **The Name on the Metal** — Unidentified American aircraft wreckage, missing crews, and responsible reporting.
+- **The Ships That Answered** — Commander Eleanor Shaw keeps the damaged HMS *Cutlass* moving, with *Caledonia* survivors aboard.
+- **The Ship We Could Not See** — After Northstar fires, a new unidentified contact tests Vale's restraint.
+- **The Captains Without Ships** — Eileen Ward confronts the loss of *Caledonia* and shares her crew's names with Vale.
+  
+This release includes **two additional illustrated plates** and a publishing-workflow repair that rebuilds the PDF against the latest source rather than attempting to merge competing generated PDFs.
+
 ## Read and develop the manuscript
 
 | Location | Contents |
 |---|---|
 | [Part I](manuscript/part-01.md) | Prologue, chapters 1–7 with scene references |
 | [Part II](manuscript/part-02.md) | Chapters 8–13 and epilogue |
-| [Expanded scenes](manuscript/scenes/) | Twenty-seven standalone insert scenes, integrated by the PDF builder |
+| [Expanded scenes](manuscript/scenes/) | Thirty-one standalone insert scenes, integrated by the PDF builder |
 | [Story Bible](STORY_BIBLE.md) | Crew biographies, vessels, continuity rules and chronological battle events |
 | [PDF builder](scripts/build_book.py) | Book-layout generator and scene compiler |
 | [Manuscript tests](tests/test_manuscript.py) | Checks scene inclusion, chronology and narrative integrity |
@@ -88,7 +97,7 @@ python scripts/build_book.py
 
 The finished book is written to: **books/The_Last_Watch_Extended_Edition.pdf**
 
-Every manuscript or publisher change triggers GitHub Actions. The build must pass source-continuity tests and PDF checks, including a 175-page minimum, extractable text, key chapters/scenes, and 6 × 9 trim size, before the new PDF is published.
+Every manuscript or publisher change triggers GitHub Actions. The build must pass source-continuity tests and PDF checks, including a 215-page minimum, extractable text, key chapters/scenes, and 6 × 9 trim size, before the new PDF is published.
 
 ## Next editorial milestone: a complete full-length novel
 
