@@ -397,6 +397,8 @@ We had not been forgotten.
 
 Help was simply far away.
 
+{{scene:27-the-cold-hours.md}}
+
 **2218 hours**
 
 Bell reported a weak submerged contact astern.
