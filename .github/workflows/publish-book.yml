@@ -9,6 +9,10 @@ on:
       - ".github/workflows/publish-book.yml"
   workflow_dispatch:
 
+concurrency:
+  group: the-last-watch-pdf-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -70,7 +74,9 @@ jobs:
           git add books/The_Last_Watch_Extended_Edition.pdf
           if ! git diff --cached --quiet; then
             git commit -m "book: publish refreshed The Last Watch PDF"
-            git push
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
           else
             echo "The published PDF is already current."
           fi
