@@ -116,7 +116,7 @@ class NovelDoc(BaseDocTemplate):
         super().__init__(str(path), pagesize=(PAGE_W, PAGE_H), leftMargin=52,
                          rightMargin=48, topMargin=57, bottomMargin=53,
                          title="The Last Watch — Expanded Novel Edition",
-                         author="DPN Technology",
+                         author="Diesel (DPN Novels)",
                          subject="An original fictional naval war novel",
                          pageCompression=1)
         cover_frame = Frame(0, 0, PAGE_W, PAGE_H, leftPadding=0, rightPadding=0,
@@ -189,7 +189,7 @@ def draw_cover(canvas, doc):
     canvas.line(61, PAGE_H - 111, PAGE_W - 61, PAGE_H - 111)
     canvas.setFillColor(FOAM)
     canvas.setFont(SANS_BOLD, 10)
-    canvas.drawCentredString(PAGE_W / 2, PAGE_H - 82, "DPN TECHNOLOGY  /  ORIGINAL FICTION")
+    canvas.drawCentredString(PAGE_W / 2, PAGE_H - 82, "DPN NOVELS  /  ORIGINAL FICTION")
     canvas.setFillColor(colors.white)
     canvas.setFont(SERIF_BOLD, 37)
     canvas.drawCentredString(PAGE_W / 2, PAGE_H - 172, "THE LAST")
@@ -203,8 +203,87 @@ def draw_cover(canvas, doc):
     canvas.drawCentredString(PAGE_W / 2, 137, "Our actions do.")
     canvas.setFillColor(GOLD)
     canvas.setFont(SANS, 8.5)
-    canvas.drawCentredString(PAGE_W / 2, 44, "EXPANDED NOVEL EDITION  •  2026")
+    canvas.drawCentredString(PAGE_W / 2, 44, "WRITTEN BY DIESEL  •  DPN NOVELS")
     canvas.restoreState()
+
+
+class InkPlate(Flowable):
+    """Original print-friendly vector illustration between the chapter heading and text."""
+    def __init__(self, mode: str):
+        super().__init__()
+        self.mode = mode
+        self.width = 322
+        self.height = 106
+
+    def draw(self):
+        c = self.canv
+        w, h = self.width, self.height
+        c.saveState()
+        c.setFillColor(colors.HexColor("#10263e"))
+        c.roundRect(0, 0, w, h, 5, fill=1, stroke=0)
+        c.setStrokeColor(colors.HexColor("#446e8b"))
+        c.setLineWidth(.65)
+        # Fine, repeating sea lines echo a woodcut printed with blue ink.
+        for n in range(11):
+            y = 12 + n * 6.8
+            p = c.beginPath()
+            p.moveTo(7, y)
+            for k in range(7):
+                x = 7 + k*45
+                p.curveTo(x+14, y+2.6, x+30, y-3.4, x+45, y)
+            c.drawPath(p, stroke=1, fill=0)
+        c.setFillColor(colors.HexColor("#d9e4ee"))
+        if self.mode == "storm":
+            # Dark destroyer silhouette advancing through the moonlit sea.
+            c.setFillColor(colors.HexColor("#acc8dd"))
+            c.circle(274, 80, 12, stroke=0, fill=1)
+            c.setFillColor(colors.HexColor("#04111e"))
+            p=c.beginPath(); p.moveTo(42,42); p.lineTo(266,42); p.lineTo(236,28)
+            p.lineTo(73,28); p.close(); c.drawPath(p, fill=1, stroke=0)
+            c.rect(112,43,104,10,stroke=0,fill=1)
+            c.rect(146,53,41,19,stroke=0,fill=1)
+            c.rect(164,71,3,21,stroke=0,fill=1)
+            c.rect(136,77,58,1.5,stroke=0,fill=1)
+        elif self.mode == "radar":
+            c.setStrokeColor(colors.HexColor("#b3d2e8"))
+            for r in (19,32,47):
+                c.circle(161,53,r,stroke=1,fill=0)
+            c.line(102,53,220,53)
+            c.line(161,5,161,101)
+            c.setStrokeColor(colors.HexColor("#e0b878"))
+            c.setLineWidth(2)
+            for x,y in ((199,80),(128,30),(170,93),(112,64)):
+                c.line(x-3,y-3,x+3,y+3)
+                c.line(x-3,y+3,x+3,y-3)
+        elif self.mode == "fire":
+            c.setFillColor(colors.HexColor("#07131d"))
+            c.rect(52,17,214,78,stroke=0,fill=1)
+            c.setStrokeColor(colors.HexColor("#bcd1e0"))
+            c.setLineWidth(2)
+            for x in (65,99,230,256):
+                c.line(x,20,x,91)
+            for y in (25,46,85):
+                c.line(65,y,256,y)
+            c.setFillColor(colors.HexColor("#e4a867"))
+            p=c.beginPath();p.moveTo(140,19);p.curveTo(122,48,159,52,150,87)
+            p.curveTo(185,56,195,36,176,19);p.close();c.drawPath(p,fill=1,stroke=0)
+            c.setFillColor(colors.HexColor("#fff0c7"))
+            p=c.beginPath();p.moveTo(151,20);p.curveTo(141,39,163,45,157,66)
+            p.curveTo(172,43,178,31,169,20);p.close();c.drawPath(p,fill=1,stroke=0)
+        else:
+            # Distant harbor lights and coastline in early winter evening.
+            c.setFillColor(colors.HexColor("#94b6d1"))
+            p=c.beginPath();p.moveTo(0,46);p.lineTo(45,60);p.lineTo(88,53)
+            p.lineTo(132,70);p.lineTo(180,58);p.lineTo(230,73);p.lineTo(w,53)
+            p.lineTo(w,0);p.lineTo(0,0);p.close();c.drawPath(p,fill=1,stroke=0)
+            c.setFillColor(colors.HexColor("#0c2237"))
+            c.rect(195,47,12,31,stroke=0,fill=1)
+            c.rect(198,78,6,9,stroke=0,fill=1)
+            c.setFillColor(colors.HexColor("#f0c98a"))
+            c.circle(201,86,2.6,stroke=0,fill=1)
+            for x,y in ((72,59),(105,58),(246,73),(280,68)):
+                c.circle(x,y,1.5,stroke=0,fill=1)
+        c.restoreState()
 
 def draw_body(canvas, doc):
     canvas.saveState()
@@ -215,7 +294,7 @@ def draw_body(canvas, doc):
     canvas.setFillColor(MUTED)
     canvas.setFont(SANS, 7.0)
     canvas.drawString(52, PAGE_H - 30, "THE LAST WATCH")
-    canvas.drawRightString(PAGE_W - 48, PAGE_H - 30, "DPN TECHNOLOGY")
+    canvas.drawRightString(PAGE_W - 48, PAGE_H - 30, "DIESEL  /  DPN NOVELS")
     canvas.line(52, 39, PAGE_W - 48, 39)
     canvas.setFont(SANS, 7.7)
     canvas.drawCentredString(PAGE_W / 2, 24, str(max(1, page - 1)))
@@ -253,7 +332,7 @@ def read_manuscript():
 
     chapter_count = len(re.findall(r"(?m)^# CHAPTER \w+", raw))
     words = len(re.findall(r"\b[\w’'-]+\b", raw))
-    if chapter_count != 13 or "# EPILOGUE" not in raw or words < 20000 or len(included) < 15:
+    if chapter_count != 13 or "# EPILOGUE" not in raw or words < 25000 or len(included) < 19:
         raise SystemExit(f"Manuscript incomplete: {chapter_count} chapters, {len(included)} scenes, {words} words")
     return raw, words, chapter_count, len(included)
 
@@ -279,9 +358,9 @@ def make_book(raw, word_count):
 
     story.append(Spacer(1, 80))
     story.append(Paragraph("THE LAST WATCH", ST["title"]))
-    story.append(Paragraph("A North Atlantic War Novel · Expanded Edition", ST["sub"]))
+    story.append(Paragraph("A North Atlantic War Novel · Written by Diesel · DPN Novels", ST["sub"]))
     story.append(Spacer(1, 25))
-    story.append(Paragraph("An original work of naval military fiction told through the eyes of Commander Daniel Vale, Commanding Officer, USS Northstar.", ST["copyright"]))
+    story.append(Paragraph("Written by Diesel. Published under the DPN Novels imprint. An original work of naval military fiction told through the eyes of Commander Daniel Vale, Commanding Officer, USS Northstar.", ST["copyright"]))
     story.append(Paragraph(f"Approximately {word_count:,} words. Designed for long-form reading or narration.", ST["copyright"]))
     story.append(Paragraph("© 2026 DPN Technology. All rights reserved. This fictional story may not be reproduced, redistributed, or adapted without the rights holder's permission, except where applicable law permits.", ST["copyright"]))
     story.append(Paragraph("The characters, naval vessels, units, nations' actions, and events portrayed in this book are invented. Any resemblance to actual people or operations is coincidental.", ST["copyright"]))
@@ -295,6 +374,7 @@ def make_book(raw, word_count):
 
     started = False
     section_seen = False
+    chapter_idx = 0
     for block in paragraphs_of(raw):
         if block.startswith("# THE LAST WATCH") or block.startswith("## Extended Manuscript"):
             continue
@@ -304,6 +384,11 @@ def make_book(raw, word_count):
                 story.append(PageBreak())
             section_seen = True
             story.append(Paragraph(inline_md(block[2:]), ST["heading"]))
+            chapter_idx += 1
+            art_mode = {2: "storm", 5: "radar", 10: "fire", 13: "harbor"}.get(chapter_idx)
+            if art_mode:
+                story.append(InkPlate(art_mode))
+                story.append(Spacer(1, 12))
             continue
         if not started:
             continue
