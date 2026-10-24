@@ -8,7 +8,7 @@ on:
       - "scripts/build_book.py"
       - "scripts/cinematic_art.py"
       - "scripts/proof_cinematic_pdf.py"
-      - "tests/test_cinematic_art.py"
+      - "tests/**"
       - "artwork/cinematic/**"
       - "assets/cinematic/**"
       - ".github/workflows/publish-book.yml"
@@ -60,6 +60,7 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
+          import re
           from pypdf import PdfReader
           path = Path("books/The_Last_Watch_Extended_Edition.pdf")
           reader = PdfReader(str(path))
@@ -71,6 +72,8 @@ jobs:
           assert not reader.is_encrypted
           assert "Diesel" in (reader.metadata.author or ""), "Missing Diesel author credit"
           alltext = "\n".join(p.extract_text() or "" for p in reader.pages)
+          assert not re.search(r"(?:\b[01]\b[\s\r\n]*){8,}", alltext), "Binary DPN ornaments leaked into audiobook text extraction"
+          assert "DIESEL  /  DPN NOVELS" not in alltext, "Repeated decorative header leaked into audiobook narration"
           for phrase in ("THE LAST WATCH", "CHAPTER ONE", "CHAPTER THIRTEEN", "EPILOGUE", "THE END", "THE SHIP THAT BREATHES", "THE WEATHER HAS NO ALLIES", "THE HEARING ROOM", "THE VOICES AT HOME", "THE LAST MANIFEST", "THE PEOPLE WE HAD PROMISED", "THE FIRST CROSSING", "THE SILENT QUARTER", "THE FISHERMAN", "THE PIER AT REYKJAV", "WHAT THE ORDERS DID NOT SAY", "BENEATH AURORA", "BEFORE THE SECOND SALVO", "THE COLD HOURS", "THE VOICE FROM HAWTHORNE", "THE UNWRITTEN MAP", "THE CORRIDOR OF LIGHTS", "THE FIRST LEDGER", "THE DARK WATER BETWEEN", "THE FREIGHTER AT THE EDGE", "WHERE THE CARGO WENT", "THE CONVOY AFTER OURS", "THE TWELVE TRACKS", "RAVEN ONE\u0027S EMPTY SEAT", "THE DISTANCE HOME", "WHAT ETHAN CHOSE", "THE TANKER", "THE LIEUTENANT", "A SPACE FOR THE LIVING", "THE ELEVENTH SURVIVOR", "THE VISITOR FROM CUTLASS", "THE DOOR WITH NO HANDLE", "THE WATCHKEEPERS", "THE LANTERN KEY", "WHEN HAWTHORNE ANSWERED", "THE ROOM FOR THE MISSING", "THE GREEN ROOF"):
               assert phrase in alltext, f"Missing expected section: {phrase}"
           assert len(alltext) > 465000, f"Expanded PDF text extraction too short: {len(alltext)} chars"
@@ -109,6 +112,7 @@ jobs:
             python scripts/proof_cinematic_pdf.py
             python - <<'PY'
           from pathlib import Path
+          import re
           from pypdf import PdfReader
           pdf = Path("books/The_Last_Watch_Extended_Edition.pdf")
           reader = PdfReader(str(pdf))
@@ -118,6 +122,8 @@ jobs:
               assert sum(bool(page.images) for page in reader.pages) >= 15, "Latest PDF missing committed cinematic photographs"
           assert "Diesel" in (reader.metadata.author or "")
           body = "\n".join(p.extract_text() or "" for p in reader.pages)
+          assert not re.search(r"(?:\b[01]\b[\s\r\n]*){8,}", body), "Latest PDF contains spoken binary decoration"
+          assert "DIESEL  /  DPN NOVELS" not in body, "Latest PDF contains repeated spoken running headers"
           assert len(body) > 465000
           assert "THE END" in body
           print(f"Validated latest-source PDF: {len(reader.pages)} pages")
