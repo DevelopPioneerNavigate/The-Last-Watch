@@ -1,0 +1,77 @@
+{
+  "edition": "CINEMATIC-01",
+  "author": "Diesel | DPN Novels",
+  "placement": "Full-page photographic illustration immediately before the matching scene; cinematic cover image replaces vector-only front cover",
+  "assets": [
+    {
+      "file": "cover_northstar_convoy.jpg",
+      "anchor": "cover",
+      "title": "The Last Watch",
+      "caption": "North Atlantic storm convoy and USS Northstar",
+      "sha256": "285dc4dde529e52d336c67c415bb3c0fd54faf1672e46cd13e0a3f10a2ef1e42"
+    },
+    {
+      "file": "cal_edonia_rescue.jpg",
+      "anchor": "THE DISTANCE BETWEEN SHIPS",
+      "title": "The Cost of Rescue",
+      "caption": "Survivors in the storm and rescue crew",
+      "sha256": "903816e8360b1cbd655e22bc4732aba1d5833ee42170636aff11e10625487fad"
+    },
+    {
+      "file": "combat_center_salvo.jpg",
+      "anchor": "THE TWELVE TRACKS",
+      "title": "Twelve Inbound",
+      "caption": "Vale and Idris lead the combat information center during incoming missile attack",
+      "sha256": "a489e0a37c59e27ff0301acaf36da765ca786a151f2a7fab4688578f1c3154d9"
+    },
+    {
+      "file": "ramirez_engineering_fire.jpg",
+      "anchor": "THE DOOR WITH NO HANDLE",
+      "title": "Fire Below",
+      "caption": "Chief Ramirez and her shipmates in the engineering fire",
+      "sha256": "46ad983cd44b25ed3088e1f2c74c16127f6083b8b2a9c5e10060ed856ca59ec8"
+    },
+    {
+      "file": "reykjavik_arrival.jpg",
+      "anchor": "THE PIER AT REYKJAV",
+      "title": "Landfall",
+      "caption": "Convoy survivors and wounded Northstar at the Icelandic harbor",
+      "sha256": "47cf09b7243f92655027e0046b42c232b63651ef46aaa265a8af0b684611b0c2"
+    },
+    {
+      "file": "liv_new_home.jpg",
+      "anchor": "THE GREEN ROOF",
+      "title": "The New Home",
+      "caption": "Liv shows Vale her drawing years after the war",
+      "sha256": "f6697d6f6988197106e14e7836fe0c79a9e0bd113fd2bdc83b69fcf416523c04"
+    },
+    {
+      "file": "raven_one_aircraft.jpg",
+      "anchor": "RAVEN ONE'S EMPTY SEAT",
+      "title": "Raven One",
+      "caption": "Helicopter searching the rough North Atlantic",
+      "sha256": "03de39c8acfa5f0eae181ecd6f2e09a3816ac7bbeaed722410e6f21b928e07f9"
+    },
+    {
+      "file": "cutlass_wounded.jpg",
+      "anchor": "THE LIEUTENANT'S BRIDGE",
+      "title": "Still Underway",
+      "caption": "HMS Cutlass damaged but moving in the North Atlantic",
+      "sha256": "b51afb5568fd8a0984a69c107d3fab7bba3bbd47aab7ea35d29b81e7621e9592"
+    },
+    {
+      "file": "aurora_paper_boats.jpg",
+      "anchor": "BENEATH AURORA",
+      "title": "Paper Boats",
+      "caption": "Families and children aboard Aurora fold paper boats",
+      "sha256": "6d1cf5fd4c5314a2b2d041fdb9d78dffa8f1f74d3d6012d91d06d589151ed687"
+    },
+    {
+      "file": "second_missile_salvo.jpg",
+      "anchor": "BEFORE THE SECOND SALVO",
+      "title": "Storm of Steel",
+      "caption": "Northstar launches defensive missiles during the naval battle",
+      "sha256": "b7f102572b2e10e0429c5bde3aca3bb9ee217a5f11108418f3a1cfaef628f32c"
+    }
+  ]
+}
