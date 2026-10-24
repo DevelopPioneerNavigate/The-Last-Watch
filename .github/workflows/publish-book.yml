@@ -6,6 +6,8 @@ on:
     paths:
       - "manuscript/**"
       - "scripts/build_book.py"
+      - "scripts/cinematic_art.py"
+      - "artwork/cinematic/**"
       - ".github/workflows/publish-book.yml"
   workflow_dispatch:
 
@@ -33,7 +35,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install PDF build requirements
-        run: python -m pip install --disable-pip-version-check "reportlab>=4,<5" "pypdf>=5,<7"
+        run: python -m pip install --disable-pip-version-check "reportlab>=4,<5" "pypdf>=5,<7" "pillow>=10,<13"
 
       - name: Validate expanded narrative and continuity
         run: python -m unittest discover -s tests -v
@@ -50,6 +52,10 @@ jobs:
           path = Path("books/The_Last_Watch_Extended_Edition.pdf")
           reader = PdfReader(str(path))
           assert len(reader.pages) >= 455, f"Unexpectedly short expanded PDF: {len(reader.pages)} pages"
+          if Path("artwork/cinematic/The_Last_Watch_Cinematic_Plates.zip").is_file():
+              image_pages = sum(bool(page.images) for page in reader.pages)
+              assert image_pages >= 10, f"Cinematic asset pack exists but PDF has only {image_pages} image pages"
+              print(f"Verified {image_pages} image-backed cinematic pages")
           assert not reader.is_encrypted
           assert "Diesel" in (reader.metadata.author or ""), "Missing Diesel author credit"
           alltext = "\n".join(p.extract_text() or "" for p in reader.pages)
@@ -88,6 +94,8 @@ jobs:
           reader = PdfReader(str(pdf))
           assert not reader.is_encrypted
           assert len(reader.pages) >= 455
+          if Path("artwork/cinematic/The_Last_Watch_Cinematic_Plates.zip").is_file():
+              assert sum(bool(page.images) for page in reader.pages) >= 10, "Latest PDF missing cinematic photographs"
           assert "Diesel" in (reader.metadata.author or "")
           body = "\n".join(p.extract_text() or "" for p in reader.pages)
           assert len(body) > 465000
