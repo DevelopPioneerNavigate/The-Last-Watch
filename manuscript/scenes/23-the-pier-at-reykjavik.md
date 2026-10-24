@@ -32,13 +32,9 @@ I looked at her.
 
 "Only to people who pay attention."
 
-Below us, Rios came onto the weather deck supported by another sailor. His bandaged hands made the rail awkward to hold, and he moved with the careful concentration of a person rediscovering the basic mechanics of walking. The moment he saw land, he stopped.
+Below us, another wounded sailor descended the gangway with a medic at his side. Several had already been taken ashore. Their absence from the ship was a relief and a wound all its own.
 
-I thought he might be crying.
-
-Then he turned his face away, and I allowed him the privacy.
-
-Two men from the Norwegian harbor service stood at the bottom of the gangway. They were waiting to receive our first medical transfer. One saluted our ensign without being asked.
+Two men from the Norwegian harbor service stood at the bottom of the gangway, ready to receive the next medical transfer. One saluted our ensign without being asked.
 
 That almost undid me.
 
