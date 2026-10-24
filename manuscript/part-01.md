@@ -78,6 +78,8 @@ I had told the ferry's captain, Peter Lindholm, that the Navy would protect them
 
 {{scene:20-the-first-crossing.md}}
 
+{{scene:24-what-the-orders-did-not-say.md}}
+
 {{scene:01-ship-that-breathes.md}}
 
 At 0230 I went below. The passageways smelled of coffee, hydraulic fluid, wet clothing, and warm machinery. Sailors hurried past with their shoulders braced against the ship's movement. Near an engineering access, I encountered Fireman Apprentice Jacob Rios, nineteen, from Kansas. He had joined because his grandfather had been a Navy man and because he wanted to see the world beyond a grain elevator.
@@ -378,6 +380,8 @@ The reports came back. Aurora safe. Atlas Mariner safe. Meridian safe. Cutlass o
 
 One vessel lay on the ocean floor.
 
+{{scene:25-beneath-auroras-windows.md}}
+
 Mara stood beside me as I reviewed the plot.
 
 "Those attacks weren't all launched from the same place."
@@ -565,6 +569,8 @@ I spoke over the announcing system.
 No applause followed. There were only acknowledgments and the steady sound of people returning to work.
 
 That quiet professionalism was the greatest strength my ship possessed.
+
+{{scene:26-before-the-second-salvo.md}}
 
 # CHAPTER SEVEN — THE STORM OF STEEL
 
