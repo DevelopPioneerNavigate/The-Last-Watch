@@ -1,14 +1,15 @@
 {
-  "edition": "CINEMATIC-DIRECT-01",
+  "edition": "CINEMATIC-DIRECT-02",
   "author": "Diesel | DPN Novels",
-  "description": "Checksum-verified committed image files; one cover and eight scene placements.",
+  "description": "Checksum-verified original photographic art: USS Northstar DDG-148 cover and ten cinematic scene plates, placed before their corresponding scenes.",
   "assets": [
     {
-      "file": "01-north-atlantic-convoy.jpg",
+      "file": "00_northstar_cover.jpg",
       "anchor": "cover",
       "title": "The Last Watch",
-      "caption": "USS Northstar guards Convoy LANTERN in a moonlit North Atlantic storm",
-      "sha256": "8d0872a5df4cce6925aabb0f0552cd9c1cdc716d3939f8ddb6f02c370c8de76d"
+      "caption": "USS Northstar DDG-148 defends the convoy through North Atlantic darkness",
+      "sha256": "528c626b6c0a1d6e8a59d4ba72a5475ee543fe7edfddccabdacd4781d004db29",
+      "source_path": "assets/cinematic/00_northstar_cover.jpg"
     },
     {
       "file": "01-north-atlantic-convoy.jpg",
@@ -65,6 +66,22 @@
       "title": "A New Home",
       "caption": "Years later, Liv shows Vale the home her family built",
       "sha256": "22b5ac381f74d94f26afb8517f4b02014270df685ca964b07101b558d196ecff"
+    },
+    {
+      "file": "12_raven_one.jpg",
+      "source_path": "assets/cinematic/12_raven_one.jpg",
+      "anchor": "RAVEN ONE'S EMPTY SEAT",
+      "title": "Raven One",
+      "caption": "Flight crews bring a naval helicopter home across the North Atlantic",
+      "sha256": "3c1e216fad14cde22253f5b52d7be53b43aca603804822dc9d9b8dc8b58d35dd"
+    },
+    {
+      "file": "03_caledonia_rescue.jpg",
+      "source_path": "assets/cinematic/03_caledonia_rescue.jpg",
+      "anchor": "THE LAST MANIFEST",
+      "title": "The Lost Freighter",
+      "caption": "Rescue crews and merchant sailors face the freezing North Atlantic",
+      "sha256": "615f3e192573cd0612d595ab73ca04416d40634747b3ffdc784276fe6ad50035"
     }
   ]
 }
