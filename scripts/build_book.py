@@ -9,6 +9,7 @@ Dependency: reportlab (pip install reportlab)
 from __future__ import annotations
 
 import html
+import hashlib
 import math
 import os
 import re
@@ -134,7 +135,7 @@ class NovelDoc(BaseDocTemplate):
         if isinstance(flowable, Paragraph) and flowable.style.name == "chapter":
             title = flowable.getPlainText()
             self.chapter_num += 1
-            key = f"chapter_{self.chapter_num}"
+            key = "chapter_" + hashlib.sha1(title.encode("utf-8")).hexdigest()[:12]
             self.canv.bookmarkPage(key)
             self.notify("TOCEntry", (0, title, self.page, key))
 
