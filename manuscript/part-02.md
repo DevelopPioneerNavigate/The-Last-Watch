@@ -455,29 +455,11 @@ She was smiling, and the sight seemed to surprise both of us.
 
 {{scene:12-voices-from-the-west.md}}
 
-Later, a Norwegian frigate and the American destroyer USS Jefferson approached from the secured corridor. Jefferson's captain offered to assume the principal air-defense responsibility for the remaining transit.
+Later, the American destroyer USS Jefferson and a Norwegian frigate approached from the secured corridor. Relief was finally arriving, though there were still hours of open water ahead of us.
 
-I thought of our reduced magazine and tired crew.
+{{scene:34-the-corridor-of-lights.md}}
 
-"We're happy to have the company," I told him.
-
-"We received your reports," the other captain said. "Medical and repair support are available when you arrive."
-
-"Appreciated."
-
-A pause.
-
-"Daniel, good work."
-
-I almost laughed.
-
-Good work. We had lost people. A merchant ship lay at the bottom. Cutlass was damaged and limping. We had fired on an enemy warship and did not know how many sailors had died. My own ship was wounded.
-
-But the civilians were alive. The surviving ships were still together.
-
-"Thank you," I said.
-
-I handed over the necessary tactical responsibilities, confirmed that all civilian vessels were accounted for, and allowed the crew to move from sustained combat readiness toward appropriate transit watches.
+With the escort responsibilities carefully handed over, I checked that all surviving civilian ships were accounted for and allowed the crew to move from sustained combat readiness toward appropriate transit watches. We had lost Caledonia and Ramirez. We had also brought hundreds of people this far. Both truths belonged in the same account.
 
 Some sailors laughed. Others cried. A few simply stared at their hands, as though they had forgotten what stillness felt like.
 
@@ -602,6 +584,8 @@ I stopped typing.
 Then I added: *I miss you. I miss Ethan. I want to come home. I think I've had enough war for a lifetime.*
 
 I sent the message and sat at my desk until the room grew dark.
+
+{{scene:35-the-first-ledger.md}}
 
 Outside, Iceland went on with its life. Cars moved through streets. People bought bread. Children went to school. It was a relief to see ordinary civilization carrying on, indifferent to our private catastrophe.
 
