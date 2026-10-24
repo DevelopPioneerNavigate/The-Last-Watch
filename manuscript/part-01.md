@@ -608,13 +608,9 @@ Mallory came over the radio.
 
 Our defensive weapons launched. Their thunder rolled through the ship like distant machinery falling down a stairwell.
 
-The operators counted destroyed threats, assigned new tracks, and adjusted the tactical picture as it changed. Several hostile missiles disappeared. Others continued.
+{{scene:44-the-twelve-tracks.md}}
 
-"Cutlass defending two inbound."
-
-I watched two fast symbols converge toward the British frigate.
-
-One vanished.
+One hostile track vanished from the British approach.
 
 The second kept coming.
 
