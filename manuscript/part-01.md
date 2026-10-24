@@ -2,7 +2,7 @@
 ## A North Atlantic War Novel
 ### Extended Manuscript — Part I
 *A fictional first-person account by Commander Daniel Vale, US Navy*
-*DPN Technology | Literary Edition | October 2026*
+*Written by Diesel | DPN Novels | October 2026*
 
 > The ocean does not decide who we are. Our actions do.
 
@@ -73,6 +73,8 @@ That distinction mattered. The sea was full of innocent ships, and a commander w
 I watched Aurora rise above a swell two miles away. A few passenger-deck windows glowed through the rain. I imagined the little world inside her: exhausted parents, people sleeping upright under coats, children asking questions that no parent knew how to answer.
 
 I had told the ferry's captain, Peter Lindholm, that the Navy would protect them. In peacetime, a promise can be a comfort. In war, it becomes a debt.
+
+{{scene:16-convoy-of-strangers.md}}
 
 {{scene:01-ship-that-breathes.md}}
 
@@ -145,6 +147,8 @@ She grinned, then became serious. "We'll make a safe search. No heroics."
 Her smile faded. "Understood."
 
 The hangar door opened onto the black weather. Crewmen moved with deliberate care on the pitching deck. Then the Seahawk lifted into the wind and vanished beyond a curtain of spray, its lights reduced to two trembling points.
+
+{{scene:17-raven-one-outbound.md}}
 
 At 0402, a coded operational message arrived: enemy submarines likely in our wider operating area; hostile surface units active; long-range attacks possible. Continue the escort. Avoid unnecessary engagement. Preserve the civilian vessels.
 
@@ -304,9 +308,11 @@ At 0531, Caledonia's bow rose into the gray darkness. For a few seconds the frei
 
 I wanted a record that would outlast the tactical symbols. I wanted the families to know where the sea had taken their people.
 
-By 0632, Cutlass had recovered nineteen survivors. Three were confirmed dead. Four remained missing. Ward was alive, bruised and shivering and still asking whether rescue boats had found the others.
+By 0544, Cutlass had recovered nineteen survivors. Three were confirmed dead. Four remained missing. Ward was alive, bruised and shivering and still asking whether rescue boats had found the others.
 
 {{scene:03-california-of-the-sea.md}}
+
+{{scene:18-the-last-manifest.md}}
 
 My duty was to keep the rest alive. Yet for the first time that night, I understood the shape of the enemy plan. They were not simply attacking ships. They were attacking our ability to choose. One crippled freighter could pull an escort away. One crisis could create another.
 
