@@ -16,8 +16,8 @@ class NovelTests(unittest.TestCase):
 
     def test_full_manuscript_present(self):
         self.assertEqual(self.chapters, 13)
-        self.assertEqual(self.scenes, 15)
-        self.assertGreater(self.words, 20000)
+        self.assertEqual(self.scenes, 19)
+        self.assertGreater(self.words, 25000)
         self.assertNotIn("{{scene:", self.raw)
         self.assertIn("THE END", self.raw)
 
@@ -28,9 +28,12 @@ class NovelTests(unittest.TestCase):
 
     def test_scene_placement(self):
         placements = [
+            ("THE PEOPLE WE HAD PROMISED", "THE SHIP THAT BREATHES"),
             ("THE SHIP THAT BREATHES", "# CHAPTER TWO"),
-            ("A FAINT LINE IN THE NOISE", "# CHAPTER THREE"),
-            ("THE DISTANCE BETWEEN SHIPS", "# CHAPTER FOUR"),
+            ("A FAINT LINE IN THE NOISE", "THE AIRCRAFT IN THE DARK"),
+            ("THE AIRCRAFT IN THE DARK", "# CHAPTER THREE"),
+            ("THE DISTANCE BETWEEN SHIPS", "THE LAST MANIFEST"),
+            ("THE LAST MANIFEST", "# CHAPTER FOUR"),
             ("THE PICTURE IS NOT THE SEA", "# CHAPTER FIVE"),
             ("THE COST OF KEEPING COURSE", "# CHAPTER SIX"),
             ("THE INVISIBLE FRONT", "# CHAPTER SEVEN"),
@@ -38,7 +41,8 @@ class NovelTests(unittest.TestCase):
             ("THE SPACE BEFORE FIRE", "# CHAPTER NINE"),
             ("THE BOUNDARIES HOLD", "# CHAPTER TEN"),
             ("THE PEOPLE WHO WERE NOT ON THE SCREEN", "# CHAPTER ELEVEN"),
-            ("THE WEATHER HAS NO ALLIES", "# CHAPTER TWELVE"),
+            ("THE WEATHER HAS NO ALLIES", "THE DARK BETWEEN THE ALARMS"),
+            ("THE DARK BETWEEN THE ALARMS", "# CHAPTER TWELVE"),
             ("VOICES FROM THE WEST", "# CHAPTER THIRTEEN"),
             ("LETTERS NEVER SENT", "# EPILOGUE"),
             ("THE HEARING ROOM", "THE VOICES AT HOME"),
