@@ -13,28 +13,28 @@ When a future North Atlantic war breaks out, Vale's destroyer and the British fr
 
 **Current published build:**
 - **76,146 words**
-- **463 printed pages**
+- **471 printed pages**
 - **13 chapters + prologue + epilogue**
 - **58 integrated scenes** featuring richer tactical, engineering, rescue, crew-life and aftermath sequences
 - Approximately **8.0–9.8 hours** of narration, depending on speaking pace
 
-The PDF is typeset at **6 × 9 inches**, with a naval-themed vector cover, **fifteen original illustrated chapter plates**, running headers, page numbers and a table of contents.
+The PDF is typeset at **6 × 9 inches**, with a **full-color cinematic cover and eight full-page narrative images**, running headers, page numbers and a table of contents.
 
 If the PDF link is missing after a new commit, check the [Publish book PDF workflow](.github/workflows/publish-book.yml) and its downloadable artifact. GitHub Actions rebuilds and commits the verified PDF when the source changes.
 
-## Cinematic illustrated edition — image upload required
+## Cinematic illustrated edition — now published
 
-The full-length novel is now configured for a **cinematic, full-color photographic edition** rather than the earlier basic vector chapter drawings. An image manifest maps **ten original images** to the cover and their appropriate scenes: the convoy, Caledonia rescue, CIC missile attack, Ramirez's fire, Reykjavík arrival, Liv's later memorial scene, Raven One, HMS Cutlass, children folding paper boats aboard Aurora, and a defensive missile launch.
+The current **471-page GitHub PDF** includes a full-color cinematic cover and eight full-page narrative artworks. They are actual JPEG assets committed in [artwork/cinematic](artwork/cinematic/README.md), verified by SHA-256 in 'committed_manifest.json', and embedded by the PDF builder. The original simpler vector illustrations have been replaced in the cinematic build.
 
-The source ZIP is prepared and available from the conversation. **The binary ZIP is not yet in this repository.** Until it is uploaded, the published PDF remains the previous **15-vector-plate edition**. GitHub does not magically access files generated in a ChatGPT session.
+The illustrated scenes cover Northstar and Convoy LANTERN, Caledonia's rescue, the Sigrid rescue, the second missile engagement, the Combat Information Center, Chief Ramirez's engineering fire, Reykjavík landfall, and Liv's later homecoming. The cover composition is also repeated as the first-crossing plate.
 
-To activate the cinematic edition, upload the single **The_Last_Watch_Cinematic_Plates.zip** into the [artwork/cinematic directory](artwork/cinematic/README.md), without unpacking or renaming. The GitHub Actions publisher then verifies the image checksums, renders the full-page illustrations at their matching scenes, checks the resulting PDF contains ten image-bearing pages, and publishes the new illustrated book automatically. This uses the already configured GitHub workflow and requires no paid image service or API token.
+An **expanded ten-image pack** is also ready, including additional illustrations of Raven One's helicopter, HMS Cutlass, and Aurora's children folding paper boats. It is not yet committed; upload the supplied 'The_Last_Watch_Cinematic_Plates.zip' into this artwork directory to activate that alternate ten-image edition automatically. All images in either source format are checked before they can enter the book.
 
 ## Publishing credit and illustrations
 
 **The Last Watch** is **written by Diesel**, published under the **DPN Novels** name. The PDF title page, metadata, cover treatment and running headers reflect this credit.
 
-The current GitHub PDF also includes **fifteen original print-friendly vector chapter illustrations** (opening watch, stormship, convoy formation, rescue craft, radar, fishing-boat rescue, aircraft wreckage, missile engagement, uncertain fleet horizon, machinery fire, engineering recovery, midnight escort, Iceland harbor, memorial, and Vale's letter). Separate cinematic concept illustrations generated during development are not yet embedded as raster assets in the GitHub edition; the vector plates are included in the reproducible book build.
+The current GitHub PDF includes verified, committed cinematic JPEG illustrations. The original 15-vector-plate artwork is retained in the source only as a compatibility fallback if photographic assets are absent.
 
 ## What's new in the expanded edition
 
