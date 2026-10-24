@@ -244,6 +244,21 @@ class InkPlate(Flowable):
             c.rect(146,53,41,19,stroke=0,fill=1)
             c.rect(164,71,3,21,stroke=0,fill=1)
             c.rect(136,77,58,1.5,stroke=0,fill=1)
+        elif self.mode == "convoy":
+            # Four merchant hulls beneath an escort silhouette: a stylized departure.
+            c.setFillColor(colors.HexColor("#d0e4ed"))
+            c.circle(265,83,11,stroke=0,fill=1)
+            c.setFillColor(colors.HexColor("#071724"))
+            for x,y,size in ((35,49,43),(89,43,51),(161,48,43),(231,42,54)):
+                p=c.beginPath()
+                p.moveTo(x,y);p.lineTo(x+size,y);p.lineTo(x+size-6,y-11)
+                p.lineTo(x+8,y-11);p.close();c.drawPath(p,fill=1,stroke=0)
+                c.rect(x+12,y+1,size*.35,11,stroke=0,fill=1)
+                c.rect(x+21,y+12,2,12,stroke=0,fill=1)
+            c.setStrokeColor(colors.HexColor("#e2b875"))
+            c.setLineWidth(1)
+            c.line(28,28,293,28)
+            c.line(37,22,280,22)
         elif self.mode == "radar":
             c.setStrokeColor(colors.HexColor("#b3d2e8"))
             for r in (19,32,47):
@@ -255,6 +270,25 @@ class InkPlate(Flowable):
             for x,y in ((199,80),(128,30),(170,93),(112,64)):
                 c.line(x-3,y-3,x+3,y+3)
                 c.line(x-3,y+3,x+3,y-3)
+        elif self.mode == "rescue":
+            # A searchlight reaches across rough water toward a rescue boat.
+            c.setFillColor(colors.HexColor("#ebd7ae"))
+            p=c.beginPath()
+            p.moveTo(94,71);p.lineTo(280,41);p.lineTo(279,20)
+            p.close();c.drawPath(p,fill=1,stroke=0)
+            c.setFillColor(colors.HexColor("#081b29"))
+            c.rect(42,45,83,22,stroke=0,fill=1)
+            c.rect(66,67,23,19,stroke=0,fill=1)
+            c.rect(77,86,2,13,stroke=0,fill=1)
+            p=c.beginPath()
+            p.moveTo(171,32);p.lineTo(259,32);p.lineTo(244,24)
+            p.lineTo(184,24);p.close();c.drawPath(p,fill=1,stroke=0)
+            for x in (192,210,227):
+                c.circle(x,38,4,stroke=0,fill=1)
+                c.rect(x-2,32,4,5,stroke=0,fill=1)
+            c.setStrokeColor(colors.HexColor("#9fc5da"))
+            c.setLineWidth(2)
+            c.arc(251,15,269,30,180,130)
         elif self.mode == "fire":
             c.setFillColor(colors.HexColor("#07131d"))
             c.rect(52,17,214,78,stroke=0,fill=1)
@@ -270,6 +304,24 @@ class InkPlate(Flowable):
             c.setFillColor(colors.HexColor("#fff0c7"))
             p=c.beginPath();p.moveTo(151,20);p.curveTo(141,39,163,45,157,66)
             p.curveTo(172,43,178,31,169,20);p.close();c.drawPath(p,fill=1,stroke=0)
+        elif self.mode == "memorial":
+            # A folded flag and ship's bell, an understated memorial plate.
+            c.setFillColor(colors.HexColor("#cedde6"))
+            c.setStrokeColor(colors.HexColor("#e7bc7a"))
+            c.setLineWidth(2)
+            c.line(90,32,231,32)
+            p=c.beginPath()
+            p.moveTo(139,32);p.lineTo(174,80);p.lineTo(209,32)
+            p.close();c.drawPath(p,stroke=1,fill=0)
+            c.setFillColor(colors.HexColor("#e9c88d"))
+            c.circle(174,33,4,stroke=0,fill=1)
+            c.setFillColor(colors.HexColor("#233e60"))
+            p=c.beginPath()
+            p.moveTo(74,20);p.lineTo(112,65);p.lineTo(151,20)
+            p.close();c.drawPath(p,fill=1,stroke=0)
+            c.setStrokeColor(colors.HexColor("#e4e9ef"))
+            for x in (96,108,120,132):
+                c.line(x,23,x+19,44)
         else:
             # Distant harbor lights and coastline in early winter evening.
             c.setFillColor(colors.HexColor("#94b6d1"))
@@ -332,7 +384,7 @@ def read_manuscript():
 
     chapter_count = len(re.findall(r"(?m)^# CHAPTER \w+", raw))
     words = len(re.findall(r"\b[\w’'-]+\b", raw))
-    if chapter_count != 13 or "# EPILOGUE" not in raw or words < 25000 or len(included) < 19:
+    if chapter_count != 13 or "# EPILOGUE" not in raw or words < 31000 or len(included) < 23:
         raise SystemExit(f"Manuscript incomplete: {chapter_count} chapters, {len(included)} scenes, {words} words")
     return raw, words, chapter_count, len(included)
 
@@ -385,7 +437,7 @@ def make_book(raw, word_count):
             section_seen = True
             story.append(Paragraph(inline_md(block[2:]), ST["heading"]))
             chapter_idx += 1
-            art_mode = {2: "storm", 5: "radar", 10: "fire", 13: "harbor"}.get(chapter_idx)
+            art_mode = {2: "storm", 3: "convoy", 4: "rescue", 5: "radar", 10: "fire", 13: "harbor", 14: "memorial"}.get(chapter_idx)
             if art_mode:
                 story.append(InkPlate(art_mode))
                 story.append(Spacer(1, 12))
