@@ -12,13 +12,13 @@ When a future North Atlantic war breaks out, Vale's destroyer and the British fr
 ### [Download the PDF book](books/The_Last_Watch_Extended_Edition.pdf)
 
 **Current published build:**
-- **46,958 words**
-- **282 printed pages**
+- **52,260 words**
+- **314 printed pages**
 - **13 chapters + prologue + epilogue**
-- **35 integrated scenes** featuring richer tactical, engineering, rescue, crew-life and aftermath sequences
-- Approximately **5.0–6.0 hours** of narration, depending on speaking pace
+- **39 integrated scenes** featuring richer tactical, engineering, rescue, crew-life and aftermath sequences
+- Approximately **5.5–6.7 hours** of narration, depending on speaking pace
 
-The PDF is typeset at **6 × 9 inches**, with a naval-themed vector cover, **eleven original illustrated chapter plates**, running headers, page numbers and a table of contents.
+The PDF is typeset at **6 × 9 inches**, with a naval-themed vector cover, **twelve original illustrated chapter plates**, running headers, page numbers and a table of contents.
 
 If the PDF link is missing after a new commit, check the [Publish book PDF workflow](.github/workflows/publish-book.yml) and its downloadable artifact. GitHub Actions rebuilds and commits the verified PDF when the source changes.
 
@@ -26,11 +26,11 @@ If the PDF link is missing after a new commit, check the [Publish book PDF workf
 
 **The Last Watch** is **written by Diesel**, published under the **DPN Novels** name. The PDF title page, metadata, cover treatment and running headers reflect this credit.
 
-The current GitHub PDF also includes **eleven original print-friendly vector chapter illustrations** (stormship, convoy formation, rescue craft, radar, aircraft wreckage, uncertain fleet horizon, machinery fire, midnight escort, Iceland harbor, memorial, and Vale's letter). Separate cinematic concept illustrations generated during development are not yet embedded as raster assets in the GitHub edition; the vector plates are included in the reproducible book build.
+The current GitHub PDF also includes **twelve original print-friendly vector chapter illustrations** (stormship, convoy formation, rescue craft, radar, aircraft wreckage, uncertain fleet horizon, machinery fire, engineering recovery, midnight escort, Iceland harbor, memorial, and Vale's letter). Separate cinematic concept illustrations generated during development are not yet embedded as raster assets in the GitHub edition; the vector plates are included in the reproducible book build.
 
 ## What's new in the expanded edition
 
-The original story was approximately 9,800 words. This revision has grown to more than 46,000 words, with sixteen additional scenes across the latest four writing passes and substantial new material throughout:
+The original story was approximately 9,800 words. This revision has grown to more than 52,000 words, with sixteen additional scenes across the latest four writing passes and substantial new material throughout:
 
 | Area | Expanded narrative |
 |---|---|
@@ -79,13 +79,22 @@ This release includes **two additional illustrated plates** and a publishing-wor
 
 This release adds two print-ready chapter illustrations (midnight escort and letter), bringing the reproducible edition to **eleven vector plates**. The full-color cinematic development illustrations remain separate artwork; they have not yet been inserted as raster files into the published PDF.
 
+### Latest installment — The survivors' unfinished watch
+
+- **The Hour Before Sunrise** — Noah Ellis asks Vale why Northstar cannot turn back to save Caledonia's missing crew.
+- **The Weight of Water** — Navarro and the captain inspect the fire damage while rescuers struggle with Ramirez's death.
+- **The Morning Without Signals** — On November 19, the merchant masters jointly navigate worsening weather and missing information.
+- **The Book of Names** — Ten months later, Rios returns with Ramirez's qualification notebook and a future of his own.
+
+This milestone adds an **original engineering illustration**, bringing the reproducible 6 × 9 PDF to **12 vector chapter plates**. The cinematic art generated separately is not yet included in the PDF.
+
 ## Read and develop the manuscript
 
 | Location | Contents |
 |---|---|
 | [Part I](manuscript/part-01.md) | Prologue, chapters 1–7 with scene references |
 | [Part II](manuscript/part-02.md) | Chapters 8–13 and epilogue |
-| [Expanded scenes](manuscript/scenes/) | Thirty-five standalone insert scenes, integrated by the PDF builder |
+| [Expanded scenes](manuscript/scenes/) | Thirty-nine standalone insert scenes, integrated by the PDF builder |
 | [Story Bible](STORY_BIBLE.md) | Crew biographies, vessels, continuity rules and chronological battle events |
 | [PDF builder](scripts/build_book.py) | Book-layout generator and scene compiler |
 | [Manuscript tests](tests/test_manuscript.py) | Checks scene inclusion, chronology and narrative integrity |
