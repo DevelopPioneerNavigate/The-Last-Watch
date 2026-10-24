@@ -134,6 +134,8 @@ She showed me the faint trace. It came and went beneath the roar of the sea. Som
 
 {{scene:02-a-faint-line.md}}
 
+{{scene:40-the-dark-water-between.md}}
+
 Idris asked permission to raise our aviation alert status. I agreed. In the hangar, the MH-60R Seahawk called Raven One was being prepared for a difficult flight.
 
 Lieutenant Samira Brooks, the aircraft commander, was standing beside her copilot, Lieutenant Owen Wells, checking the latest weather when I reached her.
