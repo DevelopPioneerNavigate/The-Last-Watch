@@ -12,11 +12,11 @@ When a future North Atlantic war breaks out, Vale's destroyer and the British fr
 ### [Download the PDF book](books/The_Last_Watch_Extended_Edition.pdf)
 
 **Current published build:**
-- **69,383 words**
-- **421 printed pages**
+- **76,146 words**
+- **463 printed pages**
 - **13 chapters + prologue + epilogue**
-- **52 integrated scenes** featuring richer tactical, engineering, rescue, crew-life and aftermath sequences
-- Approximately **7.3–8.9 hours** of narration, depending on speaking pace
+- **58 integrated scenes** featuring richer tactical, engineering, rescue, crew-life and aftermath sequences
+- Approximately **8.0–9.8 hours** of narration, depending on speaking pace
 
 The PDF is typeset at **6 × 9 inches**, with a naval-themed vector cover, **fifteen original illustrated chapter plates**, running headers, page numbers and a table of contents.
 
@@ -30,7 +30,7 @@ The current GitHub PDF also includes **fifteen original print-friendly vector ch
 
 ## What's new in the expanded edition
 
-The original story was approximately 9,800 words. This revision has grown to more than 69,000 words, with sixteen additional scenes across the latest four writing passes and substantial new material throughout:
+The original story was approximately 9,800 words. This revision has grown to more than 76,000 words, with 58 integrated character, naval action, and aftermath scenes and substantial new material throughout:
 
 | Area | Expanded narrative |
 |---|---|
@@ -116,13 +116,24 @@ This update adds **one original prologue illustration**, bringing the print-read
 
 **Editorial correction:** The epilogue now maintains Ethan Vale's established choice of civilian emergency-systems engineering rather than reversing it to a naval career. The illustrated edition retains **15 original vector plates**. Standalone cinematic paintings are not yet part of the reproducible PDF.
 
+### Full-length manuscript milestone — Six new scenes
+
+- **The Door With No Handle:** The critical early minutes of the engineering fire and the search for Ramirez's team.
+- **The Watchkeepers' Book:** Ramirez's red notebook survives, changing how the crew documents handovers and remembers its people.
+- **The Lantern Key:** A civilian vessel with an unverified position asks for assistance; Northstar must help without exposing the convoy.
+- **When Hawthorne Answered:** Confirmed word arrives that Vale's friend Matthew Hayes is alive.
+- **The Room for the Missing:** Icelandic reception workers reconcile evacuees' names and reunite separated relatives.
+- **The Green Roof:** Five years later, Liv shows Vale the life her family built after crossing the sea.
+
+**Editorial fixes in this milestone:** The 1116 Ramirez call no longer appears twice across a scene boundary; the memorial preparations now follow the dockside visit in chronological order. All 58 scene insertions and the 75,000-word floor are checked during PDF publication.
+
 ## Read and develop the manuscript
 
 | Location | Contents |
 |---|---|
 | [Part I](manuscript/part-01.md) | Prologue, chapters 1–7 with scene references |
 | [Part II](manuscript/part-02.md) | Chapters 8–13 and epilogue |
-| [Expanded scenes](manuscript/scenes/) | Fifty-two standalone insert scenes, integrated by the PDF builder |
+| [Expanded scenes](manuscript/scenes/) | Fifty-eight standalone insert scenes, integrated by the PDF builder |
 | [Story Bible](STORY_BIBLE.md) | Crew biographies, vessels, continuity rules and chronological battle events |
 | [PDF builder](scripts/build_book.py) | Book-layout generator and scene compiler |
 | [Manuscript tests](tests/test_manuscript.py) | Checks scene inclusion, chronology and narrative integrity |
@@ -143,11 +154,11 @@ python scripts/build_book.py
 
 The finished book is written to: **books/The_Last_Watch_Extended_Edition.pdf**
 
-Every manuscript or publisher change triggers GitHub Actions. The build must pass source-continuity tests and PDF checks, including a 410-page minimum, extractable text, key chapters/scenes, and 6 × 9 trim size, before the new PDF is published.
+Every manuscript or publisher change triggers GitHub Actions. The build must pass source-continuity tests and PDF checks, including a 455-page minimum, extractable text, key chapters/scenes, and 6 × 9 trim size, before the new PDF is published.
 
 ## Next editorial milestone: a complete full-length novel
 
-This is a substantial expanded novella/short novel, **not yet an 80,000-word commercial-length manuscript**. The goal is to grow it into a polished full-length military novel in installments, not to fill pages artificially.
+The manuscript has **passed its first full-length draft milestone of 75,000 words**. It still needs an editorial pass for pace, repeated material, chronology, and final proofing before it should be called publication-ready. A further 80,000–90,000-word edition remains an optional creative goal, not a requirement to add filler.
 
 Remaining work includes:
 1. Develop separate multi-chapter arcs around the earlier attacks, the enemy's larger campaign and fleet-level consequences.
