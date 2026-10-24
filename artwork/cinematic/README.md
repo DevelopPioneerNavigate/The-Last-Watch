@@ -1,49 +1,51 @@
-# Cinematic Artwork Edition — Diesel / DPN Novels
+# THE LAST WATCH — CINEMATIC ART COLLECTION
 
-This directory is the publishing contract for **The Last Watch** full-color, photo-illustrated edition. The user-approved artwork is in a downloadable, validated archive:
+**Writer:** Diesel • **Imprint:** DPN Novels • **Edition:** CINEMATIC-DIRECT-02
 
-**The_Last_Watch_Cinematic_Plates.zip** (10 image assets, ~4.1 MB)
+The repository now contains **eleven verified cinematic placements** — a cinematic image-based cover and **ten full-page scene illustrations**. They are embedded by the publisher into the actual PDF; this is no longer a pending manual ZIP upload.
 
-### Current repository state
+## Preview gallery
 
-- [x] Eight cinematic JPEG files are **already committed directly**, using 'committed_manifest.json'. One is reused for the cover and first crossing, giving **nine full-color PDF image pages**.
-- [x] The [published 471-page PDF](../../books/The_Last_Watch_Extended_Edition.pdf) contains these real embedded image assets.
-- [x] The publisher validates their SHA-256 checksums and scene locations.
-- [x] The optional expanded ZIP source contains **ten distinct high-quality images**, with an additional Raven One helicopter plate and Aurora refugee-lounge plate, ready to become the next version.
-- [ ] The optional ZIP is not committed yet. Its absence **does not mean the current book is unillustrated**.
+![USS Northstar DDG-148 — cinematic cover](../../assets/cinematic/00_northstar_cover.jpg)
 
-### Publish the prepared cinematic images in one upload
-
-To switch to the expanded ten-image pack, open this folder on GitHub, select **Add file → Upload files**, select the supplied 'The_Last_Watch_Cinematic_Plates.zip', and commit it to 'main'.
-
-**Do not extract or rename the ZIP.** The publisher looks for the exact path:
-
-    artwork/cinematic/The_Last_Watch_Cinematic_Plates.zip
-
-GitHub Actions will automatically:
-1. Verify the archive's ten JPEGs against the committed SHA-256 manifest.
-2. Insert a photo cover and nine full-color scenes at their matching narrative beats.
-3. Preserve the manuscript wording, Diesel author credit, 6×9 trim, and table of contents.
-4. Verify at least ten image-bearing pages and commit the updated PDF.
-5. Reject missing or corrupted images instead of publishing a partially illustrated edition.
-
-### Narrative placements
-
-| Artwork | Placement |
+| North Atlantic convoy | Combat information center |
 |---|---|
-| Stormy moonlit convoy | Full-color front cover |
-| Caledonia rescue | The Distance Between Ships |
-| CIC missile attack | The Twelve Tracks |
-| Ramirez and the engine-room fire | The Door With No Handle |
-| Reykjavík harbor | The Pier at Reykjavík |
+| ![Convoy LANTERN](01-north-atlantic-convoy.jpg) | ![Twelve inbound tracks](03-twelve-tracks-in-combat.jpg) |
+
+| Raven One helicopter | Engineering fire |
+|---|---|
+| ![Raven One returns](../../assets/cinematic/12_raven_one.jpg) | ![Chief Ramirez and her team](04-ramirez-engineering-fire.jpg) |
+
+| Reykjavík arrival | Liv's new home |
+|---|---|
+| ![Reykjavík harbor](05-reykjavik-arrival.jpg) | ![Liv returns with her drawing](06-the-green-roof.jpg) |
+
+## Verified placements
+
+| Illustration | Narrative scene |
+|---|---|
+| **USS Northstar DDG-148** | Full-color book cover |
+| North Atlantic convoy | The First Crossing |
+| Caledonia's survivors | The Distance Between Ships |
+| Norwegian rescue crew | The Fisherman's Choice |
+| Missile defenses | Before the Second Salvo |
+| CIC missile engagement | The Twelve Tracks |
+| Chief Ramirez's rescue | The Door With No Handle |
+| Iceland harbor | The Pier at Reykjavík |
 | Liv's new home | The Green Roof |
 | Raven One helicopter | Raven One's Empty Seat |
-| HMS Cutlass after the strike | The Lieutenant's Bridge |
-| Aurora children with paper boats | Beneath Aurora's Windows |
-| Northstar defending against missiles | Before the Second Salvo |
+| Caledonia in the storm | The Last Manifest |
 
-These are dramatic interpretations of fictional events, not documentary images or technical reference drawings. Before commercial printing, proof every spread, check hull numbers and uniforms, and assess color-print suitability.
+## Reproducible publishing
 
-### Adding more images
+- `committed_manifest.json` defines the images, exact manuscript anchors, titles and captions, relative source paths, and SHA-256 checksums.
+- `scripts/cinematic_art.py` refuses missing files, altered checksums, unsafe paths, and ambiguous image placements.
+- `scripts/build_book.py` includes the full-page artwork immediately before its corresponding scene and replaces the silhouette cover with the photographic DDG-148 cover.
+- `.github/workflows/publish-book.yml` builds and validates the 6 × 9 inch PDF, tests the manuscript and illustration mapping, verifies image-bearing pages, and commits the new book to `books/The_Last_Watch_Extended_Edition.pdf`.
+- Existing `manifest.json` describes the optional ZIP collection route for an alternative artwork release. **A ZIP upload is not required** for the checked-in edition.
 
-Create a high-resolution JPG/PNG, add a unique file/anchor/title/caption/sha256 entry to 'manifest.json', and recreate the ZIP with every named file under the 'plates/' subfolder. Commit both the manifest and ZIP; the existing build automatically places the new image at its matching scene.
+## Quality and creative direction
+
+The artwork is cinematic interpretation of a fictional naval conflict, **not historical photography**. Future plates should retain the correct Northstar designation **DDG-148**, visual consistency of the officers, North Atlantic weather and equipment, and a high-detail film-still finish rather than minimalist shapes. Print proofing and editorial review are still advisable before commercial distribution.
+
+**[Download the cinematic PDF](../../books/The_Last_Watch_Extended_Edition.pdf)**.
