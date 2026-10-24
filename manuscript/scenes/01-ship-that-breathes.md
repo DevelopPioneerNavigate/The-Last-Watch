@@ -1,4 +1,4 @@
-**THE SHIP THAT BREATHES — 0222 HOURS**
+**THE SHIP THAT BREATHES — EARLIER THAT NIGHT**
 
 There is a peculiar kind of intimacy in commanding a ship at sea. People imagine that a captain knows the vessel by its dimensions or weapon systems. I knew Northstar by her moods. I knew the change in vibration when the forward air-conditioning plant came online. I knew which deck passage would smell of baked bread before breakfast and which compartment always seemed three degrees colder than the others. When the ship rolled to port, a drawer in the navigation office would tap twice against its frame. Somebody had repaired it four times. It still tapped twice.
 
