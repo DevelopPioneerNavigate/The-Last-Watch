@@ -76,6 +76,8 @@ I had told the ferry's captain, Peter Lindholm, that the Navy would protect them
 
 {{scene:16-convoy-of-strangers.md}}
 
+{{scene:20-the-first-crossing.md}}
+
 {{scene:01-ship-that-breathes.md}}
 
 At 0230 I went below. The passageways smelled of coffee, hydraulic fluid, wet clothing, and warm machinery. Sailors hurried past with their shoulders braced against the ship's movement. Near an engineering access, I encountered Fireman Apprentice Jacob Rios, nineteen, from Kansas. He had joined because his grandfather had been a Navy man and because he wanted to see the world beyond a grain elevator.
@@ -101,6 +103,8 @@ He swallowed, looked at the wrench in his hand, and nodded.
 "Yes, Captain."
 
 He disappeared into the machinery spaces. I would remember his face hours later, when the ship was burning and I had to wait for a report from the very compartment he was entering.
+
+{{scene:21-the-silent-quarter.md}}
 
 # CHAPTER TWO — THE SOUND BENEATH US
 
@@ -489,6 +493,8 @@ I requested an update. The network provided nothing.
 I told myself a commanding officer had no luxury for private grief during an ongoing operation. But I imagined the photograph again and again.
 
 The ocean kept moving. Northstar kept moving. I wished time would stop long enough for someone to tell me whether Matthew was alive.
+
+{{scene:22-the-fishermans-choice.md}}
 
 # CHAPTER SIX — GHOSTS OF THE FLEET
 
