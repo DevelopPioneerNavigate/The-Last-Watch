@@ -7,6 +7,7 @@ on:
       - "manuscript/**"
       - "scripts/build_book.py"
       - "scripts/cinematic_art.py"
+      - "tests/test_cinematic_art.py"
       - "artwork/cinematic/**"
       - ".github/workflows/publish-book.yml"
   workflow_dispatch:
@@ -39,6 +40,14 @@ jobs:
 
       - name: Validate expanded narrative and continuity
         run: python -m unittest discover -s tests -v
+
+      - name: Report cinematic artwork status
+        run: |
+          if test -f artwork/cinematic/The_Last_Watch_Cinematic_Plates.zip; then
+            echo "CINEMATIC ZIP DETECTED: PDF must include actual photographic image pages"
+          else
+            echo "CINEMATIC ZIP PENDING: publishing validated vector edition until the source archive is uploaded"
+          fi
 
       - name: Build novel PDF
         run: python scripts/build_book.py
