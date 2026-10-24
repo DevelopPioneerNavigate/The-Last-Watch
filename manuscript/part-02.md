@@ -439,6 +439,8 @@ That silence felt like a gift I did not quite trust.
 
 {{scene:38-the-morning-without-signals.md}}
 
+{{scene:45-raven-ones-empty-seat.md}}
+
 **19 November 2037 — 1832 hours**
 
 The friendly aircraft appeared to the west just before evening.
@@ -595,6 +597,8 @@ Then I added: *I miss you. I miss Ethan. I want to come home. I think I've had e
 
 I sent the message and sat at my desk until the room grew dark.
 
+{{scene:46-the-distance-home.md}}
+
 {{scene:35-the-first-ledger.md}}
 
 Outside, Iceland went on with its life. Cars moved through streets. People bought bread. Children went to school. It was a relief to see ordinary civilization carrying on, indifferent to our private catastrophe.
@@ -630,6 +634,8 @@ The ocean kept the rest.
 {{scene:39-the-book-of-names.md}}
 
 {{scene:15-the-voices-at-home.md}}
+
+{{scene:47-what-ethan-chose.md}}
 
 After the war I lectured at the Naval War College. I showed maps, explained what we could confirm about the coordinated attacks, and described the difficulties of making decisions with incomplete information.
 
