@@ -2,7 +2,7 @@
 
 Sofia Reed did not like being called brave.
 
-I discovered this when she invited me aboard Meridian to discuss the convoy's progress during the first forty-eight hours of the crossing.
+I discovered this when she invited me aboard Meridian to discuss the convoy's progress during the first days of the crossing.
 
 The weather was rough enough that transferring personnel between moving ships would have been unsafe. We held the conversation by a secure voice circuit instead, each of us standing on a different bridge with the same gray sea beyond the windows.
 
