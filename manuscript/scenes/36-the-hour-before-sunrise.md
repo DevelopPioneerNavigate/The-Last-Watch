@@ -218,4 +218,4 @@ Then I turned it facedown.
 
 "All stations, Captain. Remain ready."
 
-At 0603 the first missile attack began.
+At 0602 the indications sharpened, and I turned toward Idris as the air-defense team prepared to name what was coming. The terrible silence before the first attack had almost ended.
