@@ -62,13 +62,19 @@ class CinematicArtworkTests(unittest.TestCase):
                 self.assertGreaterEqual(len(pdf.pages[0].images), 1)
 
     def test_no_partial_archive(self):
-        # With no archive, the publisher legitimately uses its existing
-        # vector edition. An archive, once uploaded, must pass full checks.
-        if not ARCHIVE.is_file():
-            self.assertEqual(activate_cinematic_art(), [])
-            return
+        # Prefer the original ZIP when available; verified individual JPEGs
+        # are a complete and reproducible alternative, never a silent fallback
+        # to unillustrated pages after cinematic assets have been committed.
+        direct = ART / "committed_manifest.json"
         verified = activate_cinematic_art()
-        self.assertEqual(len(verified), len(self.manifest["assets"]))
+        if ARCHIVE.is_file():
+            self.assertEqual(len(verified), len(self.manifest["assets"]))
+        elif direct.is_file():
+            self.assertGreaterEqual(len(verified), 9)
+            self.assertEqual(sum(item["anchor"] == "cover" for item in verified), 1)
+            self.assertEqual(len(verified), len({item["anchor"] for item in verified}))
+        else:
+            self.assertEqual(verified, [])
         for item in verified:
             self.assertTrue(item["path"].is_file())
 
