@@ -1,0 +1,53 @@
+"""Cinematic artwork regression tests for the DPN Novels illustrated book."""
+import json
+import sys
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+from cinematic_art import ART, ARCHIVE, MANIFEST, activate_cinematic_art, scene_plate
+from build_book import read_manuscript
+
+
+class CinematicArtworkTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+        cls.manuscript = read_manuscript()[0]
+
+    def test_scene_anchors_exist(self):
+        entries = self.manifest["assets"]
+        self.assertGreaterEqual(len(entries), 10)
+        self.assertEqual(len(entries), len({p["file"] for p in entries}))
+        self.assertEqual(sum(e["anchor"] == "cover" for e in entries), 1)
+        for item in entries:
+            with self.subTest(art=item["file"]):
+                self.assertEqual(len(item["sha256"]), 64)
+                if item["anchor"] == "cover":
+                    continue
+                self.assertIn(item["anchor"].upper().replace("'", " "), self.manuscript.upper().replace("'", " "))
+
+    def test_trigger_mapping(self):
+        entries = self.manifest["assets"]
+        for item in entries:
+            if item["anchor"] == "cover":
+                continue
+            found = scene_plate(entries, "**" + item["anchor"] + " — TEST TIME**")
+            self.assertEqual(found["file"], item["file"])
+
+    def test_no_partial_archive(self):
+        # With no archive, the publisher legitimately uses its existing
+        # vector edition. An archive, once uploaded, must pass full checks.
+        if not ARCHIVE.is_file():
+            self.assertEqual(activate_cinematic_art(), [])
+            return
+        verified = activate_cinematic_art()
+        self.assertEqual(len(verified), len(self.manifest["assets"]))
+        for item in verified:
+            self.assertTrue(item["path"].is_file())
+
+
+if __name__ == "__main__":
+    unittest.main()
