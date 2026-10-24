@@ -230,8 +230,4 @@ I smiled.
 
 Then we both returned to the screens.
 
-At 2311 the contact faded entirely.
-
-I did not order a celebration.
-
-I ordered the watch to continue.
+We continued watching through the last minutes of the hour. Bell made no grand declaration about the contact. She waited for the evidence to become strong enough to say what had happened. I understood that patience better than I had at the beginning of the war.
