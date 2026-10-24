@@ -65,7 +65,9 @@ She rested a hand briefly on my shoulder.
 
 "Fair enough."
 
-In the next twenty minutes we reorganized the convoy, reviewed the ice-avoidance route, and prepared to move through deteriorating weather. Cutlass remained afloat, her crew fighting fires and treating casualties. We had neither the space nor time to celebrate a tactical success.
+As we assessed the aftermath of the strike, we kept reorganizing the convoy, reviewing the ice-avoidance route, and preparing for deteriorating weather. Cutlass remained afloat, her crew fighting fires and treating casualties. We had neither the space nor time to celebrate a tactical success.
+
+{{scene:30-the-ship-we-could-not-see.md}}
 
 At 1048, Chief Bell made another report.
 
@@ -556,6 +558,8 @@ He disappeared into the waiting crowd.
 I watched until I could no longer see him.
 
 {{scene:23-the-pier-at-reykjavik.md}}
+
+{{scene:31-the-captains-without-ships.md}}
 
 Then I went below to prepare for the memorial service.
 
