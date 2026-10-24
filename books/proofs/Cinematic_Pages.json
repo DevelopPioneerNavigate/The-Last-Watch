@@ -1,0 +1,82 @@
+{
+  "source_pdf": "The_Last_Watch_Extended_Edition.pdf",
+  "total_pages": 481,
+  "verified_image_pages": 15,
+  "placements": [
+    {
+      "file": "00_northstar_cover.jpg",
+      "title": "The Last Watch",
+      "pdf_page": 1
+    },
+    {
+      "file": "01-north-atlantic-convoy.jpg",
+      "title": "The First Crossing",
+      "pdf_page": 17
+    },
+    {
+      "file": "02-the-caledonia-rescue.jpg",
+      "title": "The Cost of Rescue",
+      "pdf_page": 81
+    },
+    {
+      "file": "07-sigrid-rescue.jpg",
+      "title": "The Fisherman's Choice",
+      "pdf_page": 136
+    },
+    {
+      "file": "08-before-second-salvo.jpg",
+      "title": "Before the Second Salvo",
+      "pdf_page": 164
+    },
+    {
+      "file": "03-twelve-tracks-in-combat.jpg",
+      "title": "Twelve Tracks",
+      "pdf_page": 175
+    },
+    {
+      "file": "04-ramirez-engineering-fire.jpg",
+      "title": "Fire Below",
+      "pdf_page": 227
+    },
+    {
+      "file": "05-reykjavik-arrival.jpg",
+      "title": "Landfall",
+      "pdf_page": 348
+    },
+    {
+      "file": "20_liv_and_vale_remembrance.jpg",
+      "title": "Liv's New Home",
+      "pdf_page": 467
+    },
+    {
+      "file": "12_raven_one.jpg",
+      "title": "Raven One",
+      "pdf_page": 321
+    },
+    {
+      "file": "03_caledonia_rescue.jpg",
+      "title": "The Lost Freighter",
+      "pdf_page": 87
+    },
+    {
+      "file": "16_cutlass_crippled_bridge.jpg",
+      "title": "HMS Cutlass \u2014 The Wounded Escort",
+      "pdf_page": 191
+    },
+    {
+      "file": "17_aurora_child_and_nurse.jpg",
+      "title": "Beneath Aurora's Windows",
+      "pdf_page": 110
+    },
+    {
+      "file": "18_memorial_watch.jpg",
+      "title": "The Memorial Watch",
+      "pdf_page": 374
+    },
+    {
+      "file": "19_ramirez_watchbook.jpg",
+      "title": "The Watchkeepers' Book",
+      "pdf_page": 262
+    }
+  ]
+}
