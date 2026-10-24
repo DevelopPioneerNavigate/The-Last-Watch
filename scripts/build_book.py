@@ -304,6 +304,38 @@ class InkPlate(Flowable):
             c.setFillColor(colors.HexColor("#fff0c7"))
             p=c.beginPath();p.moveTo(151,20);p.curveTo(141,39,163,45,157,66)
             p.curveTo(172,43,178,31,169,20);p.close();c.drawPath(p,fill=1,stroke=0)
+        elif self.mode == "wreckage":
+            # An isolated wing fragment and reflected starlight, the unnamed aircrew.
+            c.setFillColor(colors.HexColor("#b2cedd"))
+            c.circle(260,80,9,stroke=0,fill=1)
+            c.setFillColor(colors.HexColor("#0a1b28"))
+            p=c.beginPath()
+            p.moveTo(81,50);p.lineTo(186,63);p.lineTo(230,51)
+            p.lineTo(172,44);p.lineTo(128,34);p.lineTo(94,35)
+            p.close();c.drawPath(p,stroke=0,fill=1)
+            c.setStrokeColor(colors.HexColor("#e8ba81"))
+            c.setLineWidth(2)
+            c.line(126,47,142,49)
+            c.setStrokeColor(colors.HexColor("#bdd5e5"))
+            c.setLineWidth(1)
+            for x in (60,108,154,205,249):
+                c.line(x,22,x+28,22)
+        elif self.mode == "horizon":
+            # Two distant surface ships divided by uncertain weather.
+            c.setFillColor(colors.HexColor("#9fb9cd"))
+            for x,y in ((75,65),(110,77),(168,70),(246,82)):
+                c.circle(x,y,1.5,stroke=0,fill=1)
+            c.setFillColor(colors.HexColor("#061523"))
+            for x,size,y in ((54,117,37),(196,89,30)):
+                p=c.beginPath()
+                p.moveTo(x,y);p.lineTo(x+size,y)
+                p.lineTo(x+size-14,y-10);p.lineTo(x+17,y-10)
+                p.close();c.drawPath(p,stroke=0,fill=1)
+                c.rect(x+size*.34,y, size*.29,12,fill=1,stroke=0)
+                c.rect(x+size*.46,y+12,3,19,fill=1,stroke=0)
+            c.setStrokeColor(colors.HexColor("#ecc38c"))
+            c.setLineWidth(1)
+            c.line(159,18,164,77)
         elif self.mode == "memorial":
             # A folded flag and ship's bell, an understated memorial plate.
             c.setFillColor(colors.HexColor("#cedde6"))
@@ -437,7 +469,7 @@ def make_book(raw, word_count):
             section_seen = True
             story.append(Paragraph(inline_md(block[2:]), ST["heading"]))
             chapter_idx += 1
-            art_mode = {2: "storm", 3: "convoy", 4: "rescue", 5: "radar", 10: "fire", 13: "harbor", 14: "memorial"}.get(chapter_idx)
+            art_mode = {2: "storm", 3: "convoy", 4: "rescue", 5: "radar", 7: "wreckage", 9: "horizon", 10: "fire", 13: "harbor", 14: "memorial"}.get(chapter_idx)
             if art_mode:
                 story.append(InkPlate(art_mode))
                 story.append(Spacer(1, 12))
