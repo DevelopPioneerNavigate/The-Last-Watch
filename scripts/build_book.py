@@ -388,6 +388,42 @@ class InkPlate(Flowable):
             c.line(78,20,239,20)
             c.line(173,20,173,42)
             c.line(173,68,173,87)
+        elif self.mode == "fisher":
+            # The small rescue trawler approaching a broad sea under a searchlight.
+            c.setFillColor(colors.HexColor("#e5cb9c"))
+            p=c.beginPath()
+            p.moveTo(90,82);p.lineTo(288,48);p.lineTo(288,27)
+            p.close();c.drawPath(p,fill=1,stroke=0)
+            c.setFillColor(colors.HexColor("#061726"))
+            p=c.beginPath()
+            p.moveTo(65,42);p.lineTo(244,42);p.lineTo(222,27)
+            p.lineTo(87,27);p.close();c.drawPath(p,fill=1,stroke=0)
+            c.rect(116,43,73,22,fill=1,stroke=0)
+            c.rect(141,65,4,25,fill=1,stroke=0)
+            c.setStrokeColor(colors.HexColor("#b2d4e7"))
+            c.setLineWidth(1.3)
+            c.line(143,88,212,55)
+            c.line(113,65,189,65)
+            for x in (50,104,172,231):
+                c.line(x,18,x+41,18)
+        elif self.mode == "salvo":
+            # A distant defensive missile engagement over a black Atlantic horizon.
+            c.setFillColor(colors.HexColor("#f5e3bb"))
+            c.circle(253,74,9,fill=1,stroke=0)
+            c.setStrokeColor(colors.HexColor("#b5d8e9"))
+            c.setLineWidth(1.5)
+            for x,y in ((50,26),(119,34),(200,20)):
+                c.line(x,y,x+42,y+38)
+            c.setStrokeColor(colors.HexColor("#e7b577"))
+            c.setLineWidth(3)
+            c.line(78,29,144,75)
+            c.line(168,27,211,63)
+            c.setFillColor(colors.HexColor("#071827"))
+            p=c.beginPath();p.moveTo(52,36);p.lineTo(286,36)
+            p.lineTo(267,22);p.lineTo(72,22)
+            p.close();c.drawPath(p,fill=1,stroke=0)
+            c.rect(137,36,67,13,fill=1,stroke=0)
+            c.rect(164,49,4,17,fill=1,stroke=0)
         elif self.mode == "memorial":
             # A folded flag and ship's bell, an understated memorial plate.
             c.setFillColor(colors.HexColor("#cedde6"))
@@ -468,7 +504,7 @@ def read_manuscript():
 
     chapter_count = len(re.findall(r"(?m)^# CHAPTER \w+", raw))
     words = len(re.findall(r"\b[\w’'-]+\b", raw))
-    if chapter_count != 13 or "# EPILOGUE" not in raw or words < 51000 or len(included) < 39:
+    if chapter_count != 13 or "# EPILOGUE" not in raw or words < 57000 or len(included) < 43:
         raise SystemExit(f"Manuscript incomplete: {chapter_count} chapters, {len(included)} scenes, {words} words")
     return raw, words, chapter_count, len(included)
 
@@ -521,7 +557,7 @@ def make_book(raw, word_count):
             section_seen = True
             story.append(Paragraph(inline_md(block[2:]), ST["heading"]))
             chapter_idx += 1
-            art_mode = {2: "storm", 3: "convoy", 4: "rescue", 5: "radar", 7: "wreckage", 9: "horizon", 10: "fire", 11: "engine", 12: "night", 13: "harbor", 14: "memorial", 15: "letter"}.get(chapter_idx)
+            art_mode = {2: "storm", 3: "convoy", 4: "rescue", 5: "radar", 6: "fisher", 7: "wreckage", 8: "salvo", 9: "horizon", 10: "fire", 11: "engine", 12: "night", 13: "harbor", 14: "memorial", 15: "letter"}.get(chapter_idx)
             if art_mode:
                 story.append(InkPlate(art_mode))
                 story.append(Spacer(1, 12))
