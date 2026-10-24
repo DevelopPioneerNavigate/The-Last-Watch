@@ -142,28 +142,12 @@ I knew he was repeating the lesson we'd tried to teach the crew all week: absenc
 
 "Keep checking," I said.
 
-At 1116 the radio carried a voice I had been waiting to hear.
+At 1115 the communications operator lifted two fingers. A faint voice was breaking through the damaged circuit. He adjusted the receiver, listening intently, then looked at me.
 
-"Captain, Ramirez."
+"Captain, I think it's her."
 
-The sound was broken by static.
+I moved closer to the handset. The earlier reports, the contradictory timestamps, even the tactical picture seemed to fall away.
 
-I closed my eyes for half a second.
+One minute remained before a voice would come through clearly enough to tell us what was happening.
 
-"Chief. Tell me your situation."
-
-And from the other side of a door whose handle had become too hot to touch, Elena Ramirez began telling us what her people needed.
-
-I listened.
-
-Every word mattered.
-
-There would be time later to reconstruct the exact sequence, to compare clocks, to decide whether any report could have arrived faster.
-
-For now, there was a living voice on the circuit and a ship full of people depending on us to answer it correctly.
-
-I placed my hand flat on the console.
-
-"Go ahead, Chief," I said.
-
-"We're here."
+I placed my hand flat on the console and waited.
