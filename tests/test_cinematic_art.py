@@ -61,6 +61,37 @@ class CinematicArtworkTests(unittest.TestCase):
                 self.assertEqual(len(pdf.pages), 1)
                 self.assertGreaterEqual(len(pdf.pages[0].images), 1)
 
+    def test_committed_cinematic_book_edition(self):
+        # Shipping assets are individually committed; the optional ZIP
+        # manifest is an alternate distribution format, not the source.
+        direct = ART / "committed_manifest.json"
+        edition = json.loads(direct.read_text(encoding="utf-8"))
+        items = edition["assets"]
+        self.assertEqual(len(items), 15)
+        self.assertEqual(sum(e["anchor"] == "cover" for e in items), 1)
+        self.assertEqual(len(items), len({e["anchor"] for e in items}))
+        expected = {
+            "THE LIEUTENANT'S BRIDGE", "BENEATH AURORA",
+            "LETTERS NEVER SENT", "THE WATCHKEEPERS",
+            "RAVEN ONE'S EMPTY SEAT", "THE GREEN ROOF"
+        }
+        self.assertTrue(expected.issubset({e["anchor"] for e in items}))
+        import hashlib
+        from PIL import Image as PILImage
+        for item in items:
+            with self.subTest(anchor=item["anchor"]):
+                filename = item["file"]
+                target = ROOT / item.get("source_path", "artwork/cinematic/" + filename)
+                self.assertTrue(target.is_file())
+                self.assertEqual(hashlib.sha256(target.read_bytes()).hexdigest(), item["sha256"])
+                if item["anchor"] != "cover":
+                    self.assertIn(item["anchor"].upper().replace("'", " "), self.manuscript.upper().replace("'", " "))
+                    self.assertEqual(scene_plate(items, "**" + item["anchor"] + " — SCENE**")["file"], filename)
+                if filename.startswith(("16_", "17_", "18_", "19_", "20_")):
+                    with PILImage.open(target) as im:
+                        self.assertGreaterEqual(im.width, 1024)
+                        self.assertGreaterEqual(im.height, 1536)
+
     def test_no_partial_archive(self):
         # Prefer the original ZIP when available; verified individual JPEGs
         # are a complete and reproducible alternative, never a silent fallback
