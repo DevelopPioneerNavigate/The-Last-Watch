@@ -22,7 +22,9 @@ Commander Daniel Vale commands the fictional guided-missile destroyer USS Norths
 
 ## Principal characters
 
-- **Daniel Vale:** First-person narrator and commanding officer of Northstar; married to Rebecca; father to Ethan.
+- **Daniel Vale:** First-person narrator and commanding officer of Northstar; married to Rebecca; father to Ethan. His postwar memoir includes the cost of deployment to his family.
+- **Ethan Vale:** Vale's son, sixteen during the 2037 battle and eighteen two years later; chooses civilian emergency-systems engineering.
+- **Rebecca Vale:** Vale's wife; manages the family's uncertainty during Northstar's disappearance from reliable communications.
 - **Mara Chen:** Executive officer; challenges Vale's assumptions and protects him from exhaustion.
 - **Hassan Idris:** Tactical action officer; disciplined about threat identification and uncertainty.
 - **Naomi Bell:** Chief sonar technician; detects possible submarine contacts.
@@ -59,7 +61,7 @@ Commander Daniel Vale commands the fictional guided-missile destroyer USS Norths
 
 ## Added narrative scenes
 
-The expanded edition now incorporates **43 in-line scenes**. The latest four explore Chief Bell and Priya Shah's possible second submarine track at 0321 on November 18; Atlas Mariner's storm-related cargo securing emergency during the night of November 19; verification of medical aid and missing Caledonia equipment at Reykjavík on November 20; and a new convoy's planning lessons after the LANTERN crossing. The 13 numbered chapters, prologue, epilogue and established outcomes remain canon.
+The expanded edition now incorporates **47 in-line scenes**. The latest four explore the second missile attack's overloaded combat-information center, Samira Brooks's aviation detachment as allied relief approaches, Vale's first personal call with Rebecca and Ethan after Iceland, and Ethan's decision two years later to pursue civilian emergency-systems engineering. The 13 numbered chapters, prologue, epilogue and established outcomes remain canon.
 
 ## Chronology
 
@@ -89,6 +91,7 @@ The expanded edition now incorporates **43 in-line scenes**. The latest four exp
 | 0909 | Farouk distinguishes independent observations from repeated, unverified reports |
 | 0919 | Idris, Farouk, and Bell review uncertain signs of a second attack |
 | 0934 | Second missile attack |
+| 0936–0940 | Northstar's combat-information center handles twelve inbound tracks; Vale and Idris coordinate with Cutlass before the strike |
 | ~0941–0954 | Cutlass damaged; convoy defended |
 | 1008 | Shaw updates Vale on Cutlass's fires, casualties, and Caledonia survivors |
 | 1023 | Northstar evaluates and authorizes offensive strike |
@@ -104,6 +107,7 @@ The expanded edition now incorporates **43 in-line scenes**. The latest four exp
 | 2218–2311 | Possible submarine contact, eventually fades; 2251 crew midwatch |
 | Nov 19, 0224 | Atlas Mariner's loose deck cargo forces controlled convoy speed reductions during the storm |
 | Nov 19, 0610 | Merchant captains coordinate a weather-limited route amid delayed communications |
+| Nov 19, 1658 | Brooks coordinates verified aviation information as Raven One's aircrew recovers |
 | Nov 19, 1832 | Friendly aircraft locates convoy |
 | 1941 | USS Jefferson (Rachel Park) and Norway's Fenrir support convoy relief |
 | 2241 | Lights of Iceland seen |
@@ -112,11 +116,13 @@ The expanded edition now incorporates **43 in-line scenes**. The latest four exp
 | 1138 | Eileen Ward visits Vale aboard Northstar carrying crew names and a recovered wheelhouse key ring |
 | 1430 | Medical relief coordinator Freyja Einarsson and Ward reconcile lost Caledonia supplies and verified alternative generators |
 | 1655 | Captain Ingrid Halvorsen gathers LANTERN lessons for the next civilian convoy |
+| 1828 | Vale speaks with Rebecca and their son Ethan through a repaired connection |
 | Nov 20 | Memorial for Ramirez |
 | 1916 | Vale writes a first factual command report and begins his private memoir |
 | Three months later | Battle inquiry |
 | Ten months later | Rios visits Vale with Ramirez's qualification notes and talks about his recovery |
 | One year later | Letters, visit with survivors and family |
+| Two years later | Ethan, now eighteen, chooses civilian emergency-power engineering instead of a naval career |
 | Five years later | Retirement reflections |
 
 ## Editorial continuity rules
