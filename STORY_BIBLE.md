@@ -1,5 +1,5 @@
 # THE LAST WATCH — STORY BIBLE
-**Editorial reference for DPN Technology's fictional naval novel.**
+**Written by Diesel | DPN Novels. Copyright held by DPN Technology.**
 
 ## Story premise
 
@@ -49,16 +49,24 @@ Commander Daniel Vale commands the fictional guided-missile destroyer USS Norths
 - **Anders Nygaard:** Fisherman who rescues distressed enemy sailors.
 - **Matthew Hayes:** Commander of Hawthorne, Academy friend of Vale, survives.
 - **Sofia Ramirez:** Elena's daughter, nine in 2037, ten a year later.
+- **Liv:** Young evacuee aboard Aurora who draws her destroyed home with a red crayon; appears in the embarkation flashback.
+
+## Added narrative scenes
+
+The expanded edition now incorporates **19 in-line scenes**. Newly added are the Norwegian convoy embarkation, Raven One's early search, the lost cargo manifest after Caledonia's sinking, and the 2251 midwatch with Ramirez's qualification notes. The original 15 scenes and the 13 numbered chapters remain in canon.
 
 ## Chronology
 
 | Date/time | Event |
 |---|---|
+| Nov 13 | Convoy embarkation in Norway; Vale meets Lindholm, Ward, Sofia Reed and Liv |
 | Nov 18, 0217 | First uneasy watch on Northstar |
 | 0306 | Sonar detects a possible submarine |
+| 0352 | Raven One conducts an uncertain helicopter search |
 | 0402 | Submarine threat warning; Raven One operating |
 | 0411 | Caledonia torpedoed |
 | 0426–0531 | Rescue efforts; Caledonia sinks |
+| 0548 | Vale records the manifest losses and reaches out to the remaining merchants |
 | 0603 | First missile engagement |
 | 0712 | Kestrel sends distress traffic |
 | 0740 | Report of Hawthorne damage |
@@ -72,7 +80,7 @@ Commander Daniel Vale commands the fictional guided-missile destroyer USS Norths
 | 1142 | Ramirez recovered unresponsive |
 | 1212 | Ramirez declared deceased |
 | 1546 | Weather diversion underway |
-| 2218–2311 | Possible submarine contact, eventually fades |
+| 2218–2311 | Possible submarine contact, eventually fades; 2251 crew midwatch |
 | Nov 19, 1832 | Friendly aircraft locates convoy |
 | 2241 | Lights of Iceland seen |
 | Nov 20, 0915 | Northstar alongside |
