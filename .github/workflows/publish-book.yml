@@ -67,30 +67,48 @@ jobs:
           path: books/The_Last_Watch_Extended_Edition.pdf
           if-no-files-found: error
 
-      - name: Commit published edition to repository
+      - name: Publish from latest source without overwriting other commits
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add books/The_Last_Watch_Extended_Edition.pdf
-          if ! git diff --cached --quiet; then
-            git commit -m "book: publish refreshed The Last Watch PDF"
-            # The source may advance during PDF rendering. Rebase and retry
-            # publication without forcing another contributor's branch history.
-            pushed=0
-            for attempt in 1 2 3 4; do
-              git fetch origin main
-              git rebase origin/main
-              if git push origin HEAD:main; then
-                pushed=1
-                break
-              fi
-              echo "Publication push raced with a new commit (attempt $attempt); retrying"
-            done
-            if [ "$pushed" -ne 1 ]; then
-              echo "Unable to publish the verified PDF without overwriting remote history"
-              exit 1
+          published=0
+          for attempt in 1 2 3 4 5; do
+            echo "Publication attempt $attempt: refresh main and rebuild"
+            git fetch origin main
+            # Only the disposable Actions workspace is reset. Remote history
+            # is never rewritten, and the PDF is built from current sources.
+            git reset --hard origin/main
+            python -m unittest discover -s tests -v
+            python scripts/build_book.py
+            python - <<'PY'
+          from pathlib import Path
+          from pypdf import PdfReader
+          pdf = Path("books/The_Last_Watch_Extended_Edition.pdf")
+          reader = PdfReader(str(pdf))
+          assert not reader.is_encrypted
+          assert len(reader.pages) >= 215
+          assert "Diesel" in (reader.metadata.author or "")
+          body = "\n".join(p.extract_text() or "" for p in reader.pages)
+          assert len(body) > 225000
+          assert "THE END" in body
+          print(f"Validated latest-source PDF: {len(reader.pages)} pages")
+          PY
+            git add books/The_Last_Watch_Extended_Edition.pdf
+            if git diff --cached --quiet; then
+              echo "Published PDF already matches current manuscript."
+              published=1
+              break
             fi
-          else
-            echo "The published PDF is already current."
+            git commit -m "book: publish refreshed The Last Watch PDF"
+            if git push origin HEAD:main; then
+              echo "Committed validated PDF against current main."
+              published=1
+              break
+            fi
+            echo "New changes arrived before publication; rebuilding latest source."
+          done
+          if [ "$published" -ne 1 ]; then
+            echo "Failed to publish without rewriting remote history."
+            exit 1
           fi
