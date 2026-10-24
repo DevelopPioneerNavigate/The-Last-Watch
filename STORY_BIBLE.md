@@ -43,6 +43,7 @@ Commander Daniel Vale commands the fictional guided-missile destroyer USS Norths
 - **Daniel Keene:** Combat-system operator who reports ambiguous threats honestly.
 - **Arturo Mendoza:** Chief cook, feeds the crew during combat.
 - **Edward Mallory:** British frigate captain and longtime friend of Vale; seriously injured but survives.
+- **Eleanor Shaw:** Cutlass's executive officer, takes charge while Mallory is treated; competent, understated, and responsible for Caledonia survivors aboard the damaged frigate.
 - **Eileen Ward:** Master of the sunk Caledonia; survives evacuation.
 - **Peter Lindholm:** Aurora's captain; protective of passengers.
 - **Sofia Reed:** Meridian's captain.
@@ -54,7 +55,7 @@ Commander Daniel Vale commands the fictional guided-missile destroyer USS Norths
 
 ## Added narrative scenes
 
-The expanded edition now incorporates **27 in-line scenes**. The four newest scenes expand Vale and Mara's final briefing on November 17, the civilian experience aboard Aurora after the first missile attack, the combat team's uncertain picture before the second missile salvo, and the injured passengers and crew during the storm. The original 13 numbered chapters and established outcomes remain in canon.
+The expanded edition now incorporates **31 in-line scenes**. The newest scenes cover the possible American aircraft losses, the damaged HMS Cutlass and Commander Eleanor Shaw's leadership, an unidentified surface contact after Northstar's offensive engagement, and Captain Eileen Ward's visit to Vale after arrival. The original 13 numbered chapters and established outcomes remain in canon.
 
 ## Chronology
 
@@ -76,11 +77,14 @@ The expanded edition now incorporates **27 in-line scenes**. The four newest sce
 | 0712 | Kestrel sends distress traffic |
 | 0740 | Report of Hawthorne damage |
 | 0801 | Nygaard commits Sigrid to the dangerous rescue of Kestrel's sailors |
+| 0845 | Aircraft wreckage remains unidentified; Vale records uncertain losses without naming an aircraft or crew |
 | 0858 | Communications interference and false command message |
 | 0919 | Idris, Farouk, and Bell review uncertain signs of a second attack |
 | 0934 | Second missile attack |
 | ~0941–0954 | Cutlass damaged; convoy defended |
+| 1008 | Shaw updates Vale on Cutlass's fires, casualties, and Caledonia survivors |
 | 1023 | Northstar evaluates and authorizes offensive strike |
+| 1036–1044 | New unidentified surface contact; no unjustified hostile identification or casualty claim |
 | 1048 | Possible torpedo and propulsion casualty |
 | 1102 | Machinery-space fire |
 | 1116 | Ramirez reached on communications |
@@ -93,6 +97,7 @@ The expanded edition now incorporates **27 in-line scenes**. The four newest sce
 | 2241 | Lights of Iceland seen |
 | Nov 20, 0915 | Northstar alongside |
 | 1002 | Icelandic harbor liaison and Liv's thank-you drawing |
+| 1138 | Eileen Ward visits Vale aboard Northstar carrying crew names and a recovered wheelhouse key ring |
 | Nov 20 | Memorial for Ramirez |
 | Three months later | Battle inquiry |
 | One year later | Letters, visit with survivors and family |
@@ -106,7 +111,7 @@ The expanded edition now incorporates **27 in-line scenes**. The four newest sce
 4. Keep a four-merchant convoy at the outset: Caledonia is sunk, the other three survive.
 5. Ramirez dies on November 18; Rios, Price and Ochoa survive. Later scenes may show her only in memory or dream.
 6. Sofia Ramirez is nine during the battle: she cannot be a professional engineer five years later.
-7. Do not invent verified enemy kills; preserve ambiguity where the narrative says damage is unconfirmed.
+7. Do not invent verified enemy kills; preserve ambiguity where the narrative says damage is unconfirmed. Preserve the unidentified aircraft wreckage as unconfirmed and the post-strike unidentified surface contact as neither proven hostile nor destroyed.
 8. Show ordinary shipboard life alongside combat. Avoid repetitive speeches and generic battle recaps.
 9. Combat is dramatic but not a modern real-world targeting tutorial.
 10. Preserve all characters' human dignity, including enemy sailors.
