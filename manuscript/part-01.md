@@ -324,7 +324,9 @@ My duty was to keep the rest alive. Yet for the first time that night, I underst
 
 Bell had identified two separate acoustic signatures. The first submarine appeared to have drawn our attention. The second had fired.
 
-And while I was looking at the underwater display, the air-defense operator reported six aircraft approaching from the east.
+{{scene:36-the-hour-before-sunrise.md}}
+
+By the time I returned my attention to the air-defense display, six aircraft were being tracked approaching from the east.
 
 # CHAPTER FOUR — FIRE IN THE SKY
 
