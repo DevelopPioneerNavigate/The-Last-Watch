@@ -115,7 +115,7 @@ class NovelDoc(BaseDocTemplate):
     def __init__(self, path):
         super().__init__(str(path), pagesize=(PAGE_W, PAGE_H), leftMargin=52,
                          rightMargin=48, topMargin=57, bottomMargin=53,
-                         title="The Last Watch — Extended Edition",
+                         title="The Last Watch — Expanded Novel Edition",
                          author="DPN Technology",
                          subject="An original fictional naval war novel",
                          pageCompression=1)
@@ -203,7 +203,7 @@ def draw_cover(canvas, doc):
     canvas.drawCentredString(PAGE_W / 2, 137, "Our actions do.")
     canvas.setFillColor(GOLD)
     canvas.setFont(SANS, 8.5)
-    canvas.drawCentredString(PAGE_W / 2, 44, "EXTENDED MANUSCRIPT EDITION  •  2026")
+    canvas.drawCentredString(PAGE_W / 2, 44, "EXPANDED NOVEL EDITION  •  2026")
     canvas.restoreState()
 
 def draw_body(canvas, doc):
@@ -221,16 +221,41 @@ def draw_body(canvas, doc):
     canvas.drawCentredString(PAGE_W / 2, 24, str(max(1, page - 1)))
     canvas.restoreState()
 
+SCENE_PATTERN = re.compile(r"(?m)^\{\{scene:([a-z0-9-]+\.md)\}\}$")
+
 def read_manuscript():
     parts = sorted((ROOT / "manuscript").glob("part-*.md"))
     if not parts:
         raise SystemExit("No manuscript parts were found.")
+
     raw = "\n\n".join(p.read_text(encoding="utf-8") for p in parts)
+    included = []
+
+    def insert_scene(match):
+        name = match.group(1)
+        if name in included:
+            raise SystemExit(f"Scene referenced more than once: {name}")
+        path = ROOT / "manuscript" / "scenes" / name
+        if not path.is_file():
+            raise SystemExit(f"Missing scene: {path}")
+        scene_text = path.read_text(encoding="utf-8").strip()
+        if not scene_text or "# CHAPTER" in scene_text or "{{scene:" in scene_text:
+            raise SystemExit(f"Invalid scene source: {name}")
+        included.append(name)
+        return scene_text
+
+    raw = SCENE_PATTERN.sub(insert_scene, raw)
+    if "{{scene:" in raw:
+        raise SystemExit("Unresolved scene directive in manuscript.")
+    scene_files = list((ROOT / "manuscript" / "scenes").glob("*.md"))
+    if sorted(p.name for p in scene_files) != sorted(included):
+        raise SystemExit("Every scene file must be referenced exactly once in the core manuscript.")
+
     chapter_count = len(re.findall(r"(?m)^# CHAPTER \w+", raw))
     words = len(re.findall(r"\b[\w’'-]+\b", raw))
-    if chapter_count != 13 or "# EPILOGUE" not in raw or words < 9000:
-        raise SystemExit(f"Manuscript incomplete: {chapter_count} chapters, {words} words")
-    return raw, words, chapter_count
+    if chapter_count != 13 or "# EPILOGUE" not in raw or words < 20000 or len(included) < 15:
+        raise SystemExit(f"Manuscript incomplete: {chapter_count} chapters, {len(included)} scenes, {words} words")
+    return raw, words, chapter_count, len(included)
 
 def paragraphs_of(raw):
     blocks = []
@@ -254,7 +279,7 @@ def make_book(raw, word_count):
 
     story.append(Spacer(1, 80))
     story.append(Paragraph("THE LAST WATCH", ST["title"]))
-    story.append(Paragraph("A North Atlantic War Novel · Extended Manuscript Edition", ST["sub"]))
+    story.append(Paragraph("A North Atlantic War Novel · Expanded Edition", ST["sub"]))
     story.append(Spacer(1, 25))
     story.append(Paragraph("An original work of naval military fiction told through the eyes of Commander Daniel Vale, Commanding Officer, USS Northstar.", ST["copyright"]))
     story.append(Paragraph(f"Approximately {word_count:,} words. Designed for long-form reading or narration.", ST["copyright"]))
@@ -301,10 +326,10 @@ def make_book(raw, word_count):
     doc.multiBuild(story, maxPasses=5)
 
 def main():
-    raw, words, chapters = read_manuscript()
+    raw, words, chapters, scenes = read_manuscript()
     OUT.parent.mkdir(parents=True, exist_ok=True)
     make_book(raw, words)
-    print(f"Built {OUT.relative_to(ROOT)}: {chapters} chapters, {words:,} words, {OUT.stat().st_size:,} bytes")
+    print(f"Built {OUT.relative_to(ROOT)}: {chapters} chapters, {scenes} expanded scenes, {words:,} words, {OUT.stat().st_size:,} bytes")
 
 if __name__ == "__main__":
     main()
