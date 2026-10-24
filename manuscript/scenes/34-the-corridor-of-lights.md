@@ -8,7 +8,7 @@ The tactical identification was confirmed before I allowed myself to believe wha
 
 USS Jefferson.
 
-I had met her captain, Commander Rachel Ward—not related to Eileen Ward—during a training visit the previous year. She was quick with figures and slow with jokes, the sort of officer who made you check every assumption before opening your mouth.
+I had met her captain, Commander Rachel Park—during a training visit the previous year. She was quick with figures and slow with jokes, the sort of officer who made you check every assumption before opening your mouth.
 
 Now she came over the radio sounding tired but unmistakably alive.
 
