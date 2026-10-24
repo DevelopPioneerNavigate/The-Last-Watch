@@ -78,6 +78,8 @@ I had told the ferry's captain, Peter Lindholm, that the Navy would protect them
 
 {{scene:20-the-first-crossing.md}}
 
+{{scene:52-the-tankers-captain.md}}
+
 {{scene:24-what-the-orders-did-not-say.md}}
 
 {{scene:01-ship-that-breathes.md}}
@@ -675,6 +677,8 @@ When I lowered the microphone, Mara was standing near me.
 "It does."
 
 {{scene:07-when-cutlass-went-dark.md}}
+
+{{scene:48-the-lieutenants-bridge.md}}
 
 I looked at the remaining convoy, our ammunition status, the uncertain enemy contacts, and the damaged British frigate. For the first time I understood we might be approaching the limit of what the escorts could accomplish.
 
