@@ -1,0 +1,70 @@
+{
+  "edition": "CINEMATIC-DIRECT-01",
+  "author": "Diesel | DPN Novels",
+  "description": "Checksum-verified committed image files; one cover and eight scene placements.",
+  "assets": [
+    {
+      "file": "01-north-atlantic-convoy.jpg",
+      "anchor": "cover",
+      "title": "The Last Watch",
+      "caption": "USS Northstar guards Convoy LANTERN in a moonlit North Atlantic storm",
+      "sha256": "8d0872a5df4cce6925aabb0f0552cd9c1cdc716d3939f8ddb6f02c370c8de76d"
+    },
+    {
+      "file": "01-north-atlantic-convoy.jpg",
+      "anchor": "THE FIRST CROSSING",
+      "title": "The First Crossing",
+      "caption": "The first days at sea, surrounded by merchant shipping and winter waves",
+      "sha256": "8d0872a5df4cce6925aabb0f0552cd9c1cdc716d3939f8ddb6f02c370c8de76d"
+    },
+    {
+      "file": "02-the-caledonia-rescue.jpg",
+      "anchor": "THE DISTANCE BETWEEN SHIPS",
+      "title": "The Cost of Rescue",
+      "caption": "Caledonia survivors fight the sea as sailors race to reach them",
+      "sha256": "4e846cfb2e1146768ed01fa513b9c825919a70afeab1908aa3dc55e9b85410ce"
+    },
+    {
+      "file": "07-sigrid-rescue.jpg",
+      "anchor": "THE FISHERMAN'S CHOICE",
+      "title": "The Fisherman's Choice",
+      "caption": "A Norwegian rescue vessel risks the breaking seas to save lives",
+      "sha256": "08a21fe5a598635004d507acfa1738e6c58be7913d09d8f947d0e43809bc5ad9"
+    },
+    {
+      "file": "08-before-second-salvo.jpg",
+      "anchor": "BEFORE THE SECOND SALVO",
+      "title": "Before the Second Salvo",
+      "caption": "Command and control under pressure as the battle develops",
+      "sha256": "da1e4801b26d21f397adab755e39640e454e4c79b1e9498d99c5c230316452f9"
+    },
+    {
+      "file": "03-twelve-tracks-in-combat.jpg",
+      "anchor": "THE TWELVE TRACKS",
+      "title": "Twelve Tracks",
+      "caption": "Vale and Idris confront incoming missiles inside Combat",
+      "sha256": "459d3d36ac6b3281b980abcea8dca574a9acd44cc4e4769ee64c36a4265c44a1"
+    },
+    {
+      "file": "04-ramirez-engineering-fire.jpg",
+      "anchor": "THE DOOR WITH NO HANDLE",
+      "title": "Fire Below",
+      "caption": "Chief Ramirez leads her shipmates through Northstar's machinery fire",
+      "sha256": "4bc7c8c66bd0fc06e6a1b3fde6eef102c87e38b0bc05dcb0204c849c4b02a035"
+    },
+    {
+      "file": "05-reykjavik-arrival.jpg",
+      "anchor": "THE PIER AT REYKJAV",
+      "title": "Landfall",
+      "caption": "Survivors and sailors arrive safely in the Icelandic harbor",
+      "sha256": "04538e1e0b8e21585b3321960d49c8311c5da8299323afd3efd75eadf4343251"
+    },
+    {
+      "file": "06-the-green-roof.jpg",
+      "anchor": "THE GREEN ROOF",
+      "title": "A New Home",
+      "caption": "Years later, Liv shows Vale the home her family built",
+      "sha256": "22b5ac381f74d94f26afb8517f4b02014270df685ca964b07101b558d196ecff"
+    }
+  ]
+}
