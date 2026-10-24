@@ -41,12 +41,21 @@ ROOT = Path(__file__).resolve().parents[1]
 CINEMATIC_ENTRIES = []
 OUT = ROOT / "books" / "The_Last_Watch_Extended_Edition.pdf"
 PAGE_W, PAGE_H = 6.0 * inch, 9.0 * inch
-NAVY = colors.HexColor("#10263e")
-MIDNIGHT = colors.HexColor("#071523")
-FOAM = colors.HexColor("#c5dceb")
-GOLD = colors.HexColor("#c8a66b")
-INK = colors.HexColor("#273442")
-MUTED = colors.HexColor("#526578")
+# DPN NOVELS / GRAPHITE INTERIOR — visual styling only, never manuscript edits.
+# Fixed 6x9 geometry retains the story's pagination and photo-placement flow.
+DPN_OUTER = colors.HexColor("#141820")    # Obsidian full-page frame
+DPN_PANEL = colors.HexColor("#DEE2E6")    # Readable cool steel-gray, never white
+DPN_HEADER = colors.HexColor("#1B2029")
+DPN_CRIMSON = colors.HexColor("#B5122B")
+DPN_RED_DIM = colors.HexColor("#8D1729")
+DPN_EDGE = colors.HexColor("#39424C")
+DPN_GLYPH = colors.HexColor("#59616B")
+NAVY = colors.HexColor("#87192E")
+MIDNIGHT = colors.HexColor("#141820")
+FOAM = colors.HexColor("#C3CBD3")
+GOLD = colors.HexColor("#B5122B")
+INK = colors.HexColor("#1F2630")
+MUTED = colors.HexColor("#515B65")
 
 def font(name: str, candidates: list[str], fallback: str) -> str:
     for c in candidates:
@@ -482,18 +491,72 @@ class InkPlate(Flowable):
         c.restoreState()
 
 def draw_body(canvas, doc):
+    """Render DPN graphite, crimson and binary framing behind ALL reading pages.
+
+    The plate and photographic cover use other PageTemplates unchanged. All
+    coordinates are outside the existing prose Frame (x=52..384, y=53..591)
+    so no words or illustrations are obscured. No change to manuscript/layout.
+    """
     canvas.saveState()
     page = doc.page
-    canvas.setStrokeColor(colors.HexColor("#d6dfe5"))
-    canvas.setLineWidth(.45)
-    canvas.line(52, PAGE_H - 39, PAGE_W - 48, PAGE_H - 39)
-    canvas.setFillColor(MUTED)
-    canvas.setFont(SANS, 7.0)
-    canvas.drawString(52, PAGE_H - 30, "THE LAST WATCH")
-    canvas.drawRightString(PAGE_W - 48, PAGE_H - 30, "DIESEL  /  DPN NOVELS")
-    canvas.line(52, 39, PAGE_W - 48, 39)
-    canvas.setFont(SANS, 7.7)
-    canvas.drawCentredString(PAGE_W / 2, 24, str(max(1, page - 1)))
+
+    # No plain-white body pages, including TOC and copyright: cold steel
+    # reading field inside an edge-to-edge charcoal book frame.
+    canvas.setFillColor(DPN_OUTER)
+    canvas.rect(0, 0, PAGE_W, PAGE_H, fill=1, stroke=0)
+    canvas.setFillColor(DPN_PANEL)
+    canvas.rect(39, 46, PAGE_W - 78, PAGE_H - 92, fill=1, stroke=0)
+
+    # Obsidian branding bands, red lower rules and restrained geometric edges.
+    canvas.setFillColor(DPN_HEADER)
+    canvas.rect(0, PAGE_H - 44, PAGE_W, 44, fill=1, stroke=0)
+    canvas.rect(0, 0, PAGE_W, 45, fill=1, stroke=0)
+    canvas.setFillColor(DPN_CRIMSON)
+    canvas.rect(39, PAGE_H - 46, PAGE_W - 78, 2, stroke=0, fill=1)
+    canvas.rect(39, 44, PAGE_W - 78, 2, stroke=0, fill=1)
+
+    # Hairline crimson corner brackets in the gutter, not behind prose.
+    canvas.setStrokeColor(DPN_RED_DIM)
+    canvas.setLineWidth(0.85)
+    for x, direction in ((36, 1), (PAGE_W - 36, -1)):
+        for y, vertical in ((PAGE_H - 51, -1), (51, 1)):
+            canvas.line(x, y, x + 9 * direction, y)
+            canvas.line(x, y, x, y + 10 * vertical)
+
+    # Subtle binary 'rain' restricted to charcoal outer margins.
+    # Regular deterministic sequence avoids randomness between PDF builds.
+    canvas.setFont(SANS, 5.5)
+    canvas.setFillColor(DPN_GLYPH)
+    for n in range(47):
+        y = 69 + n * 10.9
+        if y >= PAGE_H - 54:
+            break
+        left = "1" if (n * 7 + 1) % 5 < 2 else "0"
+        right = "0" if (n * 11 + 3) % 7 < 3 else "1"
+        canvas.drawCentredString(18, y, left)
+        canvas.drawCentredString(PAGE_W - 18, y + (n % 3), right)
+
+    # DPN's signature red pulse, small enough to remain a margin device.
+    canvas.setStrokeColor(DPN_CRIMSON)
+    canvas.setLineWidth(1.15)
+    pulse = canvas.beginPath()
+    pulse.moveTo(10, 104)
+    pulse.lineTo(16, 104)
+    pulse.lineTo(20, 112)
+    pulse.lineTo(24, 96)
+    pulse.lineTo(28, 104)
+    pulse.lineTo(34, 104)
+    canvas.drawPath(pulse, stroke=1, fill=0)
+
+    canvas.setFillColor(colors.HexColor("#F0F2F4"))
+    canvas.setFont(SANS_BOLD, 7.2)
+    canvas.drawString(52, PAGE_H - 29, "THE LAST WATCH")
+    canvas.setFillColor(colors.HexColor("#ED5264"))
+    canvas.setFont(SANS_BOLD, 6.8)
+    canvas.drawRightString(PAGE_W - 48, PAGE_H - 29, "DIESEL  /  DPN NOVELS")
+    canvas.setFillColor(colors.HexColor("#F0F2F4"))
+    canvas.setFont(SANS_BOLD, 7.9)
+    canvas.drawCentredString(PAGE_W / 2, 23, str(max(1, page - 1)))
     canvas.restoreState()
 
 SCENE_PATTERN = re.compile(r"(?m)^\{\{scene:([a-z0-9-]+\.md)\}\}$")
