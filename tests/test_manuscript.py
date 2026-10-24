@@ -16,8 +16,8 @@ class NovelTests(unittest.TestCase):
 
     def test_full_manuscript_present(self):
         self.assertEqual(self.chapters, 13)
-        self.assertEqual(self.scenes, 47)
-        self.assertGreater(self.words, 62000)
+        self.assertEqual(self.scenes, 52)
+        self.assertGreater(self.words, 68000)
         self.assertNotIn("{{scene:", self.raw)
         self.assertIn("THE END", self.raw)
 
@@ -29,7 +29,8 @@ class NovelTests(unittest.TestCase):
     def test_scene_placement(self):
         placements = [
             ("THE PEOPLE WE HAD PROMISED", "THE FIRST CROSSING"),
-            ("THE FIRST CROSSING", "WHAT THE ORDERS DID NOT SAY"),
+            ("THE FIRST CROSSING", "THE TANKER\u0027S CAPTAIN"),
+            ("THE TANKER\u0027S CAPTAIN", "WHAT THE ORDERS DID NOT SAY"),
             ("WHAT THE ORDERS DID NOT SAY", "THE SHIP THAT BREATHES"),
             ("THE SHIP THAT BREATHES", "THE SILENT QUARTER"),
             ("THE SILENT QUARTER", "# CHAPTER TWO"),
@@ -49,12 +50,14 @@ class NovelTests(unittest.TestCase):
             ("THE INVISIBLE FRONT", "BEFORE THE SECOND SALVO"),
             ("BEFORE THE SECOND SALVO", "# CHAPTER SEVEN"),
             ("THE TWELVE TRACKS", "WHEN CUTLASS WENT DARK"),
-            ("WHEN CUTLASS WENT DARK", "THE SHIPS THAT ANSWERED"),
+            ("WHEN CUTLASS WENT DARK", "THE LIEUTENANT\u0027S BRIDGE"),
+            ("THE LIEUTENANT\u0027S BRIDGE", "THE SHIPS THAT ANSWERED"),
             ("THE SHIPS THAT ANSWERED", "# CHAPTER EIGHT"),
             ("THE SPACE BEFORE FIRE", "THE SHIP WE COULD NOT SEE"),
             ("THE SHIP WE COULD NOT SEE", "# CHAPTER NINE"),
             ("THE BOUNDARIES HOLD", "# CHAPTER TEN"),
-            ("THE PEOPLE WHO WERE NOT ON THE SCREEN", "THE WEIGHT OF WATER"),
+            ("THE PEOPLE WHO WERE NOT ON THE SCREEN", "A SPACE FOR THE LIVING"),
+            ("A SPACE FOR THE LIVING", "THE WEIGHT OF WATER"),
             ("THE WEIGHT OF WATER", "# CHAPTER ELEVEN"),
             ("THE WEATHER HAS NO ALLIES", "THE COLD HOURS"),
             ("THE COLD HOURS", "THE DARK BETWEEN THE ALARMS"),
@@ -75,7 +78,9 @@ class NovelTests(unittest.TestCase):
             ("LETTERS NEVER SENT", "THE FIRST LEDGER"),
             ("THE FIRST LEDGER", "# EPILOGUE"),
             ("LETTERS NEVER SENT", "# EPILOGUE"),
-            ("THE HEARING ROOM", "THE BOOK OF NAMES"),
+            ("THE HEARING ROOM", "THE ELEVENTH SURVIVOR"),
+            ("THE ELEVENTH SURVIVOR", "THE VISITOR FROM CUTLASS"),
+            ("THE VISITOR FROM CUTLASS", "THE BOOK OF NAMES"),
             ("THE BOOK OF NAMES", "THE VOICES AT HOME"),
             ("THE VOICES AT HOME", "WHAT ETHAN CHOSE"),
         ]
