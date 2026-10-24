@@ -202,7 +202,7 @@ He held out a small cloth pouch.
 
 Eileen took it.
 
-Inside was a metal key ring with a brass plate engraved with the name CALedONIA. It was blackened on one side.
+Inside was a metal key ring with a brass plate engraved with the name CALEDONIA. It was blackened on one side.
 
 "One of your sailors recovered it after the sinking," Cross said. "He wanted you to have it."
 
