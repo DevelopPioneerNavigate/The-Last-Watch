@@ -144,10 +144,4 @@ I looked at the friendly helicopter symbol turning west. The aircraft had not fo
 
 I wished I could tell Brooks that was enough.
 
-Then Bell's voice changed.
-
-"Captain. Possible high-speed underwater weapon."
-
-There was no more room for wishing.
-
-The general-quarters alarm sounded.
+Then we received a coded message from fleet command. I glanced at the clock—0402—and for an instant I could not decide whether its arrival was a comfort or a warning. The helicopter was still beyond the weather, and the sea below us held its answer tightly.
