@@ -61,7 +61,7 @@ Commander Daniel Vale commands the fictional guided-missile destroyer USS Norths
 
 ## Added narrative scenes
 
-The expanded edition incorporates **52 in-line scenes**. The newest additions give tanker captain Sofia Reed a pre-battle voice; show Lieutenant Armitage and Commander Eleanor Shaw sustaining HMS Cutlass after the strike; follow corpsman Leah Okafor and the crew's recovery needs; and develop postwar correspondence with a rescued Kestrel sailor and Vale's friendship with wounded captain Edward Mallory. Ethan remains committed to civilian emergency engineering in the epilogue. The 13 chapters, prologue, epilogue and established outcomes remain canon.
+The first full-length edition incorporates **58 in-line scenes**. Six new scenes cover the critical minutes before Ramirez's 1116 report, her watchkeeping notebook, a civilian distress call during the next day's transit, verified news of Matthew Hayes's survival, Reykjavík's separated-family reception work, and Liv's life five years after the convoy. Ethan remains committed to civilian emergency engineering. The 13 chapters, prologue, epilogue and established outcomes remain canon.
 
 ## Chronology
 
@@ -100,16 +100,19 @@ The expanded edition incorporates **52 in-line scenes**. The newest additions gi
 | 1036–1044 | New unidentified surface contact; no unjustified hostile identification or casualty claim |
 | 1048 | Possible torpedo and propulsion casualty |
 | 1102 | Machinery-space fire |
+| 1108 | Navarro's boundary teams detect dangerous compartment heat as personnel accounting continues |
 | 1116 | Ramirez reached on communications |
 | 1142 | Ramirez recovered unresponsive |
 | 1212 | Ramirez declared deceased |
 | 1312 | Okafor establishes private space and recovery arrangements for injured and distressed crew |
 | 1326 | Navarro and Vale review damaged engineering spaces and the human toll of the rescue |
+| 1448 | Ramirez's red watch notebook is found and carefully preserved |
 | 1546 | Weather diversion underway |
 | 1908 | Crew psychological recovery and Aurora's medical consultation during the storm |
 | 2218–2311 | Possible submarine contact, eventually fades; 2251 crew midwatch |
 | Nov 19, 0224 | Atlas Mariner's loose deck cargo forces controlled convoy speed reductions during the storm |
 | Nov 19, 0610 | Merchant captains coordinate a weather-limited route amid delayed communications |
+| Nov 19, 1226 | An unidentified small civilian vessel requests a route; Northstar sends verified information to maritime rescue coordination without disclosing convoy position |
 | Nov 19, 1658 | Brooks coordinates verified aviation information as Raven One's aircrew recovers |
 | Nov 19, 1832 | Friendly aircraft locates convoy |
 | 1941 | USS Jefferson (Rachel Park) and Norway's Fenrir support convoy relief |
@@ -117,7 +120,10 @@ The expanded edition incorporates **52 in-line scenes**. The newest additions gi
 | Nov 20, 0915 | Northstar alongside |
 | 1002 | Icelandic harbor liaison and Liv's thank-you drawing |
 | 1138 | Eileen Ward visits Vale aboard Northstar carrying crew names and a recovered wheelhouse key ring |
+| 1221 | Verified update confirms Matthew Hayes survived Hawthorne's severe damage |
+| 1335 | Vale and crew prepare Elena Ramirez's memorial remarks |
 | 1430 | Medical relief coordinator Freyja Einarsson and Ward reconcile lost Caledonia supplies and verified alternative generators |
+| 1525 | Reykjavík family reception team reunites separated relatives through carefully verified records |
 | 1655 | Captain Ingrid Halvorsen gathers LANTERN lessons for the next civilian convoy |
 | 1828 | Vale speaks with Rebecca and their son Ethan through a repaired connection |
 | Nov 20 | Memorial for Ramirez |
@@ -128,7 +134,7 @@ The expanded edition incorporates **52 in-line scenes**. The newest additions gi
 | Ten months later | Rios visits Vale with Ramirez's qualification notes and talks about his recovery |
 | One year later | Letters, visit with survivors and family |
 | Two years later | Ethan, now eighteen, chooses civilian emergency-power engineering instead of a naval career |
-| Five years later | Retirement reflections; Ethan is an engineering student pursuing emergency-power systems, not a naval commission |
+| Five years later | Liv visits a convoy remembrance gathering and gives Vale a drawing of her family's new home; Ethan studies emergency-power engineering |
 
 ## Editorial continuity rules
 
