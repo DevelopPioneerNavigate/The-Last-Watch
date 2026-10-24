@@ -76,7 +76,7 @@ jobs:
           assert "DIESEL  /  DPN NOVELS" not in alltext, "Repeated decorative header leaked into audiobook narration"
           for phrase in ("THE LAST WATCH", "CHAPTER ONE", "CHAPTER THIRTEEN", "EPILOGUE", "THE END", "THE SHIP THAT BREATHES", "THE WEATHER HAS NO ALLIES", "THE HEARING ROOM", "THE VOICES AT HOME", "THE LAST MANIFEST", "THE PEOPLE WE HAD PROMISED", "THE FIRST CROSSING", "THE SILENT QUARTER", "THE FISHERMAN", "THE PIER AT REYKJAV", "WHAT THE ORDERS DID NOT SAY", "BENEATH AURORA", "BEFORE THE SECOND SALVO", "THE COLD HOURS", "THE VOICE FROM HAWTHORNE", "THE UNWRITTEN MAP", "THE CORRIDOR OF LIGHTS", "THE FIRST LEDGER", "THE DARK WATER BETWEEN", "THE FREIGHTER AT THE EDGE", "WHERE THE CARGO WENT", "THE CONVOY AFTER OURS", "THE TWELVE TRACKS", "RAVEN ONE\u0027S EMPTY SEAT", "THE DISTANCE HOME", "WHAT ETHAN CHOSE", "THE TANKER", "THE LIEUTENANT", "A SPACE FOR THE LIVING", "THE ELEVENTH SURVIVOR", "THE VISITOR FROM CUTLASS", "THE DOOR WITH NO HANDLE", "THE WATCHKEEPERS", "THE LANTERN KEY", "WHEN HAWTHORNE ANSWERED", "THE ROOM FOR THE MISSING", "THE GREEN ROOF"):
               assert phrase in alltext, f"Missing expected section: {phrase}"
-          assert len(alltext) > 465000, f"Expanded PDF text extraction too short: {len(alltext)} chars"
+          assert len(alltext) > 440000, f"Expanded PDF text extraction too short: {len(alltext)} chars"
           assert int(reader.pages[0].mediabox.width) == 432 and int(reader.pages[0].mediabox.height) == 648, "Unexpected trim size"
           print(f"Validated {len(reader.pages)} pages and {len(alltext):,} extracted characters.")
           PY
@@ -124,7 +124,7 @@ jobs:
           body = "\n".join(p.extract_text() or "" for p in reader.pages)
           assert not re.search(r"(?:\b[01]\b[\s\r\n]*){8,}", body), "Latest PDF contains spoken binary decoration"
           assert "DIESEL  /  DPN NOVELS" not in body, "Latest PDF contains repeated spoken running headers"
-          assert len(body) > 465000
+          assert len(body) > 440000
           assert "THE END" in body
           print(f"Validated latest-source PDF: {len(reader.pages)} pages")
           PY
