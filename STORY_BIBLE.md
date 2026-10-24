@@ -49,11 +49,12 @@ Commander Daniel Vale commands the fictional guided-missile destroyer USS Norths
 - **Anders Nygaard:** Fisherman who rescues distressed enemy sailors.
 - **Matthew Hayes:** Commander of Hawthorne, Academy friend of Vale, survives.
 - **Sofia Ramirez:** Elena's daughter, nine in 2037, ten a year later.
+- **Ingrid Voss:** Volunteer teacher aboard Aurora, helps eighty-four frightened children and communicates with Vale.
 - **Liv:** Young evacuee aboard Aurora who draws her destroyed home with a red crayon; appears in the embarkation flashback.
 
 ## Added narrative scenes
 
-The expanded edition now incorporates **23 in-line scenes**. The latest installments add Northstar's first full convoy departure, an uneasy bridge watch at 0252, Nygaard's civilian rescue decisions, and the Icelandic harbor arrival from Vale's perspective. The previous 19 scenes and the 13 numbered chapters remain in canon.
+The expanded edition now incorporates **27 in-line scenes**. The four newest scenes expand Vale and Mara's final briefing on November 17, the civilian experience aboard Aurora after the first missile attack, the combat team's uncertain picture before the second missile salvo, and the injured passengers and crew during the storm. The original 13 numbered chapters and established outcomes remain in canon.
 
 ## Chronology
 
@@ -61,6 +62,7 @@ The expanded edition now incorporates **23 in-line scenes**. The latest installm
 |---|---|
 | Nov 13 | Convoy embarkation in Norway; Vale meets Lindholm, Ward, Sofia Reed and Liv |
 | Nov 15 | Convoy departure, first coordination meeting, and a controlled damage-control drill |
+| Nov 17, evening | Vale and Mara review incomplete threat orders and the crew's readiness |
 | Nov 18, 0217 | First uneasy watch on Northstar |
 | 0252 | Quiet bridge watch with Bishop, Mercer, and a delayed family message |
 | 0306 | Sonar detects a possible submarine |
@@ -70,10 +72,12 @@ The expanded edition now incorporates **23 in-line scenes**. The latest installm
 | 0426–0531 | Rescue efforts; Caledonia sinks |
 | 0548 | Vale records the manifest losses and reaches out to the remaining merchants |
 | 0603 | First missile engagement |
+| 0642 | Vale speaks with Aurora's schoolteacher, Ingrid Voss, about frightened children |
 | 0712 | Kestrel sends distress traffic |
 | 0740 | Report of Hawthorne damage |
 | 0801 | Nygaard commits Sigrid to the dangerous rescue of Kestrel's sailors |
 | 0858 | Communications interference and false command message |
+| 0919 | Idris, Farouk, and Bell review uncertain signs of a second attack |
 | 0934 | Second missile attack |
 | ~0941–0954 | Cutlass damaged; convoy defended |
 | 1023 | Northstar evaluates and authorizes offensive strike |
@@ -83,6 +87,7 @@ The expanded edition now incorporates **23 in-line scenes**. The latest installm
 | 1142 | Ramirez recovered unresponsive |
 | 1212 | Ramirez declared deceased |
 | 1546 | Weather diversion underway |
+| 1908 | Crew psychological recovery and Aurora's medical consultation during the storm |
 | 2218–2311 | Possible submarine contact, eventually fades; 2251 crew midwatch |
 | Nov 19, 1832 | Friendly aircraft locates convoy |
 | 2241 | Lights of Iceland seen |
