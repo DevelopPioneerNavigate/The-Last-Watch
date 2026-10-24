@@ -13,12 +13,16 @@ import hashlib
 import math
 import os
 import re
+from functools import lru_cache
 from pathlib import Path
+
+from PIL import Image, ImageDraw, ImageFont
 
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER, TA_LEFT
 from reportlab.lib.pagesizes import inch
 from reportlab.lib.styles import ParagraphStyle
+from reportlab.lib.utils import ImageReader
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import (
@@ -490,6 +494,51 @@ class InkPlate(Flowable):
                 c.circle(x,y,1.5,stroke=0,fill=1)
         c.restoreState()
 
+
+@lru_cache(maxsize=512)
+def _decorative_label_image(label, point_size, rgb):
+    """Render visual furniture to an image, never the narration text layer.
+
+    ElevenLabs extracts actual PDF text objects. Keeping book furniture as
+    drawings prevents the running header/footer being read on every page.
+    """
+    scale = 4
+    px = max(9, round(point_size * scale))
+    paths = (
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf",
+    )
+    font_file = next((path for path in paths if Path(path).is_file()), None)
+    face = ImageFont.truetype(font_file, px) if font_file else ImageFont.load_default()
+    bounds = face.getbbox(label)
+    width = max(1, bounds[2] - bounds[0] + 8)
+    height = max(1, bounds[3] - bounds[1] + 8)
+    image = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(image)
+    draw.text((4 - bounds[0], 4 - bounds[1]), label, font=face, fill=rgb)
+    return ImageReader(image), width / scale, height / scale
+
+
+def _decorative_label(canvas, label, x, y, size, color, align="left"):
+    """Visible branding, intentionally absent from speech/text extraction."""
+    art, width, height = _decorative_label_image(label, size, color)
+    if align == "right":
+        x -= width
+    elif align == "center":
+        x -= width / 2
+    canvas.drawImage(art, x, y, width=width, height=height, mask="auto")
+
+
+def _binary_vector_glyph(canvas, x, y, digit):
+    """A 0/1-shaped ornament drawn as strokes, NOT as selectable PDF text."""
+    if digit == "0":
+        canvas.ellipse(x - 1.50, y - 2.1, x + 1.50, y + 2.1, stroke=1, fill=0)
+    else:
+        canvas.line(x, y - 2.1, x, y + 2.1)
+        canvas.line(x - 1.0, y + 1.0, x, y + 2.1)
+        canvas.line(x - 1.25, y - 2.1, x + 1.25, y - 2.1)
+
+
 def draw_body(canvas, doc):
     """Render DPN graphite, crimson and binary framing behind ALL reading pages.
 
@@ -523,18 +572,19 @@ def draw_body(canvas, doc):
             canvas.line(x, y, x + 9 * direction, y)
             canvas.line(x, y, x, y + 10 * vertical)
 
-    # Subtle binary 'rain' restricted to charcoal outer margins.
-    # Regular deterministic sequence avoids randomness between PDF builds.
-    canvas.setFont(SANS, 5.5)
-    canvas.setFillColor(DPN_GLYPH)
+    # The side margins preserve DPN binary rain visually, but the shapes
+    # contain NO text operators. This is crucial for ElevenLabs narration:
+    # the former drawCentredString digits were extracted as hundreds of 0/1s.
+    canvas.setStrokeColor(DPN_GLYPH)
+    canvas.setLineWidth(0.7)
     for n in range(47):
         y = 69 + n * 10.9
         if y >= PAGE_H - 54:
             break
         left = "1" if (n * 7 + 1) % 5 < 2 else "0"
         right = "0" if (n * 11 + 3) % 7 < 3 else "1"
-        canvas.drawCentredString(18, y, left)
-        canvas.drawCentredString(PAGE_W - 18, y + (n % 3), right)
+        _binary_vector_glyph(canvas, 18, y, left)
+        _binary_vector_glyph(canvas, PAGE_W - 18, y + (n % 3), right)
 
     # DPN's signature red pulse, small enough to remain a margin device.
     canvas.setStrokeColor(DPN_CRIMSON)
@@ -548,15 +598,15 @@ def draw_body(canvas, doc):
     pulse.lineTo(34, 104)
     canvas.drawPath(pulse, stroke=1, fill=0)
 
-    canvas.setFillColor(colors.HexColor("#F0F2F4"))
-    canvas.setFont(SANS_BOLD, 7.2)
-    canvas.drawString(52, PAGE_H - 29, "THE LAST WATCH")
-    canvas.setFillColor(colors.HexColor("#ED5264"))
-    canvas.setFont(SANS_BOLD, 6.8)
-    canvas.drawRightString(PAGE_W - 48, PAGE_H - 29, "DIESEL  /  DPN NOVELS")
-    canvas.setFillColor(colors.HexColor("#F0F2F4"))
-    canvas.setFont(SANS_BOLD, 7.9)
-    canvas.drawCentredString(PAGE_W / 2, 23, str(max(1, page - 1)))
+    # Repeated running headers and folios are visual elements too. Rasterize
+    # them so listening applications hear the story instead of page numbers,
+    # "THE LAST WATCH" and "DIESEL / DPN NOVELS" hundreds of times.
+    _decorative_label(canvas, "THE LAST WATCH", 52, PAGE_H - 32, 7.2,
+                      "#F0F2F4")
+    _decorative_label(canvas, "DIESEL  /  DPN NOVELS", PAGE_W - 48,
+                      PAGE_H - 32, 6.8, "#ED5264", align="right")
+    _decorative_label(canvas, str(max(1, page - 1)), PAGE_W / 2, 19.5,
+                      7.9, "#F0F2F4", align="center")
     canvas.restoreState()
 
 SCENE_PATTERN = re.compile(r"(?m)^\{\{scene:([a-z0-9-]+\.md)\}\}$")
