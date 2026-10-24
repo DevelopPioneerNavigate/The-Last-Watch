@@ -498,6 +498,8 @@ I told myself a commanding officer had no luxury for private grief during an ong
 
 The ocean kept moving. Northstar kept moving. I wished time would stop long enough for someone to tell me whether Matthew was alive.
 
+{{scene:32-the-voice-from-hawthorne.md}}
+
 {{scene:22-the-fishermans-choice.md}}
 
 # CHAPTER SIX — GHOSTS OF THE FLEET
@@ -571,6 +573,8 @@ I spoke over the announcing system.
 No applause followed. There were only acknowledgments and the steady sound of people returning to work.
 
 That quiet professionalism was the greatest strength my ship possessed.
+
+{{scene:33-the-unwritten-map.md}}
 
 {{scene:26-before-the-second-salvo.md}}
 
