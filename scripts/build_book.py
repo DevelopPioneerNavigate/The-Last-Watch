@@ -233,7 +233,25 @@ class InkPlate(Flowable):
                 p.curveTo(x+14, y+2.6, x+30, y-3.4, x+45, y)
             c.drawPath(p, stroke=1, fill=0)
         c.setFillColor(colors.HexColor("#d9e4ee"))
-        if self.mode == "storm":
+        if self.mode == "watch":
+            # Opening frontispiece: an unbroken horizon and the midnight watch.
+            c.setFillColor(colors.HexColor("#e2c793"))
+            c.circle(257,82,10,fill=1,stroke=0)
+            c.setFillColor(colors.HexColor("#071523"))
+            p=c.beginPath()
+            p.moveTo(40,37);p.lineTo(280,37)
+            p.lineTo(259,25);p.lineTo(62,25)
+            p.close();c.drawPath(p,fill=1,stroke=0)
+            c.rect(116,38,92,11,fill=1,stroke=0)
+            c.rect(145,49,46,22,fill=1,stroke=0)
+            c.rect(166,71,3,24,fill=1,stroke=0)
+            c.setStrokeColor(colors.HexColor("#a6c7da"))
+            c.setLineWidth(1)
+            c.line(167,90,221,68)
+            c.line(78,17,244,17)
+            for x in (89,109,130,200,231):
+                c.circle(x,80 if x%2 else 66,1.5,stroke=1,fill=0)
+        elif self.mode == "storm":
             # Dark destroyer silhouette advancing through the moonlit sea.
             c.setFillColor(colors.HexColor("#acc8dd"))
             c.circle(274, 80, 12, stroke=0, fill=1)
@@ -504,7 +522,7 @@ def read_manuscript():
 
     chapter_count = len(re.findall(r"(?m)^# CHAPTER \w+", raw))
     words = len(re.findall(r"\b[\w’'-]+\b", raw))
-    if chapter_count != 13 or "# EPILOGUE" not in raw or words < 57000 or len(included) < 43:
+    if chapter_count != 13 or "# EPILOGUE" not in raw or words < 62000 or len(included) < 47:
         raise SystemExit(f"Manuscript incomplete: {chapter_count} chapters, {len(included)} scenes, {words} words")
     return raw, words, chapter_count, len(included)
 
@@ -557,7 +575,7 @@ def make_book(raw, word_count):
             section_seen = True
             story.append(Paragraph(inline_md(block[2:]), ST["heading"]))
             chapter_idx += 1
-            art_mode = {2: "storm", 3: "convoy", 4: "rescue", 5: "radar", 6: "fisher", 7: "wreckage", 8: "salvo", 9: "horizon", 10: "fire", 11: "engine", 12: "night", 13: "harbor", 14: "memorial", 15: "letter"}.get(chapter_idx)
+            art_mode = {1: "watch", 2: "storm", 3: "convoy", 4: "rescue", 5: "radar", 6: "fisher", 7: "wreckage", 8: "salvo", 9: "horizon", 10: "fire", 11: "engine", 12: "night", 13: "harbor", 14: "memorial", 15: "letter"}.get(chapter_idx)
             if art_mode:
                 story.append(InkPlate(art_mode))
                 story.append(Spacer(1, 12))
