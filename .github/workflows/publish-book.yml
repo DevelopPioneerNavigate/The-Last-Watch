@@ -7,6 +7,7 @@ on:
       - "manuscript/**"
       - "scripts/build_book.py"
       - "scripts/cinematic_art.py"
+      - "scripts/proof_cinematic_pdf.py"
       - "tests/test_cinematic_art.py"
       - "artwork/cinematic/**"
       - "assets/cinematic/**"
@@ -37,7 +38,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install PDF build requirements
-        run: python -m pip install --disable-pip-version-check "reportlab>=4,<5" "pypdf>=5,<7" "pillow>=10,<13"
+        run: python -m pip install --disable-pip-version-check "reportlab>=4,<5" "pypdf>=5,<7" "pillow>=10,<13" "pymupdf>=1.25,<2"
 
       - name: Validate expanded narrative and continuity
         run: python -m unittest discover -s tests -v
@@ -78,11 +79,18 @@ jobs:
           print(f"Validated {len(reader.pages)} pages and {len(alltext):,} extracted characters.")
           PY
 
+      - name: Verify exact embedded artwork and render visual proofs
+        run: python scripts/proof_cinematic_pdf.py
+
       - name: Upload PDF as Actions artifact
         uses: actions/upload-artifact@v4
         with:
           name: The-Last-Watch-Book-PDF
-          path: books/The_Last_Watch_Extended_Edition.pdf
+          path: |
+            books/The_Last_Watch_Extended_Edition.pdf
+            books/The_Last_Watch_Cinematic_Illustrated_2026-10-24.pdf
+            books/proofs/Cinematic_Art_Contact_Sheet.jpg
+            books/proofs/New_Cinematic_Cover_Proof.jpg
           if-no-files-found: error
 
       - name: Publish from latest source without overwriting other commits
@@ -99,6 +107,7 @@ jobs:
             git reset --hard origin/main
             python -m unittest discover -s tests -v
             python scripts/build_book.py
+            python scripts/proof_cinematic_pdf.py
             python - <<'PY'
           from pathlib import Path
           from pypdf import PdfReader
@@ -114,7 +123,7 @@ jobs:
           assert "THE END" in body
           print(f"Validated latest-source PDF: {len(reader.pages)} pages")
           PY
-            git add books/The_Last_Watch_Extended_Edition.pdf
+            git add books/The_Last_Watch_Extended_Edition.pdf books/The_Last_Watch_Cinematic_Illustrated_2026-10-24.pdf books/proofs/New_Cinematic_Cover_Proof.jpg books/proofs/Cinematic_Art_Contact_Sheet.jpg books/proofs/Cinematic_Pages.json
             if git diff --cached --quiet; then
               echo "Published PDF already matches current manuscript."
               published=1
