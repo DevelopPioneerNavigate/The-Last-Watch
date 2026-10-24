@@ -16,8 +16,8 @@ class NovelTests(unittest.TestCase):
 
     def test_full_manuscript_present(self):
         self.assertEqual(self.chapters, 13)
-        self.assertEqual(self.scenes, 52)
-        self.assertGreater(self.words, 68000)
+        self.assertEqual(self.scenes, 58)
+        self.assertGreater(self.words, 75000)
         self.assertNotIn("{{scene:", self.raw)
         self.assertIn("THE END", self.raw)
 
@@ -55,23 +55,28 @@ class NovelTests(unittest.TestCase):
             ("THE SHIPS THAT ANSWERED", "# CHAPTER EIGHT"),
             ("THE SPACE BEFORE FIRE", "THE SHIP WE COULD NOT SEE"),
             ("THE SHIP WE COULD NOT SEE", "# CHAPTER NINE"),
-            ("THE BOUNDARIES HOLD", "# CHAPTER TEN"),
+            ("THE BOUNDARIES HOLD", "THE DOOR WITH NO HANDLE"),
+            ("THE DOOR WITH NO HANDLE", "# CHAPTER TEN"),
             ("THE PEOPLE WHO WERE NOT ON THE SCREEN", "A SPACE FOR THE LIVING"),
             ("A SPACE FOR THE LIVING", "THE WEIGHT OF WATER"),
-            ("THE WEIGHT OF WATER", "# CHAPTER ELEVEN"),
+            ("THE WEIGHT OF WATER", "THE WATCHKEEPERS"),
+            ("THE WATCHKEEPERS", "# CHAPTER ELEVEN"),
             ("THE WEATHER HAS NO ALLIES", "THE COLD HOURS"),
             ("THE COLD HOURS", "THE DARK BETWEEN THE ALARMS"),
             ("THE DARK BETWEEN THE ALARMS", "# CHAPTER TWELVE"),
             ("THE FREIGHTER AT THE EDGE", "THE MORNING WITHOUT SIGNALS"),
-            ("THE MORNING WITHOUT SIGNALS", "RAVEN ONE\u0027S EMPTY SEAT"),
+            ("THE MORNING WITHOUT SIGNALS", "THE LANTERN KEY"),
+            ("THE LANTERN KEY", "RAVEN ONE\u0027S EMPTY SEAT"),
             ("RAVEN ONE\u0027S EMPTY SEAT", "VOICES FROM THE WEST"),
             ("THE MORNING WITHOUT SIGNALS", "VOICES FROM THE WEST"),
             ("VOICES FROM THE WEST", "THE CORRIDOR OF LIGHTS"),
             ("THE CORRIDOR OF LIGHTS", "# CHAPTER THIRTEEN"),
             ("THE PIER AT REYKJAVÍK", "THE CAPTAINS WITHOUT SHIPS"),
-            ("THE CAPTAINS WITHOUT SHIPS", "LETTERS NEVER SENT"),
+            ("THE CAPTAINS WITHOUT SHIPS", "WHEN HAWTHORNE ANSWERED"),
+            ("WHEN HAWTHORNE ANSWERED", "LETTERS NEVER SENT"),
             ("LETTERS NEVER SENT", "WHERE THE CARGO WENT"),
-            ("WHERE THE CARGO WENT", "THE CONVOY AFTER OURS"),
+            ("WHERE THE CARGO WENT", "THE ROOM FOR THE MISSING"),
+            ("THE ROOM FOR THE MISSING", "THE CONVOY AFTER OURS"),
             ("THE CONVOY AFTER OURS", "THE DISTANCE HOME"),
             ("THE DISTANCE HOME", "THE FIRST LEDGER"),
             ("THE CONVOY AFTER OURS", "THE FIRST LEDGER"),
@@ -83,6 +88,7 @@ class NovelTests(unittest.TestCase):
             ("THE VISITOR FROM CUTLASS", "THE BOOK OF NAMES"),
             ("THE BOOK OF NAMES", "THE VOICES AT HOME"),
             ("THE VOICES AT HOME", "WHAT ETHAN CHOSE"),
+            ("WHAT ETHAN CHOSE", "THE GREEN ROOF"),
         ]
         for earlier, later in placements:
             with self.subTest(earlier=earlier):
