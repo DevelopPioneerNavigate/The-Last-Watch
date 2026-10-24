@@ -1,10 +1,10 @@
 # THE LAST WATCH — CINEMATIC ART COLLECTION
 
-**Written by Diesel • DPN Novels** · **CINEMATIC-DIRECT-03**
+**Written by Diesel • DPN Novels** · **CINEMATIC-DIRECT-04**
 
 **Current verified edition:** 15 cinematic image placements — **one full-color cover and fourteen scene illustrations** — in the 481-page, 6 × 9-inch PDF. The narrative text remains at 76,146 words.
 
-The illustrations are committed as real JPEG files and reproduced by GitHub Actions without downloading from an external image host. [Read or download the illustrated book](../../books/The_Last_Watch_Extended_Edition.pdf).
+The illustrations are committed as real JPEG files and reproduced by GitHub Actions without downloading from an external image host. [Download the freshly rebuilt cinematic edition](../../books/The_Last_Watch_Cinematic_Illustrated_2026-10-24.pdf).
 
 ## Featured gallery
 
@@ -42,7 +42,17 @@ The illustrations are committed as real JPEG files and reproduced by GitHub Acti
 | Raven One's helicopter | Raven One's Empty Seat |
 | Caledonia in the storm | The Last Manifest |
 
-Four scenes received new illustration pages, and the existing Liv illustration was upgraded to a higher-resolution image.
+**All six newest illustrations are embedded and verified:** the new typeset-in-art front cover, HMS Cutlass, Aurora passengers, Ramirez's harbor memorial, the engineering watchbook, and Liv's reunion with Vale. The complete edition contains one cover and fourteen scene plates.
+
+## Actual-PDF visual proofs
+
+These previews are rendered from the **published PDF**, not independent source images:
+
+- [View the new cinematic cover as printed on PDF page 1](../../books/proofs/New_Cinematic_Cover_Proof.jpg)
+- [View the full 15-image PDF contact sheet](../../books/proofs/Cinematic_Art_Contact_Sheet.jpg)
+- [Verify which PDF page contains each cinematic illustration](../../books/proofs/Cinematic_Pages.json)
+
+The 481-page, checksum-verified PDF is also available at a **new filename** so readers do not unknowingly open an earlier cached version: [The Last Watch — Cinematic Illustrated, October 24, 2026](../../books/The_Last_Watch_Cinematic_Illustrated_2026-10-24.pdf).
 
 ## Publishing controls
 
