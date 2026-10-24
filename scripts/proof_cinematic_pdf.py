@@ -8,7 +8,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import shutil
 from pathlib import Path
 
 import fitz
@@ -16,7 +15,6 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "books" / "The_Last_Watch_Extended_Edition.pdf"
-EDITION = ROOT / "books" / "The_Last_Watch_Cinematic_Illustrated_2026-10-24.pdf"
 PROOFS = ROOT / "books" / "proofs"
 MANIFEST = ROOT / "artwork" / "cinematic" / "committed_manifest.json"
 REQUIRED_REPLACEMENTS = {
@@ -96,12 +94,34 @@ def main() -> None:
                     [{"file": entry["file"], "title": entry["title"], "pdf_page": present[entry["file"]]}
                      for entry in entries]}, indent=2) + "\n", encoding="utf-8"
     )
+    # Validate interior colors by sampling pixels from rendered *PDF pages*,
+    # not trusting the source code alone. Artwork cover/photo pages are exempt.
+    # x=43 sits in the clear reading field outside the text frame (x>=52).
+    prose_indices = [i for i in range(1, pdf.page_count)
+                     if not pdf[i].get_images(full=True)]
+    assert len(prose_indices) > 200, "Cannot identify themed prose pages"
+    indices = [prose_indices[0], prose_indices[len(prose_indices)//2],
+               prose_indices[-1]]
+    for index in indices:
+        pix = pdf[index].get_pixmap(matrix=fitz.Matrix(1, 1), alpha=False)
+        outer, reading, header = (pix.pixel(6, 300), pix.pixel(43, 300),
+                                  pix.pixel(16, 12))
+        assert all(abs(v-w) <= 3 for v,w in zip(outer[:3], (20, 24, 32))), (
+            f"Page {index+1} is missing DPN dark outer frame: {outer}")
+        assert all(abs(v-w) <= 3 for v,w in zip(reading[:3], (222, 226, 230))), (
+            f"Page {index+1} is missing nonwhite steel reading field: {reading}")
+        assert all(abs(v-w) <= 3 for v,w in zip(header[:3], (27, 32, 41))), (
+            f"Page {index+1} is missing the graphite header: {header}")
+    proof_page = prose_indices[len(prose_indices)//2]
+    pdf[proof_page].get_pixmap(matrix=fitz.Matrix(1.8, 1.8), alpha=False).pil_image().convert("RGB").save(
+        PROOFS / "DPN_Interior_Page_Proof.jpg", quality=95)
     pdf.close()
-    shutil.copyfile(SOURCE, EDITION)
-    assert EDITION.stat().st_size > 1_000_000
-    print(f"Verified {len(entries)} actual embedded cinematic artworks in {EDITION.name}, including all 6 requested new images.")
-    print("Front cover visually rendered to books/proofs/New_Cinematic_Cover_Proof.jpg")
-    print("Every image page rendered to books/proofs/Cinematic_Art_Contact_Sheet.jpg")
+    assert SOURCE.stat().st_size > 1_000_000
+    print(f"Verified {len(entries)} actual embedded cinematic artworks in the ONE official PDF, {SOURCE.name}.")
+    print(f"Verified DPN graphite/red/steel theme on 3 representative reading pages, including page {proof_page+1}.")
+    print("Front cover proof: books/proofs/New_Cinematic_Cover_Proof.jpg")
+    print("Interior page proof: books/proofs/DPN_Interior_Page_Proof.jpg")
+    print("Illustration contact sheet: books/proofs/Cinematic_Art_Contact_Sheet.jpg")
 
 if __name__ == "__main__":
     main()
